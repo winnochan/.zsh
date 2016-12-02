@@ -117,20 +117,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# alias for git
-alias gst="git status -s"
-alias gff="git diff"
-alias gco="git checkout"
-alias gdd="git add"
-alias gci="git commit"
-alias gpl="git pull"
-alias gpo="git push origin"
-alias gbl="git blame"
-alias gcp="git cherry-pick"
-alias gss="git stash save"
-alias gsp="git stash pop"
-alias grd="git rebase develop"
-
 # alias for others
 alias getags="find ~/dev/q1/logic/ -name \"*.[chS]\" | xargs etags"
 alias gctags="find ~/dev/q1/logic/ -name \"*.[chS]\" | xargs etags"
@@ -144,13 +130,6 @@ alias tf="tail -f"
 
 # eval "$(cd dev/q1/logic/)"
 
-alias pt="./parse_trigger.sh"
-alias parse="../engine/engine.nostrip -l ./ -r cmd/wizcmds/parse.c -O"
-alias pm="../engine/engine.nostrip -l ./ -r cmd/wizcmds/parse_mission.c -O"
-alias mb="make build"
-alias ms="make start"
-alias mr="make restart"
-alias mr0="make test-r0"
 alias rg="find . -name \"*\" | xargs grep "
 alias rgc="find . -name \"*.[ch]\" | xargs grep "
 alias rglog="find . -name \"*.log\" | xargs grep "
