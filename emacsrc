@@ -1,0 +1,5 @@
+alias ect="emacsclient -t"
+alias suect="sudo emacsclient -t"
+alias ecc="emacsclient -c"
+
+export PATH="$PATH:$HOME/.emacs.d/el-get/xcscope"
