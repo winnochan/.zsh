@@ -8,3 +8,5 @@ alias mr0="make test-r0"
 alias er="../engine/engine.nostrip -l ./ -r"
 alias up="../engine/engine.nostrip -l ./ -r cmd/wizcmds/update.c -O"
 alias dump="../engine/engine.nostrip -l ./ -r cmd/wizcmds/dump_info.c"
+
+alias q1="ssh 192.168.16.155 -p 32222 -l q1"
