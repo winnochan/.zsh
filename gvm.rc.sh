@@ -1,5 +1,5 @@
 export GVM_ROOT="/home/wowchan/.gvm"
-export PATH="$GVM_ROOT/bin:$PATH"
+export PATH="$PATH:$GVM_ROOT/bin"
 
 if which gvm > /dev/null; then
     unset GOROOT
@@ -21,4 +21,7 @@ if which gvm > /dev/null; then
     export GVM_PATH_BACKUP="$PATH"
     [ -f "$GVM_ROOT/environments/default" ] && . "$GVM_ROOT/environments/default"
     . "$GVM_ROOT/scripts/env/gvm"
+else
+    export GOPATH="$HOME/.gopath.d"
+    export PATH="$PATH:$GOPATH/bin"
 fi
