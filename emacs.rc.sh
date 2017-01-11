@@ -1,4 +1,6 @@
 alias emd="emacs --daemon"
+alias emacs="emacs -nw"
+alias xemacs="emacs"
 alias ect="emacsclient -t -a emacs"
 alias sect="sudo emacsclient -t -a emacs"
 alias ecc="emacsclient -c -a emacs"
