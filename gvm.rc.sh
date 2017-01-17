@@ -1,7 +1,7 @@
 export GVM_ROOT="/home/wowchan/.gvm"
 export PATH="$PATH:$GVM_ROOT/bin"
 
-if which gvm > /dev/null; then
+if type foo > /dev/null 2>&1; then
     unset GOROOT
     unset GOARCH
     unset GOOS
