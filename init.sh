@@ -1,3 +1,4 @@
+source ~/.zshrc.d/autojump.rc.sh
 source ~/.zshrc.d/cmd.rc.sh
 source ~/.zshrc.d/emacs.rc.sh
 source ~/.zshrc.d/git.rc.sh
