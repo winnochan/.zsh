@@ -37,7 +37,22 @@ INSTALL_LIST = [
 ]
 
 THEME = 'zeta'
-PLUGINS = ['git', 'autojump', 'zsh-autosuggestions']
+PLUGINS = [
+    'git',  # add some git auto-completion and git alias
+    'autojump',  # remember cd and jump quickly
+    'zsh-autosuggestions',  # command auto suggestion
+    'last-working-dir',  # remember shell last working directory
+    'encode64',  # generate base64 encode quickly
+    'urltools',  # url parser
+    'zsh-syntax-highlighting',  # zsh command highlight
+    'zsh_reload',  # reload zsh when install program
+    'brew',  # add auto-completion for brew
+    'colored-man',  # colored man page
+    'iwhois',  #
+    'rsync',  # add some rsync alias
+    'sudo'  # type <ESC> twice to add 'sudo'
+    'osx'  # quick-look file in os x system
+]
 
 
 def main():
