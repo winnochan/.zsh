@@ -38,20 +38,26 @@ INSTALL_LIST = [
 
 THEME = 'zeta'
 PLUGINS = [
-    'git',  # add some git auto-completion and git alias
     'autojump',  # remember cd and jump quickly
-    'zsh-autosuggestions',  # command auto suggestion
-    'last-working-dir',  # remember shell last working directory
-    'encode64',  # generate base64 encode quickly
-    'urltools',  # url parser
-    'zsh-syntax-highlighting',  # zsh command highlight
-    'zsh_reload',  # reload zsh when install program
     'brew',  # add auto-completion for brew
-    'colored-man',  # colored man page
+    'colored-man-pages',  # colored man page
+    'colorize'  # highlighting file content
+    'cp'  # cp plugin
+    'encode64',  # generate base64 encode quickly
+    'debian'  # debian/ubuntu apt plugin
+    'emacs'  # emacs plugin
+    'git',  # add some git auto-completion and git alias
+    'gradle'  # gradle plugin
     'iwhois',  #
+    'last-working-dir',  # remember shell last working directory
+    'osx'  # quick-look file in os x system
+    'per-directory-history'  # use history per directory
     'rsync',  # add some rsync alias
     'sudo'  # type <ESC> twice to add 'sudo'
-    'osx'  # quick-look file in os x system
+    'urltools',  # url parser
+    'zsh-autosuggestions',  # command auto suggestion
+    'zsh_reload',  # reload zsh when install program
+    'zsh-syntax-highlighting',  # zsh command highlight
 ]
 
 
