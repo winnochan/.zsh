@@ -4,6 +4,7 @@ import os
 import sys
 
 HOME = os.getenv('HOME')
+REPO = sys.path[0]
 
 VIM = (
     '.vimrc',
@@ -31,9 +32,29 @@ ZSH_AUTOSUGGESTIONS = (
     '.oh-my-zsh/custom/plugins/zsh-autosuggestions',
     'git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions'
 )
+WP_CLI = (
+    'bin/wp',
+    'sh -c "[ ! -e $HOME/bin ] && mkdir $HOME/bin"',
+    'wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -O ~/bin/wp',
+    'chmod +x ~/bin/wp'
+)
+
+WP_CLI_COMPLETION = (
+    '{0}/wp-completion.bash'.format(REPO),
+    'curl -sSfL https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash -o {0}/wp-completion.bash'.
+    format(REPO))
+
 INSTALL_LIST = [
-    VIM, EMACS, SPACEMACS, OH_MY_ZSH, OH_MY_ZSH_THEME, OH_MY_ZSH_THEME_ZETA,
-    AUTOJUMP, ZSH_AUTOSUGGESTIONS
+    VIM,
+    EMACS,
+    SPACEMACS,
+    OH_MY_ZSH,
+    OH_MY_ZSH_THEME,
+    OH_MY_ZSH_THEME_ZETA,
+    AUTOJUMP,
+    ZSH_AUTOSUGGESTIONS,
+    WP_CLI,
+    WP_CLI_COMPLETION
 ]
 
 THEME = 'zeta'
@@ -41,23 +62,24 @@ PLUGINS = [
     'autojump',  # remember cd and jump quickly
     'brew',  # add auto-completion for brew
     'colored-man-pages',  # colored man page
-    'colorize'  # highlighting file content
-    'cp'  # cp plugin
+    'colorize',  # highlighting file content
+    'cp',  # cp plugin
     'encode64',  # generate base64 encode quickly
-    'debian'  # debian/ubuntu apt plugin
-    'emacs'  # emacs plugin
+    'debian',  # debian/ubuntu apt plugin
+    'emacs',  # emacs plugin
     'git',  # add some git auto-completion and git alias
-    'gradle'  # gradle plugin
+    'gradle',  # gradle plugin
     'iwhois',  #
     'last-working-dir',  # remember shell last working directory
-    'osx'  # quick-look file in os x system
-    'per-directory-history'  # use history per directory
+    'osx',  # quick-look file in os x system
+    'per-directory-history',  # use history per directory
     'rsync',  # add some rsync alias
-    'sudo'  # type <ESC> twice to add 'sudo'
+    'sudo',  # type <ESC> twice to add 'sudo'
     'urltools',  # url parser
+    'wp-cli',  # Command-line tools for managing Wordpress
     'zsh-autosuggestions',  # command auto suggestion
     'zsh_reload',  # reload zsh when install program
-    'zsh-syntax-highlighting',  # zsh command highlight
+    # 'zsh-syntax-highlighting',  # zsh command highlight
 ]
 
 
@@ -75,8 +97,9 @@ def main():
         if flag in 'nv' and 'emacs' in check_file:
             continue
         if not os.path.exists(check_file):
+            print('============================================================')
+            print('Installing {0} ...'.format(check_file))
             for cmd in conf[1:]:
-                print('Installing {0} ...'.format(check_file))
                 os.system(cmd)
         print('{0} installed!'.format(check_file))
     with open('/'.join([sys.path[0], 'zshrc.zsh-template'])) as zsh_template:
@@ -86,9 +109,10 @@ def main():
         content = content.replace('plugins=(git)',
                                   'plugins=({0})'.format(' '.join(PLUGINS)))
     with open('/'.join([HOME, '.zshrc']), 'w') as zshrc:
-        zshrc.write(content + 'source ~/.zshrc.d/init.sh\n')
+        zshrc.write(content + 'source {0}/init.sh\n'.format(REPO))
     return
 
 
 if __name__ == '__main__':
     main()
+

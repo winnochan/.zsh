@@ -8,3 +8,6 @@ source ~/.zshrc.d/q1.rc.sh
 source ~/.zshrc.d/sdkman.rc.sh
 source ~/.zshrc.d/ss.rc.sh
 source ~/.zshrc.d/startup.rc.sh
+source ~/.zshrc.d/wp-completion.rc.sh
+source ~/.zshrc.d/zsh-autosuggestions.rc.sh
+
