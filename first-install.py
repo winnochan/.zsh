@@ -26,7 +26,7 @@ OH_MY_ZSH_THEME_ZETA = (
 )
 AUTOJUMP = ('.autojump',
             'git clone git://github.com/joelthelion/autojump.git ~/autojump',
-            'python ~/autojump/install.py', 'rm -rf ~/autojump')
+            'cd ~/autojump && python install.py', 'rm -rf ~/autojump')
 ZSH_AUTOSUGGESTIONS = (
     '.oh-my-zsh/custom/plugins/zsh-autosuggestions',
     'git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions'
@@ -64,7 +64,7 @@ def main():
                                   'ZSH_THEME="{0}"'.format(THEME))
         content = content.replace('plugins=(git)',
                                   'plugins=({0})'.format(' '.join(PLUGINS)))
-    with open('~/.zshrc', 'w') as zshrc:
+    with open('/'.join([HOME, '.zshrc']), 'w') as zshrc:
         zshrc.write(content + 'source ~/.zshrc.d/init.sh\n')
     return
 
