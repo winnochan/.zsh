@@ -2,6 +2,7 @@
 
 import os
 import sys
+import platform
 
 HOME = os.getenv('HOME')
 REPO = sys.path[0]
@@ -28,6 +29,9 @@ OH_MY_ZSH_THEME_ZETA = (
 AUTOJUMP = ('.autojump',
             'git clone git://github.com/joelthelion/autojump.git ~/autojump',
             'cd ~/autojump && python install.py', 'rm -rf ~/autojump')
+if platform.system() == 'Darwin':
+    AUTOJUMP = ('/usr/local/Cellar/autojump',
+                'brew install autojump')
 ZSH_AUTOSUGGESTIONS = (
     '.oh-my-zsh/custom/plugins/zsh-autosuggestions',
     'git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions'
