@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import os
 import sys
@@ -52,6 +53,18 @@ WP_CLI_COMPLETION = (
     'curl -sSfL https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash -o {0}/wp-completion.bash'.
     format(REPO))
 
+NVM = (
+    '.nvm',
+    'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash'
+)
+
+NODE_VERSION = 'v6.9.4'
+NODE = ('.nvm/versions/node/{0}/bin/node'.format(NODE_VERSION),
+        'nvm install {0}'.format(NODE_VERSION))
+
+VMD = ('.nvm/versions/node/{0}/bin/vmd'.format(NODE_VERSION),
+        'npm install -g vmd')
+
 INSTALL_LIST = [
     VIM,
     EMACS,
@@ -62,7 +75,10 @@ INSTALL_LIST = [
     AUTOJUMP,
     ZSH_AUTOSUGGESTIONS,
     WP_CLI,
-    WP_CLI_COMPLETION
+    WP_CLI_COMPLETION,
+    NVM,
+    NODE,
+    VMD,
 ]
 
 THEME = 'zeta'
@@ -79,6 +95,8 @@ PLUGINS = [
     'gradle',  # gradle plugin
     'iwhois',  #
     'last-working-dir',  # remember shell last working directory
+    'npm',  # npm alias config
+    'nvm',  # nvm env config
     'osx',  # quick-look file in os x system
     'per-directory-history',  # use history per directory
     'rsync',  # add some rsync alias
@@ -91,6 +109,7 @@ PLUGINS = [
 ]
 
 
+SEP = '========================================================================'
 def main():
     prompt = 'Install editor config! v for vim, e for emacs, a for all: '
 
@@ -104,8 +123,8 @@ def main():
             continue
         if flag in 'nv' and 'emacs' in check_file:
             continue
+        print(SEP)
         if not os.path.exists(check_file):
-            print('============================================================')
             print('Installing {0} ...'.format(check_file))
             for cmd in conf[1:]:
                 os.system(cmd)
