@@ -42,6 +42,10 @@ WP_CLI = (
     'wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -O ~/bin/wp',
     'chmod +x ~/bin/wp'
 )
+if platform.system() == 'Darwin':
+    WP_CLI = ('/usr/local/bin/wp',
+    'wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -O /usr/local/bin/wp',
+    'chmod +x /usr/local/bin/wp')
 
 WP_CLI_COMPLETION = (
     '{0}/wp-completion.bash'.format(REPO),
