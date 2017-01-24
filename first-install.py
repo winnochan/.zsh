@@ -87,21 +87,21 @@ PLUGINS = [
     'brew',  # add auto-completion for brew
     'colored-man-pages',  # colored man page
     'colorize',  # highlighting file content
-    'cp',  # cp plugin
-    'encode64',  # generate base64 encode quickly
-    'debian',  # debian/ubuntu apt plugin
-    'emacs',  # emacs plugin
+    # 'cp',  # cp plugin
+    # 'encode64',  # generate base64 encode quickly
+    # 'debian',  # debian/ubuntu apt plugin
+    # 'emacs',  # emacs plugin
     'git',  # add some git auto-completion and git alias
     'gradle',  # gradle plugin
-    'iwhois',  #
+    # 'iwhois',  #
     'last-working-dir',  # remember shell last working directory
     'npm',  # npm alias config
     'nvm',  # nvm env config
     'osx',  # quick-look file in os x system
     'per-directory-history',  # use history per directory
-    'rsync',  # add some rsync alias
+    # 'rsync',  # add some rsync alias
     'sudo',  # type <ESC> twice to add 'sudo'
-    'urltools',  # url parser
+    # 'urltools',  # url parser
     'wp-cli',  # Command-line tools for managing Wordpress
     'zsh-autosuggestions',  # command auto suggestion
     'zsh_reload',  # reload zsh when install program
