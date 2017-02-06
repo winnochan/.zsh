@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-import sys
 import platform
+import sys
 
 HOME = os.getenv('HOME')
 REPO = sys.path[0]
@@ -136,10 +136,9 @@ def main():
         content = content.replace('plugins=(git)',
                                   'plugins=({0})'.format(' '.join(PLUGINS)))
     with open('/'.join([HOME, '.zshrc']), 'w') as zshrc:
-        zshrc.write(content + 'source {0}/init.sh\n'.format(REPO))
+        zshrc.write(content + 'export LC_ALL="en_US.UTF-8"\nsource {0}/init.sh\n'.format(REPO))
     return
 
 
 if __name__ == '__main__':
     main()
-
