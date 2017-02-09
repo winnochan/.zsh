@@ -8,6 +8,9 @@ alias rgpy="find . -name \"*.py\" | xargs grep "
 alias gr="grep -R * "
 alias pg="ps x | grep -v grep | grep"
 
+alias k2="kill -2"
+alias k9="kill -9"
+
 alias cm1="sudo sysctl vm.drop_caches=1"
 alias cm2="sudo sysctl vm.drop_caches=2"
 alias cm3="sudo sysctl vm.drop_caches=3"
