@@ -55,15 +55,10 @@ WP_CLI_COMPLETION = (
 
 NVM = (
     '.nvm',
-    'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash'
+    'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash',
+    '[ -s ~/.nvm/nvm.sh ] && . ~/.nvm/nvm.sh && nvm install $(nvm version-remote --lts=Argon)',
+    '[ -s ~/.nvm/nvm.sh ] && . ~/.nvm/nvm.sh && nvm install $(nvm version-remote --lts=Boron)',
 )
-
-NODE_VERSION = 'v6.9.4'
-NODE = ('.nvm/versions/node/{0}/bin/node'.format(NODE_VERSION),
-        'nvm install {0}'.format(NODE_VERSION))
-
-VMD = ('.nvm/versions/node/{0}/bin/vmd'.format(NODE_VERSION),
-        'npm install -g vmd')
 
 INSTALL_LIST = [
     VIM,
@@ -77,8 +72,6 @@ INSTALL_LIST = [
     WP_CLI,
     WP_CLI_COMPLETION,
     NVM,
-    NODE,
-    VMD,
 ]
 
 THEME = 'zeta'
@@ -100,9 +93,9 @@ PLUGINS = [
     'osx',  # quick-look file in os x system
     'per-directory-history',  # use history per directory
     # 'rsync',  # add some rsync alias
-    'sudo',  # type <ESC> twice to add 'sudo'
+    # 'sudo',  # type <ESC> twice to add 'sudo'
     # 'urltools',  # url parser
-    'wp-cli',  # Command-line tools for managing Wordpress
+    # 'wp-cli',  # Command-line tools for managing Wordpress
     'zsh-autosuggestions',  # command auto suggestion
     'zsh_reload',  # reload zsh when install program
     # 'zsh-syntax-highlighting',  # zsh command highlight
