@@ -1,3 +1,5 @@
+export LC_ALL="en_US.UTF-8"
+
 alias pt="./parse_trigger.sh"
 alias parse="../engine/engine.nostrip -l ./ -r cmd/wizcmds/parse.c -O"
 alias pm="../engine/engine.nostrip -l ./ -r cmd/wizcmds/parse_mission.c -O"
