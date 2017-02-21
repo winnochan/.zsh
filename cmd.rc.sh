@@ -14,3 +14,5 @@ alias k9="kill -9"
 alias cm1="sudo sysctl vm.drop_caches=1"
 alias cm2="sudo sysctl vm.drop_caches=2"
 alias cm3="sudo sysctl vm.drop_caches=3"
+
+alias upa="sh ~/.zshrc.d/upgrade-all.sh"
