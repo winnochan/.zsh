@@ -12,3 +12,4 @@ npm install -g js-beautify
 npm install -g mean-cli
 npm install -g nodemon
 npm install -g typescript
+npm install -g pm2
