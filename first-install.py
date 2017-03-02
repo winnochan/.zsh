@@ -77,20 +77,20 @@ INSTALL_LIST = [
 THEME = 'zeta'
 PLUGINS = [
     'autojump',  # remember cd and jump quickly
-    'brew',  # add auto-completion for brew
-    'colored-man-pages',  # colored man page
+    # 'brew',  # add auto-completion for brew
+    # 'colored-man-pages',  # colored man page
     'colorize',  # highlighting file content
     # 'cp',  # cp plugin
     # 'encode64',  # generate base64 encode quickly
     # 'debian',  # debian/ubuntu apt plugin
     # 'emacs',  # emacs plugin
     'git',  # add some git auto-completion and git alias
-    'gradle',  # gradle plugin
+    # 'gradle',  # gradle plugin
     # 'iwhois',  #
     'last-working-dir',  # remember shell last working directory
     'npm',  # npm alias config
     'nvm',  # nvm env config
-    'osx',  # quick-look file in os x system
+    # 'osx',  # quick-look file in os x system
     'per-directory-history',  # use history per directory
     # 'rsync',  # add some rsync alias
     # 'sudo',  # type <ESC> twice to add 'sudo'
