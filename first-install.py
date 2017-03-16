@@ -95,8 +95,8 @@ PLUGINS = [
     # 'rsync',  # add some rsync alias
     # 'sudo',  # type <ESC> twice to add 'sudo'
     # 'urltools',  # url parser
-    'virtualenv',  # virtualenv
-    'virtualenvwrapper',  # virtualenvwrapper
+    # 'virtualenv',  # virtualenv
+    # 'virtualenvwrapper',  # virtualenvwrapper
     # 'wp-cli',  # Command-line tools for managing Wordpress
     'zsh-autosuggestions',  # command auto suggestion
     'zsh_reload',  # reload zsh when install program
