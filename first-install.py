@@ -108,7 +108,7 @@ SEP = '========================================================================'
 def main():
     prompt = 'Install editor config! v for vim, e for emacs, a for all: '
 
-    flag = sys.argv[1] if len(sys.argv) > 1 else raw_input(prompt)
+    flag = sys.argv[1] if len(sys.argv) > 1 else input(prompt)
     if not flag or flag not in 've':
         flag = 'n'
     for conf in INSTALL_LIST:
