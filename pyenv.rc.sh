@@ -4,6 +4,8 @@ if which pyenv > /dev/null; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
     alias pydep="pip freeze > requirements.txt"
+    alias py2="pyenv local $(pyenv versions | grep "  2.7.*$" | tail -1) > /dev/null && python"
+    alias py3="pyenv local $(pyenv versions | grep "  3.5.*$" | tail -1) > /dev/null && python"
 fi
 
 export FLASK_APP="run.py"
