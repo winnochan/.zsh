@@ -3,7 +3,7 @@ source ~/.zshrc.d/cmd.rc.sh
 source ~/.zshrc.d/emacs.rc.sh
 # source ~/.zshrc.d/gvm.rc.sh
 source ~/.zshrc.d/goenv.rc.sh
-source ~/.zshrc.d/jenv.rc.sh
+# source ~/.zshrc.d/jenv.rc.sh
 # source ~/.zshrc.d/nvm.rc.sh
 source ~/.zshrc.d/pyenv.rc.sh
 source ~/.zshrc.d/q1.rc.sh
