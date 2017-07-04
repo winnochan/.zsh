@@ -16,3 +16,12 @@ alias cm2="sudo sysctl vm.drop_caches=2"
 alias cm3="sudo sysctl vm.drop_caches=3"
 
 alias upa="sh ~/.zshrc.d/upgrade-all.sh"
+
+# 文件字符串搜索
+alias fh="find . -name \"*.h\" | xargs grep"
+alias fc="find . -name \"*.c\" | xargs grep"
+alias fch="find . -name \"*.[ch]\" | xargs grep"
+alias fpy="find . -name \"*.py\" | xargs grep"
+
+alias rch="find . -name '*.[ch]' | xargs sed -i 's/$1/$2/g'"
+alias test_args="echo $1 $2"
