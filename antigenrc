@@ -1,9 +1,0 @@
-antigen use oh-my-zsh
-
-antigen bundle git
-
-# antigen bundle hchbaw/auto-fu.zsh
-
-antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
-
-antigen apply
