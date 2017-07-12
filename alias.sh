@@ -45,9 +45,11 @@ alias rch="find . -name '*.[ch]' | xargs sed -i 's/$1/$2/g'"
 alias rpy="find . -name '*.[py]' | xargs sed -i 's/$1/$2/g'"
 
 # Python 指令
-alias py2="pyenv local $(pyenv versions | grep "  2.7.*$" | tail -1) > /dev/null && python"
-alias py3="pyenv local $(pyenv versions | grep "  3.5.*$" | tail -1) > /dev/null && python"
-alias pfr="pip freeze > requirements.txt"
+if command -v pyenv >/dev/null 2>&1; then
+    alias py2="pyenv local $(pyenv versions | grep "  2.7.*$" | tail -1) > /dev/null && python"
+    alias py3="pyenv local $(pyenv versions | grep "  3.5.*$" | tail -1) > /dev/null && python"
+    alias pfr="pip freeze > requirements.txt"
+fi
 
 # Shadowsocks 指令
 alias ssnum="sudo lsof -i -n -P | egrep -c ':1080.+ESTABLISHED'"

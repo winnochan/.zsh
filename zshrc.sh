@@ -1,8 +1,3 @@
-export LC_ALL="en_US.UTF-8"
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-export ANTIGEN_PLUGIN_UPDATE_DAYS=1
-export ANTIGEN_SYSTEM_UPDATE_DAYS=1
-
 export ZSH_CUSTOM=$(cd "$(dirname "$0")"; pwd)
 export ZSH_PLUGIN=$ZSH_CUSTOM/plugins
 
