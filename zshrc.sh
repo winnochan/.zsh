@@ -5,6 +5,7 @@ source $ZSH_CUSTOM/antigen.zsh
 
 antigen use oh-my-zsh
 
+# oh-my-zsh plugins
 antigen bundle autojump
 antigen bundle git
 antigen bundle last-working-dir
@@ -12,11 +13,11 @@ antigen bundle per-directory-history
 antigen bundle zsh-completion-generator
 antigen bundle zsh_reload
 
-# antigen bundle hchbaw/auto-fu.zsh
+# git repo
 antigen bundle djui/alias-tips
-# antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle hlissner/zsh-autopair
 antigen bundle zsh-users/zsh-autosuggestions
+
 # must the end of other plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 
