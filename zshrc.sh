@@ -20,7 +20,7 @@ antigen bundle zsh_reload
 
 # antigen bundle hchbaw/auto-fu.zsh
 antigen bundle djui/alias-tips
-antigen bundle unixorn/autoupdate-antigen.zshplugin
+# antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle hlissner/zsh-autopair
 antigen bundle zsh-users/zsh-autosuggestions
 # must the end of other plugins
