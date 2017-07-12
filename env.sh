@@ -1,5 +1,6 @@
 export EDITOR="emacsclient -t -a vim"
 export SPACESHIP_TIME_SHOW=true
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 # GoEnv
 export GOENV="$HOME/.goenv"
