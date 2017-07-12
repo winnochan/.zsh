@@ -24,7 +24,7 @@ export PYENV="$HOME/.pyenv"
 export PATH="$PYENV/bin:$PATH"
 if command -v pyenv >/dev/null 2>&1; then
     eval "$(pyenv init -)"
-    # eval "$(pyenv virtualenv-init -)"
+    eval "$(pyenv virtualenv-init -)"
 fi
 
 # RbEnv
