@@ -4,6 +4,10 @@ export SPACESHIP_TIME_SHOW=true
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
+# Autojump
+export AUTOJUMP="$HOME/.autojump"
+export PATH="$AUTOJUMP/bin:$PATH"
+
 # GoEnv
 export GOENV="$HOME/.goenv"
 export GOPATH="$HOME/.gopath"
