@@ -7,6 +7,9 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 # Autojump
 export AUTOJUMP="$HOME/.autojump"
 export PATH="$AUTOJUMP/bin:$PATH"
+if command -v autojump >/dev/null 2>&1; then
+    source $AUTOJUMP/etc/profile.d/autojump.sh
+fi
 
 # GoEnv
 export GOENV="$HOME/.goenv"

@@ -6,7 +6,6 @@ source $ZSH_CUSTOM/antigen.zsh
 antigen use oh-my-zsh
 
 # oh-my-zsh plugins
-antigen bundle autojump
 antigen bundle git
 antigen bundle last-working-dir
 antigen bundle per-directory-history
