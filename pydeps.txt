@@ -1,0 +1,7 @@
+autoflake
+isort
+jedi
+json-rpc
+openpyxl
+service_factory
+yapf
