@@ -1,7 +1,9 @@
 autoflake
+flake8
 isort
 jedi
 json-rpc
 openpyxl
+pylint
 service_factory
 yapf
