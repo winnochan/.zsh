@@ -1,9 +1,13 @@
 autoflake
+django==1.3.1
 flake8
 isort
 jedi
 json-rpc
 openpyxl
+pycscope
+pymongo
 pylint
 service_factory
+xlrd
 yapf
