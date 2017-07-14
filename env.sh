@@ -3,6 +3,8 @@ export EDITOR="emacsclient -t -a vim"
 export SPACESHIP_TIME_SHOW=true
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+# export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+# export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 # Autojump
 export AUTOJUMP="$HOME/.autojump"
