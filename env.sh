@@ -42,3 +42,11 @@ export PATH="$PYENV/bin:$PATH"
 if command -v rbenv >/dev/null 2>&1; then
     eval "$(rbenv init -)"
 fi
+
+# RsEnv
+export RSENV="$HOME/.rsenv"
+export CARGO="$HOME/.cargo"
+export PATH="$RSENV/bin:$CARGO/bin:$PATH"
+if command -v rsenv >/dev/null 2>&1; then
+    eval "$(rsenv init -)"
+fi
