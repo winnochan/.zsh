@@ -5,7 +5,6 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 # export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 # export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
-export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
 # Autojump
 export AUTOJUMP="$HOME/.autojump"
@@ -50,4 +49,9 @@ export CARGO="$HOME/.cargo"
 export PATH="$RSENV/bin:$CARGO/bin:$PATH"
 if command -v rsenv >/dev/null 2>&1; then
     eval "$(rsenv init -)"
+fi
+
+if command -v rustup >/dev/null 2>&1; then
+   rustup_default_host=$(rustup toolchain list | cut -d ' ' -f 1)
+   export RUST_SRC_PATH="$HOME/.rustup/toolchains/$rustup_default_host/lib/rustlib/src/rust/src"
 fi
