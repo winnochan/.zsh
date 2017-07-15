@@ -52,3 +52,4 @@ fi
 echo "source $current_dir/zshrc.sh" > $HOME/.zshrc
 echo "source $current_dir/env.sh" >> $HOME/.zshrc
 echo "source $current_dir/alias.sh" >> $HOME/.zshrc
+echo "fpath+=$current_dir" >> $HOME/.zshrc
