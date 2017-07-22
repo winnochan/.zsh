@@ -1,7 +1,7 @@
-export ZSH_CUSTOM=$(cd "$(dirname "$0")"; pwd)
-export ZSH_PLUGIN=$ZSH_CUSTOM/plugins
+current_dir=$(cd "$(dirname "$0")"; pwd)
+plugins_dir=$current_dir/plugins
 
-source $ZSH_CUSTOM/antigen.zsh
+source $current_dir/antigen.zsh
 
 antigen use oh-my-zsh
 
