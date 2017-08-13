@@ -55,3 +55,6 @@ if command -v rustup >/dev/null 2>&1; then
    rustup_default_host=$(rustup toolchain list | cut -d ' ' -f 1)
    export RUST_SRC_PATH="$HOME/.rustup/toolchains/$rustup_default_host/lib/rustlib/src/rust/src"
 fi
+
+# iterm2 integration
+source ~/.iterm2_shell_integration.`basename $SHELL`
