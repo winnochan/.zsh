@@ -56,5 +56,9 @@ if command -v rustup >/dev/null 2>&1; then
    export RUST_SRC_PATH="$HOME/.rustup/toolchains/$rustup_default_host/lib/rustlib/src/rust/src"
 fi
 
+# sqlite3
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
 # iterm2 integration
 source ~/.iterm2_shell_integration.`basename $SHELL`
