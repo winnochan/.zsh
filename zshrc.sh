@@ -13,6 +13,11 @@ antigen bundle zsh-completion-generator
 antigen bundle zsh_reload
 
 # git repo
+# antigen bundle zdharma/zui
+# antigen bundle zdharma/zredis
+# antigen bundle zdharma/zbrowse
+# antigen bundle zdharma/fast-syntax-highlighting
+# antigen bundle psprint/history-search-multi-word
 antigen bundle djui/alias-tips
 antigen bundle hlissner/zsh-autopair
 antigen bundle zsh-users/zsh-autosuggestions

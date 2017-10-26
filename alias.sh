@@ -11,6 +11,8 @@ alias -s rs="emacsclient -t -a vim"
 alias -s json="emacsclient -t -a vim"
 alias -s ini="emacsclient -t -a vim"
 
+alias dyfake="DYLD_INSERT_LIBRARIES=/usr/local/lib/faketime/libfaketime.1.dylib && DYLD_FORCE_FLAT_NAMESPACE=1 && faketime"
+
 # Q1项目指令
 engine="../engine/engine.nostrip"
 alias c="$engine -l ./ -r"
@@ -51,8 +53,8 @@ alias flog="find . -name '*.log' | xargs grep"
 alias fpy="find . -name '*.py' | xargs grep"
 
 # 字符串替换
-alias rch="find . -name '*.[ch]' | xargs sed -i 's/$1/$2/g'"
-alias rpy="find . -name '*.[py]' | xargs sed -i 's/$1/$2/g'"
+alias rch="find . -name \"*.[ch]\" | xargs sed -i \"s/$1/$2/g\""
+alias rpy="find . -name \"*.[py]\" | xargs sed -i \"s/$1/$2/g\""
 
 # Python 指令
 if command -v pyenv >/dev/null 2>&1; then
