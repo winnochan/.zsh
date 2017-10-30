@@ -8,46 +8,58 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 export GTAGSLABEL=pygments
 
 # Autojump
-export AUTOJUMP="$HOME/.autojump"
-export PATH="$AUTOJUMP/bin:$PATH"
+AUTOJUMP="$HOME/.autojump"
+if [ -d "$AUTOJUMP" ]; then
+    export PATH="$AUTOJUMP/bin:$PATH"
+fi
 if command -v autojump >/dev/null 2>&1; then
     source $AUTOJUMP/etc/profile.d/autojump.sh
 fi
 
 # GoEnv
-export GOENV="$HOME/.goenv"
-export GOPATH="$HOME/.gopath"
-export PATH="$GOENV/bin:$GOPATH/bin:$PATH"
+GOENV="$HOME/.goenv"
+GOPATH="$HOME/.gopath"
+if [ -d "$GOENV" ]; then
+    export PATH="$GOENV/bin:$GOPATH/bin:$PATH"
+fi
 if command -v goenv >/dev/null 2>&1; then
     eval "$(goenv init -)"
 fi
 
 # JEnv
-export JENV="$HOME/.jenv"
-export PATH="$JENV/bin:$PATH"
+JENV="$HOME/.jenv"
+if [ -d "$JENV" ]; then
+    export PATH="$JENV/bin:$PATH"
+fi
 if command -v jenv >/dev/null 2>&1; then
     eval "$(jenv init -)"
 fi
 
 # PyEnv
-export PYENV="$HOME/.pyenv"
-export PATH="$PYENV/bin:$PATH"
+PYENV="$HOME/.pyenv"
+if [ -d "$PYENV" ]; then
+    export PATH="$PYENV/bin:$PATH"
+fi
 if command -v pyenv >/dev/null 2>&1; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
 
 # RbEnv
-export RBENV="$HOME/.rbenv"
-export PATH="$PYENV/bin:$PATH"
+RBENV="$HOME/.rbenv"
+if [ -d "$RBENV" ]; then
+   export PATH="$PYENV/bin:$PATH"
+fi
 if command -v rbenv >/dev/null 2>&1; then
     eval "$(rbenv init -)"
 fi
 
 # RsEnv
-export RSENV="$HOME/.rsenv"
-export CARGO="$HOME/.cargo"
-export PATH="$RSENV/bin:$CARGO/bin:$PATH"
+RSENV="$HOME/.rsenv"
+CARGO="$HOME/.cargo"
+if [ -d "$RSENV" ]; then
+    export PATH="$RSENV/bin:$CARGO/bin:$PATH"
+fi
 if command -v rsenv >/dev/null 2>&1; then
     eval "$(rsenv init -)"
 fi
@@ -58,8 +70,10 @@ if command -v rustup >/dev/null 2>&1; then
 fi
 
 # sqlite3
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+# export PATH="/usr/local/opt/sqlite/bin:$PATH"
+# export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # iterm2 integration
-source ~/.iterm2_shell_integration.`basename $SHELL`
+if [[ "$(uname)" == "Darwin" ]]; then
+    source ~/.iterm2_shell_integration.`basename $SHELL`
+fi
