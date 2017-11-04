@@ -6,7 +6,7 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 export GTAGSLABEL=pygments
-export ALL_PROXY=socks5://127.0.0.1:1086
+# export ALL_PROXY=socks5://127.0.0.1:1086
 
 # Autojump
 AUTOJUMP="$HOME/.autojump"
@@ -27,14 +27,21 @@ if command -v goenv >/dev/null 2>&1; then
     eval "$(goenv init -)"
 fi
 
+# JAVA_HOME
+if [ -d "/Library/Java/Home" ]; then
+    export JAVA_HOME="/Library/Java/Home"
+    export PATH="$JAVA_HOME/bin:$PATH"
+    export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
+fi
+
 # JEnv
-JENV="$HOME/.jenv"
-if [ -d "$JENV" ]; then
-    export PATH="$JENV/bin:$PATH"
-fi
-if command -v jenv >/dev/null 2>&1; then
-    eval "$(jenv init -)"
-fi
+# JENV="$HOME/.jenv"
+# if [ -d "$JENV" ]; then
+#     export PATH="$JENV/bin:$PATH"
+# fi
+# if command -v jenv >/dev/null 2>&1; then
+#     eval "$(jenv init -)"
+# fi
 
 # PyEnv
 PYENV="$HOME/.pyenv"
@@ -77,9 +84,4 @@ fi
 # iterm2 integration
 if [[ "$(uname)" == "Darwin" ]]; then
     source ~/.iterm2_shell_integration.`basename $SHELL`
-fi
-
-JAVA_CMD_DIR="/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands"
-if [ -d "$JAVA_CMD_DIR" ] && command -v $JAVA_CMD_DIR/java_home >/dev/null 2>&1; then
-    export JAVA_HOME=$($JAVA_CMD_DIR/java_home)
 fi
