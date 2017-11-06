@@ -14,7 +14,7 @@ antigen bundle extract
 antigen bundle git
 antigen bundle last-working-dir
 antigen bundle per-directory-history
-# antigen bundle pyenv
+antigen bundle pyenv
 # antigen bundle ssh-agent
 antigen bundle sudo
 # antigen bundle svn

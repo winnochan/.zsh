@@ -35,7 +35,7 @@ alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 
 # Emacs 指令
-alias ed="emacs --daemon"
+# alias ed="emacs --daemon"
 alias e="emacsclient -t -a vim"
 
 # Linux 常用指令
@@ -44,17 +44,17 @@ alias k2="kill -2"
 alias k9="kill -9"
 
 # 字符串搜索
-alias fall="find . -name '*' | xargs grep"
-alias fh="find . -name '*.h' | xargs grep"
-alias fc="find . -name '*.c' | xargs grep"
-alias fch="find . -name '*.[ch]' | xargs grep"
-alias fcpp="find . -name '*.cpp' | xargs grep"
-alias flog="find . -name '*.log' | xargs grep"
-alias fpy="find . -name '*.py' | xargs grep"
+# alias fall="find . -name '*' | xargs grep"
+# alias fh="find . -name '*.h' | xargs grep"
+# alias fc="find . -name '*.c' | xargs grep"
+# alias fch="find . -name '*.[ch]' | xargs grep"
+# alias fcpp="find . -name '*.cpp' | xargs grep"
+# alias flog="find . -name '*.log' | xargs grep"
+# alias fpy="find . -name '*.py' | xargs grep"
 
 # 字符串替换
-alias rch="find . -name \"*.[ch]\" | xargs sed -i \"s/$1/$2/g\""
-alias rpy="find . -name \"*.[py]\" | xargs sed -i \"s/$1/$2/g\""
+# alias rch="find . -name \"*.[ch]\" | xargs sed -i \"s/$1/$2/g\""
+# alias rpy="find . -name \"*.[py]\" | xargs sed -i \"s/$1/$2/g\""
 
 # Python 指令
 if command -v pyenv >/dev/null 2>&1; then
