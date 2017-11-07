@@ -18,6 +18,15 @@ export GTAGSLABEL=pygments
 #     eval "$(goenv init -)"
 # fi
 
+# NodeEnv
+NENV="$HOME/.nenv"
+if [ -d "$NENV" ]; then
+    export PATH="$NENV/bin:$PATH"
+fi
+if command -v nenv >/dev/null 2>&1; then
+    eval "$(nenv init -)"
+fi
+
 # JAVA_HOME
 if [ -d "/Library/Java/Home" ]; then
     export JAVA_HOME="/Library/Java/Home"
