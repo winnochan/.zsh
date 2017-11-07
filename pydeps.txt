@@ -6,6 +6,7 @@ jedi
 json-rpc
 openpyxl
 pycscope
+pygments
 pymongo
 pylint
 service_factory

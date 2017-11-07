@@ -1,18 +1,3 @@
-alias -s gz="tar -zxvf"
-alias -s tgz="tar -zxvf"
-alias -s zip="unzip"
-alias -s bz2="tar -xjvf"
-alias -s h="emacsclient -t -a vim"
-alias -s c="emacsclient -t -a vim"
-alias -s cpp="emacsclient -t -a vim"
-# alias -s py="emacsclient -t -a vim"
-alias -s rs="emacsclient -t -a vim"
-# alias -s js="emacsclient -t -a vim"
-alias -s json="emacsclient -t -a vim"
-alias -s ini="emacsclient -t -a vim"
-
-alias dyfake="DYLD_INSERT_LIBRARIES=/usr/local/lib/faketime/libfaketime.1.dylib && DYLD_FORCE_FLAT_NAMESPACE=1 && faketime"
-
 # Q1项目指令
 engine="../engine/engine.nostrip"
 alias c="$engine -l ./ -r"
@@ -31,9 +16,8 @@ alias 127="ssh 127"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
-alias .......="cd ../../../../../.."
 
+alias j="z"
 # Emacs 指令
 # alias ed="emacs --daemon"
 alias e="emacsclient -t -a vim"
@@ -56,14 +40,7 @@ alias k9="kill -9"
 # alias rch="find . -name \"*.[ch]\" | xargs sed -i \"s/$1/$2/g\""
 # alias rpy="find . -name \"*.[py]\" | xargs sed -i \"s/$1/$2/g\""
 
-# Python 指令
-if command -v pyenv >/dev/null 2>&1; then
-    alias py2="pyenv local $(pyenv versions | grep "  2.7.*$" | tail -1) > /dev/null && python"
-    alias py3="pyenv local $(pyenv versions | grep "  3.6.*$" | tail -1) > /dev/null && python"
-    alias pfr="pip freeze > requirements.txt"
-fi
-
 # Shadowsocks 指令
-alias ssnum="sudo lsof -i -n -P | egrep -c ':1080.+ESTABLISHED'"
-alias sslist="sudo lsof -i -n -P | egrep ':1080.+ESTABLISHED'"
-alias ss="ssserver -c /etc/shadowsocks.json -d"
+# alias ssnum="sudo lsof -i -n -P | egrep -c ':1080.+ESTABLISHED'"
+# alias sslist="sudo lsof -i -n -P | egrep ':1080.+ESTABLISHED'"
+# alias ss="ssserver -c /etc/shadowsocks.json -d"
