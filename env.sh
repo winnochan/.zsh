@@ -8,7 +8,7 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 export GTAGSLABEL=pygments
 # export ALL_PROXY=socks5://127.0.0.1:1086
 
-GoEnv
+# GoEnv
 GOENV="$HOME/.goenv"
 GOPATH="$HOME/.gopath"
 if [ -d "$GOENV" ]; then
