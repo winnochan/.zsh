@@ -16,7 +16,7 @@ antigen bundle last-working-dir
 antigen bundle per-directory-history
 antigen bundle pyenv
 # antigen bundle ssh-agent
-antigen bundle sudo
+# antigen bundle sudo
 # antigen bundle svn
 # antigen bundle svn-fast-info
 # antigen bundle swiftpm
