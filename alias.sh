@@ -17,7 +17,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias j="z"
 # Emacs 指令
 # alias ed="emacs --daemon"
 alias e="emacsclient -t -a vim"
@@ -41,6 +40,6 @@ alias k9="kill -9"
 # alias rpy="find . -name \"*.[py]\" | xargs sed -i \"s/$1/$2/g\""
 
 # Shadowsocks 指令
-# alias ssnum="sudo lsof -i -n -P | egrep -c ':1080.+ESTABLISHED'"
-# alias sslist="sudo lsof -i -n -P | egrep ':1080.+ESTABLISHED'"
-# alias ss="ssserver -c /etc/shadowsocks.json -d"
+alias ssnum="sudo lsof -i -n -P | egrep -c ':1080.+ESTABLISHED'"
+alias sslist="sudo lsof -i -n -P | egrep ':1080.+ESTABLISHED'"
+alias ss="ssserver -c /etc/shadowsocks.json -d"
