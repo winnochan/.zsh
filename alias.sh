@@ -43,3 +43,6 @@ alias k9="kill -9"
 alias ssnum="sudo lsof -i -n -P | egrep -c ':1080.+ESTABLISHED'"
 alias sslist="sudo lsof -i -n -P | egrep ':1080.+ESTABLISHED'"
 alias ss="ssserver -c /etc/shadowsocks.json -d"
+
+# rg
+alias rgi="rg -i"
