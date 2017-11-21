@@ -1,6 +1,6 @@
 # Q1项目指令
 engine="../engine/engine.nostrip"
-# alias c="$engine -l . -r"
+alias run="$engine -l . -r"
 alias c="$engine -l . -r cmd/wizcmds/update.c -O"
 alias mb="$engine -l . -b"
 alias mu="make upcode"
