@@ -8,12 +8,12 @@ antigen use oh-my-zsh
 # oh-my-zsh plugins
 # antigen bundle autojump
 # antigen bundle brew
-# antigen bundle colored-man-pages
-# antigen bundle encode64
-# antigen bundle extract
-# antigen bundle git
-# antigen bundle last-working-dir
-# antigen bundle per-directory-history
+antigen bundle colored-man-pages
+antigen bundle encode64
+antigen bundle extract
+antigen bundle git
+antigen bundle last-working-dir
+antigen bundle per-directory-history
 # antigen bundle pyenv
 # antigen bundle ssh-agent
 # antigen bundle sudo
@@ -21,19 +21,19 @@ antigen use oh-my-zsh
 # antigen bundle svn-fast-info
 # antigen bundle swiftpm
 # antigen bundle systemadmin
-# antigen bundle tig
+antigen bundle tig
 # antigen bundle tmux
 # antigen bundle virtualenv
 # antigen bundle virtualenvwrapper
 # antigen bundle zsh-completion-generator
-# antigen bundle zsh_reload
+antigen bundle zsh_reload
 
 # git repo
 # antigen bundle zdharma/zui
 # antigen bundle zdharma/zredis
 # antigen bundle zdharma/zbrowse
 # antigen bundle zdharma/fast-syntax-highlighting
-# antigen bundle psprint/history-search-multi-word
+antigen bundle psprint/history-search-multi-word
 
 antigen bundle djui/alias-tips
 antigen bundle hlissner/zsh-autopair

@@ -17,10 +17,10 @@ if command -v goenv >/dev/null 2>&1; then
     eval "$(goenv init -)"
 fi
 
-# nenv
-export PATH="$PATH:$HOME/.nenv/bin"
-if command -v nenv >/dev/null 2>&1; then
-    eval "$(nenv init -)"
+# nodenv
+export PATH="$PATH:$HOME/.nodenv/bin"
+if command -v nodenv >/dev/null 2>&1; then
+    eval "$(nodenv init -)"
 fi
 
 # java

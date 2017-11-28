@@ -12,9 +12,11 @@ if [ ! -d "$HOME/.goenv" ]; then
     git clone https://github.com/syndbg/goenv.git $HOME/.goenv
 fi
 
-# check nenv
-if [ ! -d "$HOME/.nenv" ]; then
-    git clone https://github.com/ryuone/nenv.git $HOME/.nenv
+# check nodenv
+if [ ! -d "$HOME/.nodenv" ]; then
+    git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+    cd $HOME/.nodenv && src/configure && make -C src
+    cd $current_dir
 fi
 
 # check pyenv
@@ -47,7 +49,7 @@ fi
 echo "source $current_dir/login.sh" > $HOME/.zlogin
 echo "source $current_dir/logout.sh" > $HOME/.zlogout
 echo "source $HOME/.zprezto/init.zsh" > $HOME/.zshrc
-echo "source $current_dir/alias.sh" > $HOME/.zshrc
+echo "source $current_dir/alias.sh" >> $HOME/.zshrc
 echo "source $current_dir/env.sh" > $HOME/.zprofile
 echo "source $HOME/.zprofile" > $HOME/.zshenv
-echo "source $current_dir/zpreztorc" > $HOME/.zpreztorc
+echo "source $current_dir/prezto.sh" > $HOME/.zpreztorc
