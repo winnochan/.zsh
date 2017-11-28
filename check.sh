@@ -1,10 +1,10 @@
-current_dir=$(cd $(dirname "$0"); pwd)
+file_dir=$(cd $(dirname "$0"); pwd)
 
 # check autojump
 if [ ! -d "$HOME/.autojump" ]; then
-    git clone https://github.com/wting/autojump.git $current_dir/autojump
-    cd $current_dir/autojump && python install.py && cd ..
-    rm -rf $current_dir/autojump
+    git clone https://github.com/wting/autojump.git $file_dir/autojump
+    cd $file_dir/autojump && python install.py && cd ..
+    rm -rf $file_dir/autojump
 fi
 
 # check goenv
@@ -13,9 +13,13 @@ if [ ! -d "$HOME/.goenv" ]; then
 fi
 
 # check nodenv
-if [ ! -d "$HOME/.nodenv" ]; then
-    git clone https://github.com/nodenv/nodenv.git ~/.nodenv
-    cd $HOME/.nodenv && src/configure && make -C src
+nodenv_root="$HOME/.nodenv"
+if [ ! -d "$nodenv_root" ]; then
+    git clone https://github.com/nodenv/nodenv.git $nodenv_root
+    git clone https://github.com/nodenv/node-build.git $nodenv_root/plugins/node-build
+    git clone https://github.com/nodenv/nodenv-update.git $nodenv_root/plugins/nodenv-update
+    current_dir="$(pwd)"
+    cd $nodenv_root && src/configure && make -C src
     cd $current_dir
 fi
 
@@ -46,10 +50,10 @@ if [ ! -d "$HOME/.zprezto" ]; then
     git clone --recursive https://github.com/sorin-ionescu/prezto.git $HOME/.zprezto
 fi
 
-echo "source $current_dir/login.sh" > $HOME/.zlogin
-echo "source $current_dir/logout.sh" > $HOME/.zlogout
+echo "source $file_dir/login.sh" > $HOME/.zlogin
+echo "source $file_dir/logout.sh" > $HOME/.zlogout
 echo "source $HOME/.zprezto/init.zsh" > $HOME/.zshrc
-echo "source $current_dir/alias.sh" >> $HOME/.zshrc
-echo "source $current_dir/env.sh" > $HOME/.zprofile
+echo "source $file_dir/alias.sh" >> $HOME/.zshrc
+echo "source $file_dir/env.sh" > $HOME/.zprofile
 echo "source $HOME/.zprofile" > $HOME/.zshenv
-echo "source $current_dir/prezto.sh" > $HOME/.zpreztorc
+echo "source $file_dir/prezto.sh" > $HOME/.zpreztorc
