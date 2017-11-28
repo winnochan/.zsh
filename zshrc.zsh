@@ -4,7 +4,7 @@ source $ZPLUG_HOME/init.zsh
 
 zmodload zsh/zprof
 
-zplug "zplug/zplug", hook-build:"zplug --self-manage"
+# zplug "zplug/zplug", hook-build:"zplug --self-manage"
 
 # plugins from prezto
 zplug "sorin-ionescu/prezto", use:"init.zsh", \
