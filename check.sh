@@ -50,10 +50,5 @@ if [ ! -d "$HOME/.zprezto" ]; then
     git clone --recursive https://github.com/sorin-ionescu/prezto.git $HOME/.zprezto
 fi
 
-echo "source $file_dir/login.sh" > $HOME/.zlogin
-echo "source $file_dir/logout.sh" > $HOME/.zlogout
-echo "source $HOME/.zprezto/init.zsh" > $HOME/.zshrc
-echo "source $file_dir/alias.sh" >> $HOME/.zshrc
-echo "source $file_dir/env.sh" > $HOME/.zprofile
-echo "source $HOME/.zprofile" > $HOME/.zshenv
-echo "source $file_dir/prezto.sh" > $HOME/.zpreztorc
+echo "source $file_dir/zshrc.zsh" > $HOME/.zshrc
+echo "source $file_dir/zshenv.zsh" > $HOME/.zshenv

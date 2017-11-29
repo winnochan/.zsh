@@ -55,3 +55,6 @@ if zplug check b4b4r07/enhancd; then
     # setting if enhancd is available
     export ENHANCD_FILTER=fzy
 fi
+
+# custom alias
+source $ZSH_HOME/alias.zsh
