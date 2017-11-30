@@ -46,8 +46,9 @@ if [ ! -d "$HOME/.rustup" ]; then
     curl https://sh.rustup.rs -sSf | sh
 fi
 
-if [ ! -d "$HOME/.zprezto" ]; then
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git $HOME/.zprezto
+# check scala
+if [ ! -d "$HOME/.scalaenv" ]; then
+    git clone git://github.com/scalaenv/scalaenv.git $HOME/.scalaenv
 fi
 
 echo "source $file_dir/zshrc.zsh" > $HOME/.zshrc
