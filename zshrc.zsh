@@ -72,7 +72,7 @@ export LC_ALL="en_US.UTF-8"
 export GTAGSLABEL=pygments
 export SPACESHIP_TIME_SHOW=true
 export EDITOR="emacsclient -t -a vim"
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=1'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=9'
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
