@@ -1,3 +1,4 @@
+export LC_ALL="en_US.UTF-8"
 export ZSH_HOME=$(cd "$(dirname "$0")"; pwd)
 export ZPLUG_HOME=$ZSH_HOME/zplug
 source $ZPLUG_HOME/init.zsh
@@ -22,7 +23,7 @@ zplug "zsh-users/zsh-history-substring-search"
 # must the end of other plugins
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-zplug "robbyrussell/oh-my-zsh", \
+zplug "robbyrussell/oh-my-zsh", from:oh-my-zsh, \
       hook-build:"ln -s $ZPLUG_HOME/repos/robbyrussell/oh-my-zsh ~/.oh-my-zsh"
 if zplug check robbyrussell/oh-my-zsh; then
     source $ZSH_HOME/ohmyzsh.zsh
@@ -68,7 +69,6 @@ fi
 # custom alias
 source $ZSH_HOME/alias.zsh
 
-export LC_ALL="en_US.UTF-8"
 export GTAGSLABEL=pygments
 export SPACESHIP_TIME_SHOW=true
 export EDITOR="emacsclient -t -a vim"
