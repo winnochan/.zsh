@@ -65,8 +65,35 @@ if zplug check b4b4r07/enhancd; then
     export ENHANCD_FILTER=fzy
 fi
 
-# custom settings
-# set -o emacs
-bindkey -e
 # custom alias
 source $ZSH_HOME/alias.zsh
+
+export LC_ALL="en_US.UTF-8"
+export GTAGSLABEL=pygments
+export SPACESHIP_TIME_SHOW=true
+export EDITOR="emacsclient -t -a vim"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=1'
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+
+# goenv
+if command -v goenv >/dev/null 2>&1; then
+    eval "$(goenv init -)"
+fi
+
+# nodenv
+if command -v nodenv >/dev/null 2>&1; then
+    eval "$(nodenv init -)"
+fi
+
+# pyenv
+if command -v pyenv >/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+
+# scalaenv
+if command -v scalaenv >/dev/null 2>&1; then
+    eval "$(scalaenv init -)"
+fi
