@@ -19,7 +19,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Emacs 指令
-# alias ed="emacs --daemon"
+alias ed="emacs --daemon"
 alias e="emacsclient -t -a vim"
 
 # Linux 常用指令
