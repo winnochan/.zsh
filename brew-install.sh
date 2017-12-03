@@ -11,7 +11,7 @@ brew cask install neteasemusic kugoumusic baidunetdisk youku openoffice dash
 brew cask install google-chrome alfred appcleaner box-sync shadowsocksx-ng
 brew cask install typinator android-studio font-go font-go-mono font-go-medium
 brew cask install java8 avast-security sublime-text openemu shiftit teamviewer
-brew cask install youdaodict squirrel boostnote cakebrew
+brew cask install youdaodict squirrel boostnote cakebrew the-unarchiver
 
 brew install tmux --with-utf8proc
 brew install ant --with-bcel --with-ivy
