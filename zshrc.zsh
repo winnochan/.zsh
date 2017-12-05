@@ -51,6 +51,19 @@ zplug "hlissner/zsh-autopair", defer:2
 # theme from github
 # zplug 'denysdovhan/spaceship-zsh-theme', as:theme, use:"spaceship.zsh"
 
+zplug mafredri/zsh-async, from:github
+zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+
+if zplug check sindresorhus/pure; then
+    export PURE_CMD_MAX_EXEC_TIME=5
+    export PURE_GIT_PULL=0
+    export PURE_GIT_UNTRACKED_DIRTY=1
+    # export PURE_GIT_DELAY_DIRTY_CHECK=1
+    export PURE_PROMPT_SYMBOL="Z"
+    export PURE_GIT_DOWN_ARROW="⇣"
+    export PURE_GIT_UP_ARROW="⇡"
+fi
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     zplug install
