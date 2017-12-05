@@ -63,7 +63,6 @@ plugins=(
     git
     last-working-dir
     per-directory-history
-    tib
     zsh_reload
 )
 

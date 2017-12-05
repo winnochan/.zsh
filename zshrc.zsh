@@ -16,10 +16,10 @@ source $ZPLUG_HOME/init.zsh
 # fi
 
 # plugins from zsh-user
-zplug "zsh-users/zaw"
+# zplug "zsh-users/zaw"
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-history-substring-search"
+# zplug "zsh-users/zsh-completions"
+# zplug "zsh-users/zsh-history-substring-search"
 # must the end of other plugins
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
@@ -49,7 +49,7 @@ zplug "b4b4r07/enhancd", use:"init.sh", defer:1
 zplug "hlissner/zsh-autopair", defer:2
 
 # theme from github
-zplug 'denysdovhan/spaceship-zsh-theme', as:theme, use:"spaceship.zsh"
+# zplug 'denysdovhan/spaceship-zsh-theme', as:theme, use:"spaceship.zsh"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -90,7 +90,7 @@ fi
 # pyenv
 if command -v pyenv >/dev/null 2>&1; then
     eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+    # eval "$(pyenv virtualenv-init -)"
 fi
 
 # scalaenv
