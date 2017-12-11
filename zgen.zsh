@@ -15,7 +15,6 @@ if ! zgen saved; then
 
     # from github
     # zgen load djui/alias-tips
-    zgen load hlissner/zsh-autopair
     # zgen load unixorn/autoupdate-zgen
     # zgen load supercrabtree/k
     # zgen load RobSis/zsh-completion-generator
@@ -32,6 +31,7 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-completions
     # zgen load zsh-users/zsh-syntax-highlighting
     zgen load b4b4r07/enhancd
+    zgen load hlissner/zsh-autopair
     zgen load zdharma/fast-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
 
