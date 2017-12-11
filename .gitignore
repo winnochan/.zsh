@@ -1,1 +1,5 @@
+.fasd-init-cache.zsh
+.zsh_history
+.zsh-update
+.zcompdump*
 *.zwc

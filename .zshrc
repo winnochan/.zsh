@@ -1,5 +1,8 @@
-export ZGEN_RESET_ON_CHANGE=($ZSH_HOME/zgen.zsh)
-export ZGEN_DIR=$ZSH_HOME/zgen
+export LC_ALL="en_US.UTF-8"
+export ZSH_DIR=$HOME/.zsh
+export ZGEN_DIR=${ZDOTDIR:-ZSH_DIR}/.zgen
+export ZGEN_RESET_ON_CHANGE=(${ZDOTDIR:-ZSH_DIR}/.zshrc $ZGEN_DIR/init.zsh)
+
 source $ZGEN_DIR/zgen.zsh
 
 # if the init scipt doesn't exist
@@ -39,9 +42,6 @@ if ! zgen saved; then
     zgen save
 fi
 
-# autoload -U compinit && compinit
-
-# # custom config
-source $ZSH_HOME/alias.zsh
-source $ZSH_HOME/custom.zsh
-source $ZSH_HOME/fasd.zsh
+source ${ZDOTDIR:-ZSH_DIR}/alias.zsh
+source ${ZDOTDIR:-ZSH_DIR}/custom.zsh
+source ${ZDOTDIR:-ZSH_DIR}/fasd.zsh
