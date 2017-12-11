@@ -21,8 +21,8 @@ alias .....="cd ../../../.."
 # Emacs 指令
 alias ed="emacs --daemon"
 alias e="emacsclient -t -a vim"
-alias ef="$e $(fzf)"
-alias vf="vim $(fzf)"
+alias ef='emacsclient -t -a vim $(fzf)'
+alias vf='vim $(fzf)'
 
 # Linux 常用指令
 alias tf="tail -f"
