@@ -2,7 +2,7 @@ export ZPLUG_HOME=${ZDOTDIR:-ZSH_DIR}/.zplug
 
 source $ZPLUG_HOME/init.zsh
 
-zplug "robbyrussell/oh-my-zsh", from:oh-my-zsh, use:"oh-my-zsh.sh"
+# zplug "robbyrussell/oh-my-zsh", from:oh-my-zsh, use:"oh-my-zsh.sh"
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/last-working-dir", from:oh-my-zsh
@@ -13,6 +13,7 @@ zplug "plugins/tig", from:oh-my-zsh
 # zgen load supercrabtree/k
 # zgen load RobSis/zsh-completion-generator
 zplug "molovo/tipz"
+zplug "desyncr/key-bindings", use:"key-bindings.plugin.zsh"
 
 # theme
 zplug "mafredri/zsh-async"
