@@ -1,4 +1,4 @@
-export ZPLUG_HOME=${ZDOTDIR:-ZSH_DIR}/.zplug
+export ZPLUG_HOME=${ZDOTDIR:-$ZSH_DIR}/.zplug
 
 source $ZPLUG_HOME/init.zsh
 

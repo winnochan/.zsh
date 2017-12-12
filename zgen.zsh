@@ -1,4 +1,4 @@
-export ZGEN_DIR=${ZDOTDIR:-ZSH_DIR}/.zgen
+export ZGEN_DIR=${ZDOTDIR:-$ZSH_DIR}/.zgen
 export ZGEN_RESET_ON_CHANGE=($ZSH_DIR/zgen.zsh)
 
 source $ZGEN_DIR/zgen.zsh
