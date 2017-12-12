@@ -1,6 +1,6 @@
 # autojump
-autojump_sh="$HOME/.autojump/etc/profile.d/autojump.sh"
-[[ -s $autojump_sh ]] && source $autojump_sh
+# autojump_sh="$HOME/.autojump/etc/profile.d/autojump.sh"
+# [[ -s $autojump_sh ]] && source $autojump_sh
 
 # goenv
 export GOPATH="$HOME/.gopath"
