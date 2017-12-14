@@ -10,7 +10,15 @@ export EDITOR="emacsclient -t -a vim"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=9'
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+
+# brew
+if command -v brew >/dev/null 2>&1; then
+    if [ "$(uname)" = "Darwin" ]; then
+        export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+    elif [ "$(uname)" = "Linux" ]; then
+        export HOMEBREW_BUILD_FROM_SOURCE=1
+    fi
+fi
 
 # goenv
 if command -v goenv >/dev/null 2>&1; then

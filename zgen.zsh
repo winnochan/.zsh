@@ -3,7 +3,7 @@ export ZGEN_RESET_ON_CHANGE=($ZSH_DIR/zgen.zsh)
 
 source $ZGEN_DIR/zgen.zsh
 
-export ZSH_FZY_FLAGS=( -l 25 -s -j 4 )
+# export ZSH_FZY_FLAGS=( -l 25 -s -j 4 )
 
 # if the init scipt doesn't exist
 if ! zgen saved; then
@@ -41,7 +41,8 @@ if ! zgen saved; then
     zgen load b4b4r07/enhancd
     # zgen load changyuheng/fz fz.plugin.zsh
     zgen load hlissner/zsh-autopair
-    zgen load zdharma/fast-syntax-highlighting
+    # zgen load zdharma/fast-syntax-highlighting
+    zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
 
     # generate the init script from plugins above
