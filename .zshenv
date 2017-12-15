@@ -1,7 +1,3 @@
-# autojump
-# autojump_sh="$HOME/.autojump/etc/profile.d/autojump.sh"
-# [[ -s $autojump_sh ]] && source $autojump_sh
-
 # brew
 if command -v brew >/dev/null 2>&1; then
     if [ "$(uname)" = "Linux" ]; then
