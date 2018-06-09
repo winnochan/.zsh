@@ -13,12 +13,13 @@ zplug "plugins/tig", from:oh-my-zsh
 # zgen load supercrabtree/k
 # zgen load RobSis/zsh-completion-generator
 zplug "molovo/tipz"
-zplug "desyncr/key-bindings", use:"key-bindings.plugin.zsh"
+# zplug "desyncr/key-bindings", use:"key-bindings.plugin.zsh"
 
 # theme
 zplug "mafredri/zsh-async"
 # zplug "sindresorhus/pure"
 zplug "yardnsm/blox-zsh-theme"
+zplug "seletskiy/zsh-fuzzy-search-and-edit"
 
 # from zsh-user
 zplug "zsh-users/zaw"
