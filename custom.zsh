@@ -3,6 +3,8 @@ export BLOX_CONF__ONELINE=true
 export BLOX_BLOCK__CWD_TRUNC=0
 export BLOX_BLOCK__HOST_USER_SHOW_ALWAYS=true
 export BLOX_BLOCK__HOST_MACHINE_SHOW_ALWAYS=true
+export BLOX_BLOCK__TIME_COLOR='black'
+# export BLOX_BLOCK__PYENV_COLOR='black'
 
 export GTAGSLABEL=pygments
 export SPACESHIP_TIME_SHOW=true

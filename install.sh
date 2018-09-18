@@ -51,5 +51,5 @@ if [ ! -d "$HOME/.scalaenv" ]; then
     git clone git://github.com/scalaenv/scalaenv.git $HOME/.scalaenv
 fi
 
-echo "source $file_dir/zshrc.zsh" > $HOME/.zshrc
-echo "source $file_dir/zshenv.zsh" > $HOME/.zshenv
+echo "source $file_dir/.zshrc" > $HOME/.zshrc
+echo "source $file_dir/.zshenv" > $HOME/.zshenv
