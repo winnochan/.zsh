@@ -1,12 +1,5 @@
 file_dir=$(cd $(dirname "$0"); pwd)
 
-# check autojump
-if [ ! -d "$HOME/.autojump" ]; then
-    git clone https://github.com/wting/autojump.git $file_dir/autojump
-    cd $file_dir/autojump && python install.py && cd ..
-    rm -rf $file_dir/autojump
-fi
-
 # check goenv
 if [ ! -d "$HOME/.goenv" ]; then
     git clone https://github.com/syndbg/goenv.git $HOME/.goenv
