@@ -46,7 +46,7 @@ alias k9="kill -9"
 alias ssnum="sudo lsof -i -n -P | egrep -c ':1080.+ESTABLISHED'"
 alias sslist="sudo lsof -i -n -P | egrep ':1080.+ESTABLISHED'"
 alias ss="ssserver -c /etc/shadowsocks.json -d"
-alias gpac="genpac -p 'SOCKS5 127.0.0.1:1080' --gfwlist-proxy='SOCKS5 127.0.0.1:1080' --output='autoproxy.pac' --gfwlist-url='https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt' --user-rule-from='user-rules.txt'"
+alias gpac="genpac --pac-proxy 'SOCKS5 127.0.0.1:1080' --gfwlist-proxy='SOCKS5 127.0.0.1:1080' --output='autoproxy.pac' --gfwlist-url='https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt' --user-rule-from='user-rules.txt'"
 
 # rg
 alias rgi="rg -i"
