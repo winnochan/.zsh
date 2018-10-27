@@ -5,6 +5,11 @@ if [ ! -d "$HOME/.goenv" ]; then
     git clone https://github.com/syndbg/goenv.git $HOME/.goenv
 fi
 
+# check jenv
+if [ ! -d "$HOME/.jenv" ]; then
+    git clone https://github.com/gcuisinier/jenv.git $HOME/.jenv
+fi
+
 # check nodenv
 nodenv_root="$HOME/.nodenv"
 if [ ! -d "$nodenv_root" ]; then
@@ -42,6 +47,15 @@ fi
 # check scala
 if [ ! -d "$HOME/.scalaenv" ]; then
     git clone git://github.com/scalaenv/scalaenv.git $HOME/.scalaenv
+fi
+
+# check rbenv
+if [ ! -d "$HOME/.rbenv" ]; then
+    git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
+fi
+if [ ! -d "$HOME/.rbenv/plugins/ruby-build" ]; then
+    mkdir -p $HOME/.rbenv/plugins
+    git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build
 fi
 
 echo "source $file_dir/.zshrc" > $HOME/.zshrc

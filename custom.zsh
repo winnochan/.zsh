@@ -31,6 +31,11 @@ if command -v goenv >/dev/null 2>&1; then
     eval "$(goenv init -)"
 fi
 
+# jenv
+if command -v jenv >/dev/null 2>&1; then
+    eval "$(jenv init -)"
+fi
+
 # nodenv
 if command -v nodenv >/dev/null 2>&1; then
     eval "$(nodenv init -)"
@@ -40,6 +45,11 @@ fi
 if command -v pyenv >/dev/null 2>&1; then
     eval "$(pyenv init -)"
     # eval "$(pyenv virtualenv-init -)"
+fi
+
+# rbenv
+if command -v rbenv >/dev/null 2>&1; then
+    eval "$(rbenv init -)"
 fi
 
 # scalaenv

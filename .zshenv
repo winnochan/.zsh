@@ -11,6 +11,9 @@ fi
 export GOPATH="$HOME/.gopath"
 export PATH="$HOME/.goenv/bin:$GOPATH/bin:$PATH"
 
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+
 # nodenv
 export PATH="$HOME/.nodenv/bin:$PATH"
 
@@ -29,6 +32,9 @@ if [ "$(uname)" = "Linux" ]; then
 elif [ "$(uname)" = "Darwin" ]; then
     export PYTHON_CONFIGURE_OPTS="--enable-framework"
 fi
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 # scalaenv
 export PATH="$HOME/.scalaenv/bin:$PATH"
