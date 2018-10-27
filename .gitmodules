@@ -4,3 +4,6 @@
 [submodule ".zplug"]
 	path = .zplug
 	url = https://github.com/zplug/zplug.git
+[submodule ".jetbrains-agent"]
+	path = .jetbrains-agent
+	url = https://gitee.com/pengzhile/jetbrains-agent.git
