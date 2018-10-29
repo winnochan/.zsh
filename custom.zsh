@@ -18,20 +18,30 @@ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 # brew
+if [ "$(uname)" = "Linux" ]; then
+    export PATH="$HOME/.linuxbrew/bin:$PATH"
+fi
 if command -v brew >/dev/null 2>&1; then
+    export MANPATH="$(brew --prefix)/share/man:$MANPATH"
+    export INFOPATH="$(brew --prefix)/share/info:$INFOPATH"
+
+    # zsh completions
+    fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+    # brew repo
     if [ "$(uname)" = "Darwin" ]; then
         export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
     elif [ "$(uname)" = "Linux" ]; then
         export HOMEBREW_BUILD_FROM_SOURCE=1
     fi
-fi
 
-# ccache
-if command -v ccache >/dev/null 2>&1; then
-    if [ "$(uname)" = "Darwin" ]; then
-        export PATH="/usr/local/opt/ccache/libexec:$PATH"
-    elif [ "$(uname)" = "Linux" ]; then
-        export PATH="$HOME/.linuxbrew/opt/ccache/libexec:$PATH"
+    # ccache
+    if command -v ccache >/dev/null 2>&1; then
+        if [ "$(uname)" = "Darwin" ]; then
+            export PATH="/usr/local/opt/ccache/libexec:$PATH"
+        elif [ "$(uname)" = "Linux" ]; then
+            export PATH="$HOME/.linuxbrew/opt/ccache/libexec:$PATH"
+        fi
     fi
 fi
 

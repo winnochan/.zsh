@@ -1,12 +1,3 @@
-# brew
-if command -v brew >/dev/null 2>&1; then
-    if [ "$(uname)" = "Linux" ]; then
-        export PATH="$HOME/.linuxbrew/bin:$PATH"
-        export MANPATH="$(brew --prefix)/share/man:$MANPATH"
-        export INFOPATH="$(brew --prefix)/share/info:$INFOPATH"
-    fi
-fi
-
 # goenv
 export GOPATH="$HOME/.gopath"
 export PATH="$HOME/.goenv/bin:$GOPATH/bin:$PATH"
