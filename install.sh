@@ -5,6 +5,13 @@ if [ ! -d "$HOME/.goenv" ]; then
     git clone https://github.com/syndbg/goenv.git $HOME/.goenv
 fi
 
+# linuxbrew
+if [ "$(uname)" = "Linux" ]; then
+    if [ ! -d "$HOME/.linuxbrew" ]; then
+        git clone https://github.com/Linuxbrew/brew.git $HOME~/.linuxbrew
+    fi
+fi
+
 # check jenv
 if [ ! -d "$HOME/.jenv" ]; then
     git clone https://github.com/gcuisinier/jenv.git $HOME/.jenv
