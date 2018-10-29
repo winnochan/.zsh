@@ -26,6 +26,15 @@ if command -v brew >/dev/null 2>&1; then
     fi
 fi
 
+# ccache
+if command -v ccache >/dev/null 2>&1; then
+    if [ "$(uname)" = "Darwin" ]; then
+        export PATH="/usr/local/opt/ccache/libexec:$PATH"
+    elif [ "$(uname)" = "Linux" ]; then
+        export PATH="$HOME/.linuxbrew/opt/ccache/libexec:$PATH"
+    fi
+fi
+
 # goenv
 if command -v goenv >/dev/null 2>&1; then
     eval "$(goenv init -)"
