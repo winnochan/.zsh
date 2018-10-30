@@ -8,7 +8,7 @@ fi
 # linuxbrew
 if [ "$(uname)" = "Linux" ]; then
     if [ ! -d "$HOME/.linuxbrew" ]; then
-        git clone https://github.com/Linuxbrew/brew.git $HOME~/.linuxbrew
+        git clone https://github.com/Linuxbrew/brew.git $HOME/.linuxbrew
     fi
 fi
 
