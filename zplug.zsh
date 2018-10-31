@@ -4,6 +4,8 @@ source $ZPLUG_HOME/init.zsh
 
 # zplug "robbyrussell/oh-my-zsh", from:oh-my-zsh, use:"oh-my-zsh.sh"
 zplug "plugins/colored-man-pages", from:oh-my-zsh
+zplug "plugins/fasd", from:oh-my-zsh
+zplug "plugins/fzf", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/last-working-dir", from:oh-my-zsh
 zplug "plugins/per-directory-history", from:oh-my-zsh
