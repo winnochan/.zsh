@@ -1,3 +1,8 @@
+#brew
+if [ "$(uname)" = "Linux" ]; then
+    export PATH="$HOME/.linuxbrew/bin:$PATH"
+fi
+
 # goenv
 export GOPATH="$HOME/.gopath"
 export PATH="$HOME/.goenv/bin:$GOPATH/bin:$PATH"

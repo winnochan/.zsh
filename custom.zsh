@@ -18,9 +18,6 @@ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 # brew
-if [ "$(uname)" = "Linux" ]; then
-    export PATH="$HOME/.linuxbrew/bin:$PATH"
-fi
 if command -v brew >/dev/null 2>&1; then
     export MANPATH="$(brew --prefix)/share/man:$MANPATH"
     export INFOPATH="$(brew --prefix)/share/info:$INFOPATH"
