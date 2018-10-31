@@ -42,6 +42,11 @@ if command -v brew >/dev/null 2>&1; then
     fi
 fi
 
+# fasd
+if [ "$(uname)" = "Darwin" ]; then
+    alias o='a -e open_command'
+fi
+
 # goenv
 if command -v goenv >/dev/null 2>&1; then
     eval "$(goenv init -)"
