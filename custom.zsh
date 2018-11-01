@@ -1,4 +1,7 @@
+# enhancd
 export ENHANCD_FILTER=fzy
+
+# zsh theme
 export BLOX_CONF__ONELINE=true
 export BLOX_BLOCK__CWD_TRUNC=0
 export BLOX_BLOCK__HOST_USER_SHOW_ALWAYS=true
@@ -9,11 +12,22 @@ export BLOX_BLOCK__PYENV_COLOR='green'
 export BLOX_BLOCK__VIRTUALENV_COLOR='green'
 export BLOX_BLOCK__TIME_COLOR='green'
 
+# fzf
+export FZF_COMPLETION_TRIGGER=';;'
 
+# gtags
 export GTAGSLABEL=pygments
+
+# spaceship theme
 export SPACESHIP_TIME_SHOW=true
+
+# editor
 export EDITOR="emacsclient -t -a vim"
+
+# zsh-autosuggest
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=9'
+
+# rust
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
