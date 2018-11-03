@@ -46,9 +46,9 @@ if command -v brew >/dev/null 2>&1; then
     elif [ "$(uname)" = "Linux" ]; then
 	      # export HOMEBREW_BUILD_FROM_SOURCE=1
 
-        export C_INCLUDE_PATH="$HOME/.linuxbrew/include:$C_INCLUDE_PATH"
-        export CPLUS_INCLUDE_PATH="$HOME/.linuxbrew/include:$CPLUS_INCLUDE_PATH"
-        export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
+        # export C_INCLUDE_PATH="$HOME/.linuxbrew/include:$C_INCLUDE_PATH"
+        # export CPLUS_INCLUDE_PATH="$HOME/.linuxbrew/include:$CPLUS_INCLUDE_PATH"
+        # export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
     fi
 
     # ccache
