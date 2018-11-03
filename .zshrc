@@ -7,5 +7,7 @@ source ${ZDOTDIR:-$ZSH_DIR}/zgen.zsh
 source ${ZDOTDIR:-$ZSH_DIR}/alias.zsh
 source ${ZDOTDIR:-$ZSH_DIR}/custom.zsh
 
+source ${ZDOTDIR:-$ZSH_DIR}/fzf.zsh
+
 # autoload -Uz compinit && compinit
 autoload -Uz compinit && compinit -i
