@@ -52,4 +52,5 @@ alias gpac="genpac --pac-proxy 'SOCKS5 127.0.0.1:1080' --gfwlist-proxy='SOCKS5 1
 alias rgi="rg -i"
 
 # docker
-alias dockerdoc="docker run -ti -p 4000:4000 docs/docker.github.io:latest"
+alias ddoc="docker run -ti -p 4000:4000 docs/docker.github.io:latest"
+alias dreg="docker run -d -p 5000:5000 --restart always --name registry registry:2"
