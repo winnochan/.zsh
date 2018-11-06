@@ -1,5 +1,13 @@
+# editor
+export EDITOR="emacsclient -t -a vim"
+
 # enhancd
-export ENHANCD_FILTER=fzy
+export ENHANCD_FILTER=fzf
+
+# fzf
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# bind -x '"\C-o": $EDITOR $(fzf);'
 
 # zsh theme
 export BLOX_CONF__ONELINE=true
@@ -20,9 +28,6 @@ export GTAGSLABEL=pygments
 
 # spaceship theme
 export SPACESHIP_TIME_SHOW=true
-
-# editor
-export EDITOR="emacsclient -t -a vim"
 
 # zsh-autosuggest
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=9'
