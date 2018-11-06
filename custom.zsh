@@ -41,20 +41,10 @@ if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_NO_AUTO_UPDATE=true
     export MANPATH="$(brew --prefix)/share/man:$MANPATH"
     export INFOPATH="$(brew --prefix)/share/info:$INFOPATH"
+    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
     # zsh completions
     fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
-
-    # brew repo
-    if [ "$(uname)" = "Darwin" ]; then
-        export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-    elif [ "$(uname)" = "Linux" ]; then
-        # export HOMEBREW_BUILD_FROM_SOURCE=1
-
-        # export C_INCLUDE_PATH="$HOME/.linuxbrew/include:$C_INCLUDE_PATH"
-        # export CPLUS_INCLUDE_PATH="$HOME/.linuxbrew/include:$CPLUS_INCLUDE_PATH"
-        # export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
-    fi
 
     # ccache
     if command -v ccache >/dev/null 2>&1; then
