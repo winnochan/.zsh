@@ -6,7 +6,7 @@ if [ -d $(brew --repo)/Library/Taps/homebrew/homebrew-core ]; then
     git remote set-url origin https://github.com/Homebrew/homebrew-core.git
 fi
 
-if [ -d $(brew --repo)/Library/Taps/caskroom/homebrew-cask ]; then
-    cd "$(brew --repo)/Library/Taps/caskroom/homebrew-cask"
-    git remote set-url origin https://github.com/caskroom/homebrew-cask.git
+if [ -d $(brew --repo)/Library/Taps/homebrew/homebrew-cask ]; then
+    cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
+    git remote set-url origin https://github.com/Homebrew/homebrew-cask.git
 fi
