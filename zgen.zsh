@@ -17,6 +17,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/last-working-dir
     zgen oh-my-zsh plugins/per-directory-history
     zgen oh-my-zsh plugins/tig
+    zgen oh-my-zsh plugins/zsh-completions
 
     # from github
     # zgen load djui/alias-tips
