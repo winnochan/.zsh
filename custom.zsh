@@ -44,7 +44,7 @@ if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
     # zsh completions
-    fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+    fpath=($(brew --prefix)/share/zsh/site-functions $(brew --repo)/completions/zsh $fpath)
 
     # ccache
     if command -v ccache >/dev/null 2>&1; then
