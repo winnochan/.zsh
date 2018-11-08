@@ -54,3 +54,6 @@ alias rgi="rg -i"
 # docker
 alias ddoc="docker run -ti -p 4000:4000 docs/docker.github.io:latest"
 alias dreg="docker run -d -p 5000:5000 --restart always --name registry registry:2"
+
+# mosh
+alias moshroot="mosh --ssh='ssh -l root'"
