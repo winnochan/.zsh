@@ -2,7 +2,7 @@
 export EDITOR="emacsclient -t -a vim"
 
 # enhancd
-export ENHANCD_FILTER=fzf
+# export ENHANCD_FILTER=fzf
 
 # fzf
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!{.git,node_modules}/*" 2> /dev/null'
