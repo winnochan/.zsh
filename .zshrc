@@ -11,11 +11,4 @@ if command -v fzf >/dev/null 2>&1; then
     source ${ZDOTDIR:-$ZSH_DIR}/fzf.zsh
 fi
 
-# autoload -Uz compinit && compinit
-autoload -Uz compinit && compinit -i
-# autoload -Uz compinit
-# if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
-#     compinit
-# else
-#     compinit -C
-# fi
+autoload -Uz compinit && compinit
