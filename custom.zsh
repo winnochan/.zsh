@@ -1,9 +1,6 @@
 # editor
 export EDITOR="emacsclient -t -a vim"
 
-# enhancd
-# export ENHANCD_FILTER=fzf
-
 # fzf
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -38,22 +35,24 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 # brew
 if command -v brew >/dev/null 2>&1; then
+    brew_prefix=$(brew --prefix)
+    brew_repo=$(brew --repo)
     export HOMEBREW_NO_AUTO_UPDATE=true
-    export MANPATH="$(brew --prefix)/share/man:$MANPATH"
-    export INFOPATH="$(brew --prefix)/share/info:$INFOPATH"
+    export MANPATH="${brew_prefix}/share/man:$MANPATH"
+    export INFOPATH="${brew_prefix}/share/info:$INFOPATH"
     export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
     # zsh completions
-    fpath=($(brew --prefix)/share/zsh/site-functions $(brew --repo)/completions/zsh $fpath)
+    fpath=(${brew_prefix}/share/zsh/site-functions ${brew_repo}/completions/zsh $fpath)
 
     # ccache
-    if command -v ccache >/dev/null 2>&1; then
-        if [ "$(uname)" = "Darwin" ]; then
-            export PATH="/usr/local/opt/ccache/libexec:$PATH"
-        elif [ "$(uname)" = "Linux" ]; then
-            export PATH="$HOME/.linuxbrew/opt/ccache/libexec:$PATH"
-        fi
-    fi
+    # if command -v ccache >/dev/null 2>&1; then
+    #     if [ "$(uname)" = "Darwin" ]; then
+    #         export PATH="/usr/local/opt/ccache/libexec:$PATH"
+    #     elif [ "$(uname)" = "Linux" ]; then
+    #         export PATH="$HOME/.linuxbrew/opt/ccache/libexec:$PATH"
+    #     fi
+    # fi
 fi
 
 # fasd
@@ -61,33 +60,65 @@ if [ "$(uname)" = "Darwin" ]; then
     alias o='a -e open_command'
 fi
 
-# goenv
-if command -v goenv >/dev/null 2>&1; then
-    eval "$(goenv init -)"
-fi
+function async_init_goenv() {
+    # goenv
+    if command -v goenv >/dev/null 2>&1; then
+        echo "init goenv"
+        eval "$(goenv init -)"
+    fi
+}
 
-# jenv
-if command -v jenv >/dev/null 2>&1; then
-    eval "$(jenv init -)"
-fi
+# lazy init goenv
+goenv() {
+    unfunction "goenv"
+    if command -v goenv >/dev/null 2>&1; then
+        eval "$(goenv init -)"
+    fi
+    goenv "$@"
+}
 
-# nodenv
-if command -v nodenv >/dev/null 2>&1; then
-    eval "$(nodenv init -)"
-fi
+# lazy init jenv
+jenv() {
+    unfunction "jenv"
+    if command -v jenv >/dev/null 2>&1; then
+        eval "$(jenv init -)"
+    fi
+    jenv "$@"
+}
 
-# pyenv
-if command -v pyenv >/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-    # eval "$(pyenv virtualenv-init -)"
-fi
+# lazy init nodenv
+nodenv() {
+    unfunction "nodenv"
+    if command -v nodenv >/dev/null 2>&1; then
+        eval "$(nodenv init -)"
+    fi
+    nodenv "$@"
+}
 
-# rbenv
-if command -v rbenv >/dev/null 2>&1; then
-    eval "$(rbenv init -)"
-fi
+# lazy init pyenv
+pyenv() {
+    unfunction "pyenv"
+    if command -v pyenv >/dev/null 2>&1; then
+        eval "$(pyenv init -)"
+        # eval "$(pyenv virtualenv-init -)"
+    fi
+    pyenv "$@"
+}
 
-# scalaenv
-if command -v scalaenv >/dev/null 2>&1; then
-    eval "$(scalaenv init -)"
-fi
+# lazy init rbenv
+rbenv() {
+    unfunction "rbenv"
+    if command -v rbenv >/dev/null 2>&1; then
+        eval "$(rbenv init -)"
+    fi
+    rbenv "$@"
+}
+
+# lazy init scalaenv
+scalaenv() {
+    unfunction "scalaenv"
+    if command -v scalaenv >/dev/null 2>&1; then
+        eval "$(scalaenv init -)"
+    fi
+    scalaenv "$@"
+}

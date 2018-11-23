@@ -10,18 +10,17 @@ if ! zgen saved; then
 
     # from oh-my-zsh
     zgen oh-my-zsh
-    # zgen oh-my-zsh plugins/colored-man-pages
+    zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/fasd
     # zgen oh-my-zsh plugins/fzf
-    zgen oh-my-zsh plugins/git
+    # zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/gitfast
     zgen oh-my-zsh plugins/last-working-dir
-    # zgen oh-my-zsh plugins/per-directory-history
+    zgen oh-my-zsh plugins/per-directory-history
     # zgen oh-my-zsh plugins/tig
 
     # from github
-    # zgen load djui/alias-tips
-    # zgen load unixorn/autoupdate-zgen
-    # zgen load supercrabtree/k
+    zgen load unixorn/autoupdate-zgen
     # zgen load RobSis/zsh-completion-generator
     zgen load molovo/tipz
     # zgen load ytet5uy4/fzf-widgets
@@ -34,12 +33,10 @@ if ! zgen saved; then
     # zgen load urbainvaes/fzf-marks
 
     # from zsh-user
-    # zgen load zsh-users/zaw
+    zgen load zsh-users/zaw
     zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-completions
-    # zgen load zsh-users/zsh-syntax-highlighting
-    # zgen load b4b4r07/enhancd
-    # zgen load changyuheng/fz fz.plugin.zsh
+    zgen load zsh-users/zsh-syntax-highlighting
     zgen load hlissner/zsh-autopair
     # zgen load zdharma/fast-syntax-highlighting
     zgen load zsh-users/zsh-syntax-highlighting
