@@ -40,10 +40,10 @@ elif [ "$(uname)" = "Darwin" ]; then
 fi
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
 
 # scalaenv
-export PATH="$HOME/.scalaenv/bin:$PATH"
+# export PATH="$HOME/.scalaenv/bin:$PATH"
 
 # rust cargo
 cargo_env="$HOME/.cargo/env"
