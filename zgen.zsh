@@ -6,17 +6,29 @@ source $ZGEN_DIR/zgen.zsh
 # export ZSH_FZY_FLAGS=( -l 25 -s -j 4 )
 
 # if the init scipt doesn't exist
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+
 if ! zgen saved; then
 
     # from oh-my-zsh
     zgen oh-my-zsh
+    zgen oh-my-zsh plugins/brew
+    zgen oh-my-zsh plugins/cargo
     zgen oh-my-zsh plugins/colored-man-pages
+    zgen oh-my-zsh plugins/cp
+    zgen oh-my-zsh plugins/extract
     zgen oh-my-zsh plugins/fasd
     # zgen oh-my-zsh plugins/fzf
     # zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/gitfast
+    zgen oh-my-zsh plugins/gulp
     zgen oh-my-zsh plugins/last-working-dir
+    zgen oh-my-zsh plugins/mosh
+    zgen oh-my-zsh plugins/ng
     zgen oh-my-zsh plugins/per-directory-history
+    zgen oh-my-zsh plugins/rsync
+    zgen oh-my-zsh plugins/rust
+    zgen oh-my-zsh plugins/ssh-agent
     # zgen oh-my-zsh plugins/tig
 
     # from github

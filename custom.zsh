@@ -60,65 +60,107 @@ if [ "$(uname)" = "Darwin" ]; then
     alias o='a -e open_command'
 fi
 
-function async_init_goenv() {
-    # goenv
+# init goenv
+init_goenv() {
     if command -v goenv >/dev/null 2>&1; then
-        echo "init goenv"
         eval "$(goenv init -)"
     fi
+    return 0
 }
-
 # lazy init goenv
 goenv() {
     unfunction "goenv"
-    if command -v goenv >/dev/null 2>&1; then
-        eval "$(goenv init -)"
-    fi
+    init_goenv
     goenv "$@"
+    return 0
+}
+
+# init jenv
+init_jenv() {
+    if command -v jenv >/dev/null 2>&1; then
+        eval "$(jenv init -)"
+    fi
+    return 0
 }
 
 # lazy init jenv
 jenv() {
     unfunction "jenv"
-    if command -v jenv >/dev/null 2>&1; then
-        eval "$(jenv init -)"
-    fi
+    init_jenv
     jenv "$@"
+    return 0
+}
+
+# init nodenv
+init_nodenv() {
+    if command -v nodenv >/dev/null 2>&1; then
+        eval "$(nodenv init -)"
+    fi
+    return 0
 }
 
 # lazy init nodenv
 nodenv() {
     unfunction "nodenv"
-    if command -v nodenv >/dev/null 2>&1; then
-        eval "$(nodenv init -)"
-    fi
+    init_nodenv
     nodenv "$@"
+    return 0
+}
+
+# init pyenv
+init_pyenv() {
+    if command -v pyenv >/dev/null 2>&1; then
+        eval "$(pyenv init -)"
+        # eval "$(pyenv virtualenv-init -)"
+    fi
+    return 0
 }
 
 # lazy init pyenv
 pyenv() {
     unfunction "pyenv"
-    if command -v pyenv >/dev/null 2>&1; then
-        eval "$(pyenv init -)"
-        # eval "$(pyenv virtualenv-init -)"
-    fi
+    init_pyenv
     pyenv "$@"
+    return 0
+}
+
+# init rbenv
+init_rbenv() {
+    if command -v rbenv >/dev/null 2>&1; then
+        eval "$(rbenv init -)"
+    fi
+    return 0
 }
 
 # lazy init rbenv
 rbenv() {
     unfunction "rbenv"
+    init_rbenv
     if command -v rbenv >/dev/null 2>&1; then
-        eval "$(rbenv init -)"
+        rbenv "$@"
     fi
-    rbenv "$@"
+    return 0
+}
+
+# init scalaenv
+init_scalaenv() {
+    if command -v scalaenv >/dev/null 2>&1; then
+        eval "$(scalaenv init -)"
+    fi
+    return 0
 }
 
 # lazy init scalaenv
 scalaenv() {
     unfunction "scalaenv"
+    init_scalaenv
     if command -v scalaenv >/dev/null 2>&1; then
-        eval "$(scalaenv init -)"
+        scalaenv "$@"
     fi
-    scalaenv "$@"
+    return 0
+}
+
+i() {
+    init_goenv && init_jenv && init_nodenv && init_pyenv && init_rbenv && init_scalaenv
+    # goenv && jenv && nodenv && pyenv && rbenv && scalaenv
 }
