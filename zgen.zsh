@@ -12,6 +12,8 @@ if ! zgen saved; then
 
     # from oh-my-zsh
     zgen oh-my-zsh
+    # zgen oh-my-zsh plugins/autoenv
+    # zgen oh-my-zsh plugins/battery
     zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/cargo
     zgen oh-my-zsh plugins/colored-man-pages
@@ -29,7 +31,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/rsync
     zgen oh-my-zsh plugins/rust
     zgen oh-my-zsh plugins/ssh-agent
-    # zgen oh-my-zsh plugins/tig
+    zgen oh-my-zsh plugins/tig
 
     # from github
     zgen load unixorn/autoupdate-zgen
