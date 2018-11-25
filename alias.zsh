@@ -46,3 +46,6 @@ alias dreg="docker run -d -p 5000:5000 --restart always --name registry registry
 
 # mosh
 alias moshroot="mosh --ssh='ssh -l root'"
+
+# jetbrains
+alias echo-jetbrains-crack="echo '-javaagent:$HOME/.zsh/jetbrains/JetbrainsIdesCrack.jar'"

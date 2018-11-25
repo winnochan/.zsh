@@ -7,3 +7,6 @@
 [submodule ".jetbrains-agent"]
 	path = .jetbrains-agent
 	url = https://gitee.com/pengzhile/jetbrains-agent.git
+[submodule ".gfwlist"]
+	path = .gfwlist
+	url = https://github.com/gfwlist/gfwlist.git
