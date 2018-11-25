@@ -16,10 +16,15 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Emacs 指令
-alias ed="emacs --daemon"
 alias e="emacsclient -t -a vim"
-# alias ef='emacsclient -t -a vim $(fzf)'
-# alias vf='vim $(fzf)'
+alias ed="emacs --daemon"
+alias edt="emacs --daemon --timed-requires"
+alias edi="emacs --debug-init"
+alias edit="emacs --debug-init --timed-requires"
+alias eddi="emacs --daemon --debug-init"
+alias eddit="emacs --daemon --debug-init --timed-requires"
+alias ef='emacsclient -t -a vim $(fzf)'
+alias vf='vim $(fzf)'
 
 # Linux 常用指令
 alias tf="tail -f"
