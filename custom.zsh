@@ -9,20 +9,23 @@ export EDITOR="emacsclient -t -a vim"
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="rg --sort-files --files --null 2> /dev/null | xargs -0 dirname | uniq"
+export FZF_COMPLETION_TRIGGER=';;'
 
-# zsh theme
+# pure-zsh-theme
+
+# blox-zsh-theme
 export BLOX_CONF__ONELINE=true
 export BLOX_BLOCK__CWD_TRUNC=0
 export BLOX_BLOCK__HOST_USER_SHOW_ALWAYS=true
 export BLOX_BLOCK__HOST_MACHINE_SHOW_ALWAYS=true
-
+export BLOX_BLOCK__SYMBOL_ALTERNATE='◇'
 export BLOX_BLOCK__NODEJS_COLOR='green'
 export BLOX_BLOCK__PYENV_COLOR='green'
 export BLOX_BLOCK__VIRTUALENV_COLOR='green'
 export BLOX_BLOCK__TIME_COLOR='green'
+export BLOX_BLOCK__BGJOBS_COLOR='green'
 
-# fzf
-export FZF_COMPLETION_TRIGGER=';;'
+# dracula-zsh-theme
 
 # gtags
 export GTAGSLABEL=pygments

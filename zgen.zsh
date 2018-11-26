@@ -44,6 +44,7 @@ if ! zgen saved; then
     zgen load mafredri/zsh-async
     # zgen load sindresorhus/pure
     zgen load yardnsm/blox-zsh-theme
+    # zgen load dracula/dracula-theme zsh/dracula.zsh-theme
     # zgen load seletskiy/zsh-fuzzy-search-and-edit
     # zgen load urbainvaes/fzf-marks
 
