@@ -173,5 +173,5 @@ i() {
 }
 
 if [ "$(uname)" = "Linux" ]; then
-    init_nodenv && init_pyenv
+    init_pyenv
 fi
