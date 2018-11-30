@@ -171,7 +171,3 @@ i() {
     init_goenv && init_jenv && init_nodenv && init_pyenv && init_rbenv && init_scalaenv
     # goenv && jenv && nodenv && pyenv && rbenv && scalaenv
 }
-
-if [ "$(uname)" = "Linux" ]; then
-    init_pyenv
-fi
