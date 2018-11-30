@@ -26,6 +26,8 @@ export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
 
 # java
+test -f /usr/libexec/java_home && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+test -d /usr/local/share/android-sdk && export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 if [ -d "/Library/Java/Home" ]; then
     export JAVA_HOME="/Library/Java/Home"
     export PATH="$JAVA_HOME/bin:$PATH"

@@ -49,5 +49,3 @@ alias moshroot="mosh --ssh='ssh -l root'"
 
 # jetbrains
 alias echo-jetbrains-crack="echo '-javaagent:$HOME/.zsh/jetbrains/JetbrainsIdesCrack.jar'"
-
-alias upall="git --git-dir=\"$HOME/.zsh/.git\" pull && git --git-dir=\"$HOME/.ssh/.git\" pull && git --git-dir=\"$HOME/.spacemacs.d/.git\" pull && git --git-dir=\"$HOME/.emacs.d/.git\" pull"
