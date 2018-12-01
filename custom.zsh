@@ -171,3 +171,12 @@ i() {
     init_goenv && init_jenv && init_nodenv && init_pyenv && init_rbenv && init_scalaenv
     # goenv && jenv && nodenv && pyenv && rbenv && scalaenv
 }
+
+ip=""
+if command -v ip >/dev/null 2>&1; then
+    ip=$(ip route get 1 | awk '{print $NF;exit}')
+fi
+
+if [ $ip = "192.168.0.80" ]; then
+    init_pyenv
+fi
