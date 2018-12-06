@@ -172,6 +172,8 @@ i() {
     # goenv && jenv && nodenv && pyenv && rbenv && scalaenv
 }
 
+init_nodenv
+
 ip=""
 if command -v ip >/dev/null 2>&1; then
     ip=$(ip route get 1 | awk '{print $NF;exit}')
