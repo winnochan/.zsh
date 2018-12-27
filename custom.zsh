@@ -55,10 +55,16 @@ if command -v brew >/dev/null 2>&1; then
     # zsh completions
     fpath=(${brew_prefix}/share/zsh/site-functions ${brew_repo}/completions/zsh $fpath)
 
+    # openssl
+    export PATH="${brew_prefix}/opt/openssl/bin:$PATH"
+    export LDFLAGS="$LDFLAGS -L${brew_prefix}/opt/openssl/lib"
+    export CPPFLAGS="$CPPFLAGS -I${brew_prefix}/opt/openssl/include"
+    export PKG_CONFIG_PATH="${brew_prefix}/opt/openssl/lib/pkgconfig"
+
     # node@10
-    export PATH="/usr/local/opt/node@10/bin:$PATH"
-    export LDFLAGS="$LDFLAGS -L/usr/local/opt/node@10/lib"
-    export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/node@10/include"
+    export PATH="${brew_prefix}/opt/node@10/bin:$PATH"
+    export LDFLAGS="$LDFLAGS -L${brew_prefix}/opt/node@10/lib"
+    export CPPFLAGS="$CPPFLAGS -I${brew_prefix}/opt/node@10/include"
 
     # ccache
     if command -v ccache >/dev/null 2>&1; then
