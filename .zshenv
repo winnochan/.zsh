@@ -1,5 +1,6 @@
 #brew
 if [ "$(uname)" = "Linux" ]; then
+    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
     export PATH="$HOME/.linuxbrew/bin:$PATH"
 fi
 
