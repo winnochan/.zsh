@@ -2,6 +2,9 @@ if command -v battery_pct_prompt >/dev/null 2>&1; then
     export RPROMPT="$RPROMPT $(battery_pct_prompt)"
 fi
 
+#completion
+fpath=(${ZSH_DIR}/completions $fpath)
+
 # editor
 export EDITOR="emacsclient -t -a vim"
 
