@@ -50,7 +50,9 @@ if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_NO_AUTO_UPDATE=true
     export MANPATH="${brew_prefix}/share/man:$MANPATH"
     export INFOPATH="${brew_prefix}/share/info:$INFOPATH"
-    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+    if [ "$(uname)" = "Darwin" ]; then
+        export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+    fi
 
     # zsh completions
     fpath=(${brew_prefix}/share/zsh/site-functions ${brew_repo}/completions/zsh $fpath)
