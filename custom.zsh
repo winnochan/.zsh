@@ -55,14 +55,15 @@ if command -v brew >/dev/null 2>&1; then
     # zsh completions
     fpath=(${brew_prefix}/share/zsh/site-functions ${brew_repo}/completions/zsh $fpath)
 
+    # node@10
+    export PATH="/usr/local/opt/node@10/bin:$PATH"
+    export LDFLAGS="$LDFLAGS -L/usr/local/opt/node@10/lib"
+    export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/node@10/include"
+
     # ccache
-    # if command -v ccache >/dev/null 2>&1; then
-    #     if [ "$(uname)" = "Darwin" ]; then
-    #         export PATH="/usr/local/opt/ccache/libexec:$PATH"
-    #     elif [ "$(uname)" = "Linux" ]; then
-    #         export PATH="$HOME/.linuxbrew/opt/ccache/libexec:$PATH"
-    #     fi
-    # fi
+    if command -v ccache >/dev/null 2>&1; then
+        export PATH="${brew_prefix}/opt/ccache/libexec:$PATH"
+    fi
 fi
 
 # fasd
@@ -175,7 +176,7 @@ i() {
     # goenv && jenv && nodenv && pyenv && rbenv && scalaenv
 }
 
-init_nodenv
+# init_nodenv
 
 ip=""
 if command -v ip >/dev/null 2>&1; then

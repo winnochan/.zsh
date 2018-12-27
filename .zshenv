@@ -1,10 +1,3 @@
-if [ "$(uname)" = "Darwin" ]; then
-    export PATH="/usr/local/opt/llvm/bin:$PATH"
-    export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
-    # export LDFLAGS="-L/usr/local/opt/llvm/lib"
-    export CPPFLAGS="-I/usr/local/opt/llvm/include"
-fi
-
 #brew
 if [ "$(uname)" = "Linux" ]; then
     export PATH="$HOME/.linuxbrew/bin:$PATH"
