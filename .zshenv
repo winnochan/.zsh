@@ -53,6 +53,3 @@ if command -v rustup >/dev/null 2>&1; then
    rustup_default_host=$(rustup toolchain list | cut -d ' ' -f 1)
    export RUST_SRC_PATH="$HOME/.rustup/toolchains/$rustup_default_host/lib/rustlib/src/rust/src"
 fi
-
-# q1
-export PATH="$HOME/.local/bin:$PATH"
