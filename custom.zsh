@@ -72,6 +72,13 @@ if command -v brew >/dev/null 2>&1; then
     if command -v ccache >/dev/null 2>&1; then
         export PATH="${brew_prefix}/opt/ccache/libexec:$PATH"
     fi
+
+    # fzf
+    if command -v fzf >/dev/null 2>&1; then
+        export PATH="${brew_prefix}/opt/fzf/bin:$PATH"
+        source "${brew_prefix}/opt/fzf/shell/completion.zsh" 2> /dev/null
+        source "${brew_prefix}/opt/fzf/shell/key-bindings.zsh"
+    fi
 fi
 
 # fasd
