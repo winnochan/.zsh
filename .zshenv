@@ -1,7 +1,13 @@
 #brew
-if [ "$(uname)" = "Linux" ]; then
-    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-    export PATH="$HOME/.linuxbrew/bin:$PATH"
+if command -v brew >/dev/null 2>&1; then
+    eval $(brew shellenv)
+else
+    brew_base="/usr/local"
+    test -f $brew_base/bin/brew && eval $($brew_base/bin/brew shellenv)
+    brew_base="$HOME/.linuxbrew"
+    test -f $brew_base/bin/brew && eval $($brew_base/bin/brew shellenv)
+    brew_base="/home/linuxbrew/.linuxbrew"
+    test -f $brew_base/bin/brew && eval $($brew_base/bin/brew shellenv)
 fi
 
 # dart
