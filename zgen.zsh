@@ -32,6 +32,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/rust
     zgen oh-my-zsh plugins/ssh-agent
     zgen oh-my-zsh plugins/tig
+    zgen oh-my-zsh plugins/tmux
     zgen oh-my-zsh plugins/vscode
 
     # from github
