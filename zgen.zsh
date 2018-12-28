@@ -23,16 +23,16 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/fzf
     # zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/gitfast
-    zgen oh-my-zsh plugins/gulp
+    # zgen oh-my-zsh plugins/gulp
     zgen oh-my-zsh plugins/last-working-dir
-    zgen oh-my-zsh plugins/mosh
+    # zgen oh-my-zsh plugins/mosh
     zgen oh-my-zsh plugins/ng
     zgen oh-my-zsh plugins/per-directory-history
     zgen oh-my-zsh plugins/rsync
-    zgen oh-my-zsh plugins/rust
+    # zgen oh-my-zsh plugins/rust
     zgen oh-my-zsh plugins/ssh-agent
     zgen oh-my-zsh plugins/tig
-    zgen oh-my-zsh plugins/tmux
+    # zgen oh-my-zsh plugins/tmux
     zgen oh-my-zsh plugins/vscode
 
     # from github
