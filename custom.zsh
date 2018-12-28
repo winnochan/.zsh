@@ -2,7 +2,17 @@ if command -v battery_pct_prompt >/dev/null 2>&1; then
     export RPROMPT="$RPROMPT $(battery_pct_prompt)"
 fi
 
-#completion
+# zsh integrated completion
+zsh_bin=$(which zsh)
+zsh_prefix=${zsh_bin%/bin/zsh}
+functions_path="$zsh_prefix/share/zsh/functions"
+if [ -d $functions_path ]; then
+    fpath=($functions_path $fpath)
+fi
+functions_path="$zsh_prefix/share/zsh/$ZSH_VERSION/functions"
+if [ -d $functions_path ]; then
+    fpath=($functions_path $fpath)
+fi
 fpath=(${ZSH_DIR}/completions $fpath)
 
 # editor
