@@ -14,7 +14,7 @@ if ! zgen saved; then
     zgen oh-my-zsh
     # zgen oh-my-zsh plugins/autoenv
     # zgen oh-my-zsh plugins/battery
-    zgen oh-my-zsh plugins/brew
+    # zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/cargo
     zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/cp

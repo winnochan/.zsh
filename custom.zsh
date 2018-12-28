@@ -3,13 +3,11 @@ if command -v battery_pct_prompt >/dev/null 2>&1; then
 fi
 
 # zsh integrated completion
-zsh_bin=$(which zsh)
-zsh_prefix=${zsh_bin%/bin/zsh}
-functions_path="$zsh_prefix/share/zsh/functions"
+functions_path="$HOMEBREW_PREFIX/share/zsh/functions"
 if [ -d $functions_path ]; then
     fpath=($functions_path $fpath)
 fi
-functions_path="$zsh_prefix/share/zsh/$ZSH_VERSION/functions"
+functions_path="$HOMEBREW_PREFIX/share/zsh/$ZSH_VERSION/functions"
 if [ -d $functions_path ]; then
     fpath=($functions_path $fpath)
 fi
@@ -55,39 +53,35 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 # brew
 if command -v brew >/dev/null 2>&1; then
-    brew_prefix=$(brew --prefix)
-    brew_repo=$(brew --repo)
     export HOMEBREW_NO_AUTO_UPDATE=true
-    export MANPATH="${brew_prefix}/share/man:$MANPATH"
-    export INFOPATH="${brew_prefix}/share/info:$INFOPATH"
     if [ "$(uname)" = "Darwin" ]; then
         export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
     fi
 
     # zsh completions
-    fpath=(${brew_prefix}/share/zsh/site-functions ${brew_repo}/completions/zsh $fpath)
+    fpath=($fpath ${HOMEBREW_PREFIX}/share/zsh/site-functions ${HOMEBREW_REPOSITORY}/completions/zsh)
 
     # openssl
-    export PATH="${brew_prefix}/opt/openssl/bin:$PATH"
-    export LDFLAGS="$LDFLAGS -L${brew_prefix}/opt/openssl/lib"
-    export CPPFLAGS="$CPPFLAGS -I${brew_prefix}/opt/openssl/include"
-    export PKG_CONFIG_PATH="${brew_prefix}/opt/openssl/lib/pkgconfig"
+    export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
+    export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/openssl/lib"
+    export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/openssl/include"
+    export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl/lib/pkgconfig"
 
     # node@10
-    export PATH="${brew_prefix}/opt/node@10/bin:$PATH"
-    export LDFLAGS="$LDFLAGS -L${brew_prefix}/opt/node@10/lib"
-    export CPPFLAGS="$CPPFLAGS -I${brew_prefix}/opt/node@10/include"
+    export PATH="${HOMEBREW_PREFIX}/opt/node@10/bin:$PATH"
+    export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/node@10/lib"
+    export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/node@10/include"
 
     # ccache
     if command -v ccache >/dev/null 2>&1; then
-        export PATH="${brew_prefix}/opt/ccache/libexec:$PATH"
+        export PATH="${HOMEBREW_PREFIX}/opt/ccache/libexec:$PATH"
     fi
 
     # fzf
     if command -v fzf >/dev/null 2>&1; then
-        export PATH="${brew_prefix}/opt/fzf/bin:$PATH"
-        source "${brew_prefix}/opt/fzf/shell/completion.zsh" 2> /dev/null
-        source "${brew_prefix}/opt/fzf/shell/key-bindings.zsh"
+        export PATH="${HOMEBREW_PREFIX}/opt/fzf/bin:$PATH"
+        source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh" 2> /dev/null
+        source "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh"
     fi
 fi
 
