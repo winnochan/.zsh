@@ -1,13 +1,22 @@
 #brew
-if command -v brew >/dev/null 2>&1; then
-    eval $(brew shellenv)
+export ZSH_DIR=$(dirname ${(%):-%N})
+export ZSH_SYS=$(uname)
+
+brew_env_cache=$ZSH_DIR/.brewenv.zsh
+if [ -f $brew_env_cache ]; then
+    source $brew_env_cache
+elif command -v brew >/dev/null 2>&1; then
+    brew shellenv > $brew_env_cache
+    source $brew_env_cache
 else
     brew_base="/usr/local"
-    test -f $brew_base/bin/brew && eval $($brew_base/bin/brew shellenv)
+    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_env_cache
     brew_base="$HOME/.linuxbrew"
-    test -f $brew_base/bin/brew && eval $($brew_base/bin/brew shellenv)
+    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_env_cache
     brew_base="/home/linuxbrew/.linuxbrew"
-    test -f $brew_base/bin/brew && eval $($brew_base/bin/brew shellenv)
+    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_env_cache
+
+    test -f $brew_env_cache && source $brew_env_cache
 fi
 
 # dart
@@ -37,9 +46,9 @@ fi
 # pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 # python env var
-if [ "$(uname)" = "Linux" ]; then
+if [ "$ZSH_SYS" = "Linux" ]; then
     export PYTHON_CONFIGURE_OPTS="--enable-shared"
-elif [ "$(uname)" = "Darwin" ]; then
+elif [ "$ZSH_SYS" = "Darwin" ]; then
     export PYTHON_CONFIGURE_OPTS="--enable-framework"
 fi
 

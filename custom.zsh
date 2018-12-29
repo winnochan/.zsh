@@ -3,14 +3,14 @@ export PATH=$ZSH_DIR/.dasht/bin:$PATH
 export MANPATH=$ZSH_DIR/.dasht/man:$MANPATH
 export DASHT_DOCSETS_DIR=$ZSH_DIR/.docsets
 
-if [ -d $ZSH_DIR/.dasht ]; then
-    source $ZSH_DIR/.dasht/etc/zsh/completions.zsh
-    fpath+=$ZSH_DIR/.dasht/etc/zsh/completions
-fi
+# if [ -d $ZSH_DIR/.dasht ]; then
+#     fpath+=$ZSH_DIR/.dasht/etc/zsh/completions
+#     source $ZSH_DIR/.dasht/etc/zsh/completions.zsh
+# fi
 
-if command -v battery_pct_prompt >/dev/null 2>&1; then
-    export RPROMPT="$RPROMPT $(battery_pct_prompt)"
-fi
+# if command -v battery_pct_prompt >/dev/null 2>&1; then
+#     export RPROMPT="$RPROMPT $(battery_pct_prompt)"
+# fi
 
 # zsh integrated completion
 functions_path="$HOMEBREW_PREFIX/share/zsh/functions"
@@ -22,7 +22,7 @@ fpath=(${ZSH_DIR}/completions $fpath)
 # brew
 if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_NO_AUTO_UPDATE=true
-    if [ "$(uname)" = "Darwin" ]; then
+    if [ "$ZSH_SYS" = "Darwin" ]; then
         export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
     fi
 
@@ -60,7 +60,7 @@ if command -v brew >/dev/null 2>&1; then
 fi
 
 # fasd
-if [ "$(uname)" = "Darwin" ]; then
+if [ "$ZSH_SYS" = "Darwin" ]; then
     alias o='a -e open_command'
 fi
 
