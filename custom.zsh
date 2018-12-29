@@ -1,3 +1,13 @@
+# dasht
+export PATH=$ZSH_DIR/.dasht/bin:$PATH
+export MANPATH=$ZSH_DIR/.dasht/man:$MANPATH
+export DASHT_DOCSETS_DIR=$ZSH_DIR/.dasht/docsets
+
+if [ -d $ZSH_DIR/.dasht ]; then
+    source $ZSH_DIR/.dasht/etc/zsh/completions.zsh
+    fpath+=$ZSH_DIR/.dasht/etc/zsh/completions
+fi
+
 if command -v battery_pct_prompt >/dev/null 2>&1; then
     export RPROMPT="$RPROMPT $(battery_pct_prompt)"
 fi
@@ -29,6 +39,12 @@ if command -v brew >/dev/null 2>&1; then
     export PATH="${HOMEBREW_PREFIX}/opt/node@10/bin:$PATH"
     export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/node@10/lib"
     export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/node@10/include"
+
+    # sqlite3
+    export PATH="${HOMEBREW_PREFIX}/opt/sqlite/bin:$PATH"
+    export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/sqlite/lib"
+    export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/sqlite/include"
+    export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/sqlite/lib/pkgconfig"
 
     # ccache
     if command -v ccache >/dev/null 2>&1; then
