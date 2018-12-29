@@ -5,3 +5,4 @@
 .zcompdump*
 *.zwc
 .docsets/*
+.brewenv.zsh
