@@ -1,7 +1,7 @@
 # dasht
 export PATH=$ZSH_DIR/.dasht/bin:$PATH
 export MANPATH=$ZSH_DIR/.dasht/man:$MANPATH
-export DASHT_DOCSETS_DIR=$ZSH_DIR/.dasht/docsets
+export DASHT_DOCSETS_DIR=$ZSH_DIR/.docsets
 
 if [ -d $ZSH_DIR/.dasht ]; then
     source $ZSH_DIR/.dasht/etc/zsh/completions.zsh

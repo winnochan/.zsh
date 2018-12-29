@@ -4,3 +4,4 @@
 .zsh-update
 .zcompdump*
 *.zwc
+.docsets/*
