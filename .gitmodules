@@ -10,3 +10,6 @@
 [submodule ".gfwlist"]
 	path = .gfwlist
 	url = https://github.com/gfwlist/gfwlist.git
+[submodule ".dasht"]
+	path = .dasht
+	url = https://github.com/sunaku/dasht.git
