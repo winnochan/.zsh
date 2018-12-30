@@ -13,3 +13,6 @@
 [submodule ".dasht"]
 	path = .dasht
 	url = https://github.com/sunaku/dasht.git
+[submodule ".flutter"]
+	path = .flutter
+	url = https://github.com/flutter/flutter.git

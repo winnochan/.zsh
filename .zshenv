@@ -19,10 +19,16 @@ else
     test -f $brew_env_cache && source $brew_env_cache
 fi
 
+# android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+
 # dart
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 export PATH="$HOME/.pub-cache/bin:$PATH"
+
+# flutter
+export PATH="$ZSH_DIR/.flutter/bin:$PATH"
+# export PUB_HOSTED_URL=https://pub.flutter-io.cn
+# export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 # goenv
 export GOPATH="$HOME/.gopath"
@@ -35,10 +41,15 @@ export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
 
 # java
-test -f /usr/libexec/java_home && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-test -d /usr/local/share/android-sdk && export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
-if [ -d "/Library/Java/Home" ]; then
-    export JAVA_HOME="/Library/Java/Home"
+# test -f /usr/libexec/java_home && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# test -d /usr/local/share/android-sdk && export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+# if [ -d "/Library/Java/Home" ]; then
+#     export JAVA_HOME="/Library/Java/Home"
+#     export PATH="$JAVA_HOME/bin:$PATH"
+#     export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
+# fi
+if [ -d "/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home" ]; then
+    export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
     export PATH="$JAVA_HOME/bin:$PATH"
     export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 fi

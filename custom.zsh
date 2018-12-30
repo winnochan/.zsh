@@ -1,3 +1,6 @@
+# android
+export PATH="$ANDROID_HOME/tools/bin:$PATH"
+
 # dasht
 export PATH=$ZSH_DIR/.dasht/bin:$PATH
 export MANPATH=$ZSH_DIR/.dasht/man:$MANPATH
