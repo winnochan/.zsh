@@ -60,6 +60,12 @@ if command -v brew >/dev/null 2>&1; then
         source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh" 2> /dev/null
         source "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh"
     fi
+
+    export GOOGLE_CLOUD_SDK_HOME="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+    if [ -d $GOOGLE_CLOUD_SDK_HOME ]; then
+        source $GOOGLE_CLOUD_SDK_HOME/path.zsh.inc
+        source $GOOGLE_CLOUD_SDK_HOME/completion.zsh.inc
+    fi
 fi
 
 # fasd
