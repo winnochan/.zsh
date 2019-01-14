@@ -38,7 +38,7 @@ if ! zgen saved; then
     # from github
     zgen load unixorn/autoupdate-zgen
     # zgen load RobSis/zsh-completion-generator
-    zgen load molovo/tipz
+    zgen load djui/alias-tips
     # zgen load ytet5uy4/fzf-widgets
 
     # theme
