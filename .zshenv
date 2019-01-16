@@ -1,7 +1,7 @@
-#brew
 export ZSH_DIR=$(dirname ${(%):-%N})
 export ZSH_SYS=$(uname)
 
+#brew
 brew_env_cache=$ZSH_DIR/.brewenv.zsh
 if [ -f $brew_env_cache ]; then
     source $brew_env_cache
@@ -19,16 +19,17 @@ else
     test -f $brew_env_cache && source $brew_env_cache
 fi
 
-# android
-export ANDROID_HOME=$HOME/Library/Android/sdk
+# android sdk
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/tools/bin:$PATH"
 
 # dart
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
 # flutter
 export PATH="$ZSH_DIR/.flutter/bin:$PATH"
-# export PUB_HOSTED_URL=https://pub.flutter-io.cn
-# export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export PUB_HOSTED_URL="https://pub.flutter-io.cn"
+export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 # goenv
 export GOPATH="$HOME/.gopath"
@@ -41,15 +42,12 @@ export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
 
 # java
-# test -f /usr/libexec/java_home && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-# test -d /usr/local/share/android-sdk && export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
-# if [ -d "/Library/Java/Home" ]; then
-#     export JAVA_HOME="/Library/Java/Home"
-#     export PATH="$JAVA_HOME/bin:$PATH"
-#     export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
-# fi
 if [ -d "/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home" ]; then
     export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+    export PATH="$JAVA_HOME/bin:$PATH"
+    export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
+elif [ -d "/Library/Java/Home" ]; then
+    export JAVA_HOME="/Library/Java/Home"
     export PATH="$JAVA_HOME/bin:$PATH"
     export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 fi
@@ -78,4 +76,7 @@ fi
 if command -v rustup >/dev/null 2>&1; then
    rustup_default_host=$(rustup toolchain list | cut -d ' ' -f 1)
    export RUST_SRC_PATH="$HOME/.rustup/toolchains/$rustup_default_host/lib/rustlib/src/rust/src"
+
+   export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
+   export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 fi
