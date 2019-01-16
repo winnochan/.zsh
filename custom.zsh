@@ -1,20 +1,3 @@
-# android
-export PATH="$ANDROID_HOME/tools/bin:$PATH"
-
-# dasht
-export PATH=$ZSH_DIR/.dasht/bin:$PATH
-export MANPATH=$ZSH_DIR/.dasht/man:$MANPATH
-export DASHT_DOCSETS_DIR=$ZSH_DIR/.docsets
-
-# if [ -d $ZSH_DIR/.dasht ]; then
-#     fpath+=$ZSH_DIR/.dasht/etc/zsh/completions
-#     source $ZSH_DIR/.dasht/etc/zsh/completions.zsh
-# fi
-
-# if command -v battery_pct_prompt >/dev/null 2>&1; then
-#     export RPROMPT="$RPROMPT $(battery_pct_prompt)"
-# fi
-
 # zsh integrated completion
 functions_path="$HOMEBREW_PREFIX/share/zsh/functions"
 if [ -d $functions_path ]; then
@@ -101,15 +84,8 @@ export BLOX_BLOCK__BGJOBS_COLOR='green'
 # gtags
 export GTAGSLABEL=pygments
 
-# spaceship theme
-export SPACESHIP_TIME_SHOW=true
-
 # zsh-autosuggest
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=9'
-
-# rust
-export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
-export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 # init goenv
 init_goenv() {
@@ -213,16 +189,14 @@ scalaenv() {
 
 i() {
     init_goenv && init_jenv && init_nodenv && init_pyenv && init_rbenv && init_scalaenv
-    # goenv && jenv && nodenv && pyenv && rbenv && scalaenv
 }
 
 # init_nodenv
 
-ip=""
 if command -v ip >/dev/null 2>&1; then
-    ip=$(ip route get 1 | awk '{print $NF;exit}')
+    export HOST_IP=$(ip route get 1 | awk '{print $NF;exit}')
 fi
 
-if [ $ip = "192.168.0.80" ]; then
+if [ $HOST_IP = "192.168.0.80" ]; then
     init_pyenv
 fi
