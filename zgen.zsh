@@ -30,7 +30,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/per-directory-history
     # zgen oh-my-zsh plugins/rsync
     # zgen oh-my-zsh plugins/rust
-    zgen oh-my-zsh plugins/ssh-agent
+    # zgen oh-my-zsh plugins/ssh-agent
     # zgen oh-my-zsh plugins/tig
     # zgen oh-my-zsh plugins/tmux
     # zgen oh-my-zsh plugins/vscode
