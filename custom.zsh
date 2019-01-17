@@ -193,10 +193,10 @@ i() {
 
 # init_nodenv
 
-if command -v ip >/dev/null 2>&1; then
-    export HOST_IP=$(ip route get 1 | awk '{print $NF;exit}')
-fi
+# if command -v ip >/dev/null 2>&1; then
+#     export HOST_IP=$(ip route get 1 | awk '{print $NF;exit}')
+# fi
 
-if [ $HOST_IP = "192.168.0.80" ]; then
-    init_pyenv
-fi
+# if [ $HOST_IP = "192.168.0.80" ]; then
+#     init_pyenv
+# fi
