@@ -15,25 +15,25 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/autoenv
     # zgen oh-my-zsh plugins/battery
     # zgen oh-my-zsh plugins/brew
-    zgen oh-my-zsh plugins/cargo
-    zgen oh-my-zsh plugins/colored-man-pages
-    zgen oh-my-zsh plugins/cp
+    # zgen oh-my-zsh plugins/cargo
+    # zgen oh-my-zsh plugins/colored-man-pages
+    # zgen oh-my-zsh plugins/cp
     zgen oh-my-zsh plugins/extract
-    zgen oh-my-zsh plugins/fasd
+    # zgen oh-my-zsh plugins/fasd
     # zgen oh-my-zsh plugins/fzf
     # zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/gitfast
     # zgen oh-my-zsh plugins/gulp
     zgen oh-my-zsh plugins/last-working-dir
     # zgen oh-my-zsh plugins/mosh
-    zgen oh-my-zsh plugins/ng
+    # zgen oh-my-zsh plugins/ng
     zgen oh-my-zsh plugins/per-directory-history
-    zgen oh-my-zsh plugins/rsync
+    # zgen oh-my-zsh plugins/rsync
     # zgen oh-my-zsh plugins/rust
     zgen oh-my-zsh plugins/ssh-agent
-    zgen oh-my-zsh plugins/tig
+    # zgen oh-my-zsh plugins/tig
     # zgen oh-my-zsh plugins/tmux
-    zgen oh-my-zsh plugins/vscode
+    # zgen oh-my-zsh plugins/vscode
 
     # from github
     zgen load unixorn/autoupdate-zgen
@@ -50,14 +50,13 @@ if ! zgen saved; then
     # zgen load urbainvaes/fzf-marks
 
     # from zsh-user
-    zgen load zsh-users/zaw
+    # zgen load zsh-users/zaw
     zgen load zsh-users/zsh-autosuggestions
-    zgen load zsh-users/zsh-completions
-    zgen load zsh-users/zsh-syntax-highlighting
+    # zgen load zsh-users/zsh-completions
     zgen load hlissner/zsh-autopair
     # zgen load zdharma/fast-syntax-highlighting
     zgen load zsh-users/zsh-syntax-highlighting
-    zgen load zsh-users/zsh-history-substring-search
+    # zgen load zsh-users/zsh-history-substring-search
 
     # generate the init script from plugins above
     zgen save
