@@ -19,7 +19,7 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/colored-man-pages
     # zgen oh-my-zsh plugins/cp
     zgen oh-my-zsh plugins/extract
-    # zgen oh-my-zsh plugins/fasd
+    zgen oh-my-zsh plugins/fasd
     # zgen oh-my-zsh plugins/fzf
     # zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/gitfast
