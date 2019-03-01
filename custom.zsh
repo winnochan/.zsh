@@ -51,6 +51,10 @@ if command -v brew >/dev/null 2>&1; then
     fi
 fi
 
+# if command -v pipenv >/dev/null 2>&1; then
+#     eval "$(pipenv --completion)"
+# fi
+
 # fasd
 if [ "$ZSH_SYS" = "Darwin" ]; then
     alias o='a -e open_command'
