@@ -40,6 +40,7 @@ if ! zgen saved; then
     # zgen load RobSis/zsh-completion-generator
     zgen load djui/alias-tips
     # zgen load ytet5uy4/fzf-widgets
+    zgen load lukechilds/zsh-nvm
 
     # theme
     zgen load mafredri/zsh-async
