@@ -47,5 +47,8 @@ alias dreg="docker run -d -p 5000:5000 --restart always --name registry registry
 # mosh
 alias moshroot="mosh --ssh='ssh -l root'"
 
-# jetbrains
-alias echo-jetbrains-crack="echo '-javaagent:$HOME/.zsh/jetbrains/JetbrainsIdesCrack.jar'"
+# brook
+PROXY_IP="127.0.0.1"
+PROXY_PORT="1087"
+alias bss="brook ssclient -l ${PROXY_IP}:${PROXY_PORT} -i ${PROXY_IP} -s vm.winnochan.tech:9997 --http -p"
+alias ehp="export http_proxy=http://${PROXY_IP}:${PROXY_PORT}; export https_proxy=http://${PROXY_IP}:${PROXY_PORT};"
