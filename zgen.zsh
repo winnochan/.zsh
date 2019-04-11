@@ -21,8 +21,9 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/extract
     zgen oh-my-zsh plugins/fasd
     # zgen oh-my-zsh plugins/fzf
-    # zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/gitfast
+    zgen oh-my-zsh plugins/gitignore
     # zgen oh-my-zsh plugins/gulp
     zgen oh-my-zsh plugins/last-working-dir
     # zgen oh-my-zsh plugins/mosh
