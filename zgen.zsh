@@ -14,7 +14,6 @@ if ! zgen saved; then
     zgen oh-my-zsh
     # zgen oh-my-zsh plugins/autoenv
     # zgen oh-my-zsh plugins/battery
-    # zgen oh-my-zsh plugins/brew
     # zgen oh-my-zsh plugins/cargo
     # zgen oh-my-zsh plugins/colored-man-pages
     # zgen oh-my-zsh plugins/cp
@@ -34,14 +33,12 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/ssh-agent
     # zgen oh-my-zsh plugins/tig
     # zgen oh-my-zsh plugins/tmux
-    # zgen oh-my-zsh plugins/vscode
 
     # from github
     zgen load unixorn/autoupdate-zgen
     # zgen load RobSis/zsh-completion-generator
     zgen load djui/alias-tips
     # zgen load ytet5uy4/fzf-widgets
-    zgen load lukechilds/zsh-nvm
 
     # theme
     zgen load mafredri/zsh-async
