@@ -9,7 +9,7 @@ fpath=(${ZSH_DIR}/completions $fpath)
 if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_NO_AUTO_UPDATE=true
     if [ "$ZSH_SYS" = "Darwin" ]; then
-        export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+        export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
     fi
 
     # zsh completions
@@ -197,18 +197,3 @@ i() {
 
 # init_nodenv
 init_pyenv
-
-# if command -v ip >/dev/null 2>&1; then
-#     export HOST_IP=$(ip route get 1 | awk '{print $NF;exit}')
-# fi
-
-# if [ $HOST_IP = "192.168.0.80" ]; then
-#     init_pyenv
-# fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export GVM_DIR="$HOME/.gvm"
-[ -s "$GVM_DIR/scripts/gvm" ] && source "$GVM_DIR/scripts/gvm"

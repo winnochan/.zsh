@@ -20,8 +20,13 @@ else
 fi
 
 # anaconda3
-export ANACONDA3_HOME="$HOME/anaconda3"
-export PATH="$ANACONDA3_HOME/bin:$PATH"
+if [ "$ZSH_SYS" = "Darwin" ]; then
+    export ANACONDA3_HOME="/anaconda3"
+    export PATH="$ANACONDA3_HOME/bin:$PATH"
+else
+    export ANACONDA3_HOME="$HOME/anaconda3"
+    export PATH="$ANACONDA3_HOME/bin:$PATH"
+fi
 
 # android sdk
 export ANDROID_HOME="$HOME/Library/Android/sdk"
