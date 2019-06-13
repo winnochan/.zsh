@@ -196,4 +196,4 @@ i() {
 }
 
 # init_nodenv
-init_pyenv
+# init_pyenv
