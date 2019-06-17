@@ -1,7 +1,13 @@
 export ZSH_DIR=$(dirname ${(%):-%N})
 export ZSH_SYS=$(uname)
 
-#brew
+# base-shell config
+BASE16_SHELL="$ZSH_DIR/.base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+    eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# brew
 brew_env_cache=$ZSH_DIR/.brewenv.zsh
 if [ -f $brew_env_cache ]; then
     source $brew_env_cache
