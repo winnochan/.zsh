@@ -96,5 +96,12 @@ if command -v rustup >/dev/null 2>&1; then
    # export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 fi
 
+# vagrant
+if [ "$ZSH_SYS" = "Darwin" ]; then
+    export VAGRANT_DEFAULT_PROVIDER="virtualbox"
+elif [ "$ZSH_SYS" = "Linux" ]; then
+    export VAGRANT_DEFAULT_PROVIDER="libvirt"
+fi
+
 ##################### other tools #####################
 export BETTER_EXCEPTIONS=1
