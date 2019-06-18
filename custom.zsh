@@ -1,4 +1,9 @@
 # zsh integrated completion
+functions_path="$HOMEBREW_PREFIX/share/zsh-completions"
+if [ -d $functions_path ]; then
+    fpath=($functions_path $fpath)
+fi
+
 functions_path="$HOMEBREW_PREFIX/share/zsh/functions"
 if [ -d $functions_path ]; then
     fpath=($functions_path $fpath)
