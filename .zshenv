@@ -89,11 +89,10 @@ if [ -f "$cargo_env" ]; then
 fi
 # rustup
 if command -v rustup >/dev/null 2>&1; then
-   rustup_default_host=$(rustup toolchain list | cut -d ' ' -f 1)
-   export RUST_SRC_PATH="$HOME/.rustup/toolchains/$rustup_default_host/lib/rustlib/src/rust/src"
+    export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
-   # export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
-   # export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
+    # export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
+    # export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 fi
 
 # vagrant
