@@ -14,7 +14,7 @@ if ! zgen saved; then
     zgen oh-my-zsh
     # zgen oh-my-zsh plugins/autoenv
     # zgen oh-my-zsh plugins/battery
-    # zgen oh-my-zsh plugins/cargo
+    zgen oh-my-zsh plugins/cargo
     # zgen oh-my-zsh plugins/colored-man-pages
     # zgen oh-my-zsh plugins/cp
     zgen oh-my-zsh plugins/extract
@@ -29,11 +29,15 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/ng
     zgen oh-my-zsh plugins/per-directory-history
     zgen oh-my-zsh plugins/pip
+    zgen oh-my-zsh plugins/pipenv
     # zgen oh-my-zsh plugins/rsync
     # zgen oh-my-zsh plugins/rust
     zgen oh-my-zsh plugins/ssh-agent
+    zgen oh-my-zsh plugins/systemd
     # zgen oh-my-zsh plugins/tig
     # zgen oh-my-zsh plugins/tmux
+    zgen oh-my-zsh plugins/vagrant
+    zgen oh-my-zsh plugins/vagrant-prompt
 
     # from github
     zgen load unixorn/autoupdate-zgen
