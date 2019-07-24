@@ -52,3 +52,6 @@ PROXY_IP="127.0.0.1"
 PROXY_PORT="1087"
 alias bsc="brook ssclient -l ${PROXY_IP}:${PROXY_PORT} -i ${PROXY_IP} -s vm.winnochan.tech:9997 --http -p"
 alias ehp="export http_proxy=http://${PROXY_IP}:${PROXY_PORT}; export https_proxy=http://${PROXY_IP}:${PROXY_PORT};"
+
+# v2ray install
+alias v2rayi="bash <(curl -L -s https://install.direct/go.sh)"
