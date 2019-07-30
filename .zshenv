@@ -47,8 +47,8 @@ export PUB_HOSTED_URL="https://pub.flutter-io.cn"
 export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 # goenv
-export GOPATH="$HOME/.gopath"
-export PATH="$HOME/.goenv/bin:$GOPATH/bin:$PATH"
+# export GOPATH="$HOME/.gopath"
+# export PATH="$HOME/.goenv/bin:$GOPATH/bin:$PATH"
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
