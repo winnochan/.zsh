@@ -196,9 +196,23 @@ scalaenv() {
     return 0
 }
 
+init_gvm() {
+    [[ -s "/Users/winnochan/.gvm/scripts/gvm" ]] && source "/Users/winnochan/.gvm/scripts/gvm"
+}
+
+gvm() {
+    unfunction "gvm"
+    init_gvm
+    if command -v gvm >/dev/null 2>&1; then
+        gvm "$@"
+    fi
+    return 0
+}
+
 i() {
-    init_goenv && init_jenv && init_nodenv && init_pyenv && init_rbenv && init_scalaenv
+    init_goenv && init_jenv && init_nodenv && init_pyenv && init_rbenv && init_scalaenv && init_gvm
 }
 
 # init_nodenv
 # init_pyenv
+init_gvm
