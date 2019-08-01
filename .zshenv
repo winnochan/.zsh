@@ -42,13 +42,9 @@ export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
 # flutter
-export PATH="$HOME/flutter/bin:$PATH"
+export PATH="$ZSH_DIR/.flutter/bin:$PATH"
 export PUB_HOSTED_URL="https://pub.flutter-io.cn"
 export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
-
-# goenv
-# export GOPATH="$HOME/.gopath"
-# export PATH="$HOME/.goenv/bin:$GOPATH/bin:$PATH"
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
