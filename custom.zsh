@@ -27,9 +27,9 @@ if command -v brew >/dev/null 2>&1; then
     export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl/lib/pkgconfig"
 
     # node@10
-    # export PATH="${HOMEBREW_PREFIX}/opt/node@10/bin:$PATH"
-    # export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/node@10/lib"
-    # export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/node@10/include"
+    export PATH="${HOMEBREW_PREFIX}/opt/node@10/bin:$PATH"
+    export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/node@10/lib"
+    export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/node@10/include"
 
     # sqlite3
     export PATH="${HOMEBREW_PREFIX}/opt/sqlite/bin:$PATH"
