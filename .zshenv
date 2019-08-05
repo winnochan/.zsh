@@ -46,6 +46,10 @@ export PATH="$ZSH_DIR/.flutter/bin:$PATH"
 export PUB_HOSTED_URL="https://pub.flutter-io.cn"
 export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
+# go
+export GO111MODULE="on"
+export GOPROXY="https://goproxy.io"
+
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 

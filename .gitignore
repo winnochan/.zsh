@@ -6,3 +6,5 @@
 *.zwc
 .docsets/*
 .brewenv.zsh
+go.mod
+go.sum
