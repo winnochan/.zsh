@@ -55,3 +55,6 @@ alias ehp="export http_proxy=http://${PROXY_IP}:${PROXY_PORT}; export https_prox
 
 # v2ray install
 alias v2rayi="bash <(curl -L -s https://install.direct/go.sh)"
+
+alias ap="export all_proxy=http://127.0.0.1:1087;"
+alias unap="unset all_proxy"
