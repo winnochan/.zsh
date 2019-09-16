@@ -1,6 +1,10 @@
 export ZSH_DIR=$(dirname ${(%):-%N})
 export ZSH_SYS=$(uname)
 
+# oh-my-zsh
+DISABLE_UPDATE_PROMPT="true"
+DISABLE_AUTO_UPDATE="true"
+
 # base-shell config
 BASE16_SHELL="$ZSH_DIR/.base16-shell/"
 [ -n "$PS1" ] && \
