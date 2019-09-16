@@ -21,8 +21,8 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/fasd
     # zgen oh-my-zsh plugins/fzf
     zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/gitfast
-    zgen oh-my-zsh plugins/gitignore
+    # zgen oh-my-zsh plugins/gitfast
+    # zgen oh-my-zsh plugins/gitignore
     # zgen oh-my-zsh plugins/gulp
     zgen oh-my-zsh plugins/last-working-dir
     # zgen oh-my-zsh plugins/mosh
@@ -33,15 +33,15 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/pipenv
     # zgen oh-my-zsh plugins/rsync
     # zgen oh-my-zsh plugins/rust
-    zgen oh-my-zsh plugins/ssh-agent
-    zgen oh-my-zsh plugins/systemd
+    # zgen oh-my-zsh plugins/ssh-agent
+    # zgen oh-my-zsh plugins/systemd
     # zgen oh-my-zsh plugins/tig
     # zgen oh-my-zsh plugins/tmux
-    zgen oh-my-zsh plugins/vagrant
-    zgen oh-my-zsh plugins/vagrant-prompt
+    # zgen oh-my-zsh plugins/vagrant
+    # zgen oh-my-zsh plugins/vagrant-prompt
 
     # from github
-    zgen load unixorn/autoupdate-zgen
+    # zgen load unixorn/autoupdate-zgen
     # zgen load RobSis/zsh-completion-generator
     zgen load djui/alias-tips
     # zgen load ytet5uy4/fzf-widgets
@@ -58,6 +58,7 @@ if ! zgen saved; then
     zgen load zsh-users/zaw
     zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-completions
+
     zgen load hlissner/zsh-autopair
     # zgen load zdharma/fast-syntax-highlighting
     zgen load zsh-users/zsh-syntax-highlighting
