@@ -61,9 +61,9 @@ fi
 # fi
 
 # fasd
-if [ "$ZSH_SYS" = "Darwin" ]; then
-    alias o='a -e open_command'
-fi
+# if [ "$ZSH_SYS" = "Darwin" ]; then
+#     alias o='a -e open_command'
+# fi
 
 # editor
 export EDITOR="emacsclient -t -a vim"

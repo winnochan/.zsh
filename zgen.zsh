@@ -29,8 +29,8 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/ng
     # zgen oh-my-zsh plugins/nvm
     zgen oh-my-zsh plugins/per-directory-history
-    zgen oh-my-zsh plugins/pip
-    zgen oh-my-zsh plugins/pipenv
+    # zgen oh-my-zsh plugins/pip
+    # zgen oh-my-zsh plugins/pipenv
     # zgen oh-my-zsh plugins/rsync
     # zgen oh-my-zsh plugins/rust
     # zgen oh-my-zsh plugins/ssh-agent
@@ -55,14 +55,14 @@ if ! zgen saved; then
     # zgen load urbainvaes/fzf-marks
 
     # from zsh-user
-    zgen load zsh-users/zaw
+    # zgen load zsh-users/zaw
     zgen load zsh-users/zsh-autosuggestions
-    zgen load zsh-users/zsh-completions
+    # zgen load zsh-users/zsh-completions
 
     zgen load hlissner/zsh-autopair
     # zgen load zdharma/fast-syntax-highlighting
     zgen load zsh-users/zsh-syntax-highlighting
-    zgen load zsh-users/zsh-history-substring-search
+    # zgen load zsh-users/zsh-history-substring-search
 
     # generate the init script from plugins above
     zgen save
