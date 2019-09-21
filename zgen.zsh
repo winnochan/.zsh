@@ -57,7 +57,7 @@ if ! zgen saved; then
     # from zsh-user
     # zgen load zsh-users/zaw
     zgen load zsh-users/zsh-autosuggestions
-    # zgen load zsh-users/zsh-completions
+    zgen load zsh-users/zsh-completions
 
     zgen load hlissner/zsh-autopair
     # zgen load zdharma/fast-syntax-highlighting
