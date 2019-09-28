@@ -54,6 +54,9 @@ if command -v brew >/dev/null 2>&1; then
         source $GOOGLE_CLOUD_SDK_HOME/path.zsh.inc
         source $GOOGLE_CLOUD_SDK_HOME/completion.zsh.inc
     fi
+
+    # mono
+    export MONO_GAC_PREFIX="${HOMEBREW_PREFIX}"
 fi
 
 # if command -v pipenv >/dev/null 2>&1; then
