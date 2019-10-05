@@ -52,8 +52,8 @@ export PUB_HOSTED_URL="https://pub.flutter-io.cn"
 export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 # go
-export GO111MODULE="on"
-export GOPROXY="https://goproxy.io"
+export GOPROXY="https://goproxy.io,direct"
+export GOPRIVATE="*.corp.example.com"
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
