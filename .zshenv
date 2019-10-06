@@ -54,7 +54,7 @@ export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 # go
 export GOPATH=$HOME/.gopath
 export PATH=$GOPATH/bin:$PATH
-export GO111MODULE=on
+export GO111MODULE=auto
 export GOPROXY=https://goproxy.io,direct
 # export GOPRIVATE=*.corp.example.com
 
