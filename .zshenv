@@ -59,7 +59,7 @@ export GOPROXY=https://goproxy.io,direct
 # export GOPRIVATE=*.corp.example.com
 # oo
 source $ZSH_DIR/.oo/env
-export PATH=$GOPATH/bin:$PATH
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
