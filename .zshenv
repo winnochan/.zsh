@@ -54,11 +54,12 @@ export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 # go
 # export GOROOT=$HOME/.go
 # export GOPATH=$HOME/go
-# export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
 export GO111MODULE=auto
 export GOPROXY=https://goproxy.io,direct
 # oo
 source $ZSH_DIR/.oo/env
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # export GOPRIVATE=*.corp.example.com
 
 # jenv
