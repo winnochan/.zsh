@@ -10,6 +10,11 @@ if [ -d $functions_path ]; then
 fi
 fpath=(${ZSH_DIR}/completions $fpath)
 
+# ssh keychain
+if [ -f $HOME/.keychain/gamesvr-sh ]; then
+    source $HOME/.keychain/gamesvr-sh
+fi
+
 # brew
 if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_NO_AUTO_UPDATE=true
