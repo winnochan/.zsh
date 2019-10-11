@@ -12,8 +12,8 @@ fpath=(${ZSH_DIR}/completions $fpath)
 
 # ssh keychain
 keychain_file=$HOME/.keychain/$(hostname)-sh
-if [ -f keychain_file ]; then
-    source keychain_file
+if [ -f $keychain_file ]; then
+    source $keychain_file
 fi
 
 # brew
