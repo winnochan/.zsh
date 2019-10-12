@@ -61,6 +61,8 @@ export GOSUMDB=gosum.io+ce6e7565+AY5qEHUk/qmHc5btzW45JVoENfazw8LielDsaI+lEbq6
 # oo
 source $ZSH_DIR/.oo/env
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+# godoc color
+export GODOCC_STYLE='native'
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
