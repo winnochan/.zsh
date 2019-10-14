@@ -20,7 +20,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/extract
     zgen oh-my-zsh plugins/fasd
     # zgen oh-my-zsh plugins/fzf
-    zgen oh-my-zsh plugins/git
+    # zgen oh-my-zsh plugins/git
     # zgen oh-my-zsh plugins/gitfast
     # zgen oh-my-zsh plugins/gitignore
     # zgen oh-my-zsh plugins/gulp
@@ -28,7 +28,7 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/mosh
     # zgen oh-my-zsh plugins/ng
     # zgen oh-my-zsh plugins/nvm
-    zgen oh-my-zsh plugins/per-directory-history
+    # zgen oh-my-zsh plugins/per-directory-history
     # zgen oh-my-zsh plugins/pip
     # zgen oh-my-zsh plugins/pipenv
     # zgen oh-my-zsh plugins/rsync
@@ -44,6 +44,9 @@ if ! zgen saved; then
     # zgen load unixorn/autoupdate-zgen
     # zgen load RobSis/zsh-completion-generator
     zgen load djui/alias-tips
+    zgen load avivl/gcloud-project
+    zgen load mdumitru/git-aliases
+    zgen load wfxr/forgit
     # zgen load ytet5uy4/fzf-widgets
 
     # theme
