@@ -25,9 +25,10 @@ fi
 # brew
 if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_NO_AUTO_UPDATE=true
-    # if [ "$ZSH_SYS" = "Darwin" ]; then
-    #     export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
-    # fi
+    if [ "$ZSH_SYS" = "Darwin" ]; then
+        # export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+        export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+    fi
 
     # zsh completions
     fpath=($fpath ${HOMEBREW_PREFIX}/share/zsh/site-functions)
