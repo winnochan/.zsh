@@ -44,9 +44,10 @@ if ! zgen saved; then
     # zgen load unixorn/autoupdate-zgen
     # zgen load RobSis/zsh-completion-generator
     zgen load djui/alias-tips
-    zgen load avivl/gcloud-project
+    # zgen load avivl/gcloud-project
+    zgen load littleq0903/gcloud-zsh-completion
     zgen load mdumitru/git-aliases
-    zgen load wfxr/forgit
+    # zgen load wfxr/forgit
     # zgen load ytet5uy4/fzf-widgets
 
     # theme

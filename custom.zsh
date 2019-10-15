@@ -10,6 +10,12 @@ if [ -d $functions_path ]; then
 fi
 fpath=(${ZSH_DIR}/completions $fpath)
 
+# gcloud completion
+# gcloud_completion_path=$ZSH_DIR/.zgen/littleq0903/gcloud-zsh-completion-master/src
+# if [ -f $gcloud_completion_path ]; then
+#     fpath=($gcloud_completion_path $fpath)
+# fi
+
 # ssh keychain
 keychain_file=$HOME/.keychain/$(hostname)-sh
 if [ -f $keychain_file ]; then
