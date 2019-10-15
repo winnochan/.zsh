@@ -48,8 +48,10 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 
 # flutter
 export PATH="$ZSH_DIR/.flutter/bin:$PATH"
-export PUB_HOSTED_URL="https://pub.flutter-io.cn"
-export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
+# export PUB_HOSTED_URL="https://pub.flutter-io.cn"
+# export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
+export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub/"
+export FLUTTER_STORAGE_BASE_URL="https://mirrors.tuna.tsinghua.edu.cn/flutter"
 
 # go
 # export GOROOT=$HOME/.go
@@ -96,11 +98,15 @@ fi
 # scalaenv
 # export PATH="$HOME/.scalaenv/bin:$PATH"
 
+# rust mirror
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+
 # rust cargo
 cargo_env="$HOME/.cargo/env"
 if [ -f "$cargo_env" ]; then
     source $cargo_env
 fi
+
 # rustup
 if command -v rustup >/dev/null 2>&1; then
     export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
