@@ -29,15 +29,6 @@ else
     test -f $brew_env_cache && source $brew_env_cache
 fi
 
-# anaconda3
-# if [ "$ZSH_SYS" = "Darwin" ]; then
-#     export ANACONDA3_HOME="/anaconda3"
-#     export PATH="$ANACONDA3_HOME/bin:$PATH"
-# else
-#     export ANACONDA3_HOME="$HOME/anaconda3"
-#     export PATH="$ANACONDA3_HOME/bin:$PATH"
-# fi
-
 # android sdk
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export ANDROID_NDK_HOME="${ANDROID_SDK_ROOT}/ndk-bundle"
