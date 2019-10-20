@@ -71,6 +71,16 @@ if command -v brew >/dev/null 2>&1; then
 
     # mono
     export MONO_GAC_PREFIX="${HOMEBREW_PREFIX}"
+
+    # anaconda3
+    if [ -d ${HOMEBREW_PREFIX}/anaconda3 ]; then
+        export PATH=${HOMEBREW_PREFIX}/anaconda3/bin:$PATH
+    fi
+
+    # llvm
+    if [ -d ${HOMEBREW_PREFIX}/opt/llvm ]; then
+        export PATH=${HOMEBREW_PREFIX}/opt/llvm/bin:$PATH
+    fi
 fi
 
 # if command -v pipenv >/dev/null 2>&1; then
