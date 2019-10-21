@@ -1,0 +1,13 @@
+autoflake
+black
+flake8
+isort
+json-rpc
+ptvsd
+pygments
+pylint
+python-language-server
+pyls-isort
+pyls-mypy
+service_factory
+yapf
