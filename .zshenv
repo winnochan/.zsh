@@ -35,14 +35,14 @@ export ANDROID_NDK_HOME="${ANDROID_SDK_ROOT}/ndk-bundle"
 export PATH="${ANDROID_SDK_ROOT}/tools/bin:$PATH"
 
 # dart
-export PATH="$HOME/.pub-cache/bin:$PATH"
+# export PATH="$HOME/.pub-cache/bin:$PATH"
 
 # flutter
-export PATH="$HOME/flutter/bin:$PATH"
+# export PATH="$HOME/flutter/bin:$PATH"
 # export PUB_HOSTED_URL="https://pub.flutter-io.cn"
 # export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
-export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub/"
-export FLUTTER_STORAGE_BASE_URL="https://mirrors.tuna.tsinghua.edu.cn/flutter"
+# export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub/"
+# export FLUTTER_STORAGE_BASE_URL="https://mirrors.tuna.tsinghua.edu.cn/flutter"
 
 # go
 # export GOROOT=$HOME/.go
