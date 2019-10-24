@@ -77,6 +77,11 @@ if command -v brew >/dev/null 2>&1; then
         export PATH=${HOMEBREW_PREFIX}/anaconda3/bin:$PATH
     fi
 
+    # miniconda
+    if [ -d ${HOMEBREW_PREFIX}/Caskroom/miniconda/base ]; then
+        export PATH=${HOMEBREW_PREFIX}/Caskroom/miniconda/base/bin:$PATH
+    fi
+
     # llvm
     if [ -d ${HOMEBREW_PREFIX}/opt/llvm ]; then
         export PATH=${HOMEBREW_PREFIX}/opt/llvm/bin:$PATH
