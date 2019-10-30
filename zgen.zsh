@@ -24,7 +24,7 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/gitfast
     # zgen oh-my-zsh plugins/gitignore
     # zgen oh-my-zsh plugins/gulp
-    zgen oh-my-zsh plugins/keychain
+    # zgen oh-my-zsh plugins/keychain
     zgen oh-my-zsh plugins/last-working-dir
     # zgen oh-my-zsh plugins/mosh
     # zgen oh-my-zsh plugins/ng
