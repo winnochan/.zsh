@@ -16,12 +16,6 @@ fpath=(${ZSH_DIR}/completions $fpath)
 #     fpath=($gcloud_completion_path $fpath)
 # fi
 
-# ssh keychain
-keychain_file=$HOME/.keychain/$(hostname)-sh
-if [ -f $keychain_file ]; then
-    source $keychain_file
-fi
-
 # brew
 if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_NO_AUTO_UPDATE=true
