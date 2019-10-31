@@ -20,7 +20,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/extract
     zgen oh-my-zsh plugins/fasd
     # zgen oh-my-zsh plugins/fzf
-    # zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/git
     # zgen oh-my-zsh plugins/gitfast
     # zgen oh-my-zsh plugins/gitignore
     # zgen oh-my-zsh plugins/gulp
@@ -46,8 +46,8 @@ if ! zgen saved; then
     # zgen load RobSis/zsh-completion-generator
     zgen load djui/alias-tips
     # zgen load avivl/gcloud-project
-    zgen load littleq0903/gcloud-zsh-completion
-    zgen load mdumitru/git-aliases
+    # zgen load littleq0903/gcloud-zsh-completion
+    # zgen load mdumitru/git-aliases
     # zgen load wfxr/forgit
     # zgen load ytet5uy4/fzf-widgets
 
