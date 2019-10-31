@@ -12,15 +12,11 @@ ZPLGM[MUTE_WARNINGS]=1
 
 source ${ZPLGM[BIN_DIR]}/zplugin.zsh
 
-# export ALL_PROXY=http://127.0.0.1:1087;
+export ALL_PROXY=http://127.0.0.1:1087;
 
 # blox theme
 zplugin ice silent pick'async.zsh' src'blox.zsh'
 zplugin light yardnsm/blox-zsh-theme
-
-# 大量常用命令的补全插件
-zplugin ice silent blockf
-zplugin light zsh-users/zsh-completions
 
 # 记住上次的工作目录
 zplugin snippet OMZ::plugins/last-working-dir/last-working-dir.plugin.zsh
@@ -34,8 +30,7 @@ zplugin ice silent wait'0a'
 zplugin snippet OMZ::plugins/fasd/fasd.plugin.zsh
 
 # git命令alias插件
-# zplugin ice silent wait'0b'
-zplugin ice silent
+zplugin ice silent wait'0b'
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 
 # alias提示插件
@@ -76,3 +71,7 @@ zplugin snippet OMZ::plugins/cargo/_cargo
 # 一键解压工具插件
 zplugin ice silent wait'3b'
 zplugin snippet OMZ::plugins/extract/extract.plugin.zsh
+
+# 大量常用命令的补全插件
+zplugin ice silent blockf wait'3c'
+zplugin light zsh-users/zsh-completions
