@@ -1,27 +1,78 @@
-export ZPLUGIN_DIR=$ZSH_DIR/.zplugin
-source $ZPLUGIN_DIR/zplugin.zsh
+declare -A ZPLGM
 
-export all_proxy=http://${PROXY_IP}:${PROXY_PORT};
-# zplugin snippet OMZ::plugins/cargo/cargo.plugin.zsh
-# zplugin snippet OMZ::plugins/extract/extract.plugin.zsh
-# zplugin snippet OMZ::plugins/fasd/fasd.plugin.zsh
-# zplugin snippet OMZ::plugins/git/git.plugin.zsh
-# zplugin snippet OMZ::plugins/last-working-dir/last-working-dir.plugin.zsh
-# zplugin snippet OMZ::plugins/per-directory-history/per-directory-history.plugin.zsh
+ZPLGM[CACHE_DIR]=$ZSH_DIR/.cache
+ZPLGM[HOME_DIR]=$ZSH_DIR/.zplugin
+ZPLGM[BIN_DIR]=${ZPLGM[HOME_DIR]}/bin
+ZPLGM[PLUGINS_DIR]=${ZPLGM[CACHE_DIR]}/plugins
+ZPLGM[COMPLETIONS_DIR]=${ZPLGM[CACHE_DIR]}/completions
+ZPLGM[SNIPPETS_DIR]=${ZPLGM[CACHE_DIR]}/snippets
+ZPLGM[ZCOMPDUMP_PATH]=$HOME
+ZPLGM[COMPINIT_OPTS]='-C'
+ZPLGM[MUTE_WARNINGS]=1
 
-zplugin light djui/alias-tips
+source ${ZPLGM[BIN_DIR]}/zplugin.zsh
 
-# for blox theme
-zplugin ice pick"async.zsh" src"blox.zsh"
+# export ALL_PROXY=http://127.0.0.1:1087;
+
+# blox theme
+zplugin ice silent pick'async.zsh' src'blox.zsh'
 zplugin light yardnsm/blox-zsh-theme
 
-# fzf
-# zplugin ice from"gh-r" as"program"
-# zplugin load junegunn/fzf-bin
-# zplugin snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh"
-# zplugin snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh"
-
-zplugin light zsh-users/zsh-autosuggestions
+# 大量常用命令的补全插件
+zplugin ice silent blockf
 zplugin light zsh-users/zsh-completions
+
+# 记住上次的工作目录
+zplugin snippet OMZ::plugins/last-working-dir/last-working-dir.plugin.zsh
+
+# 自动推荐历史命令插件
+zplugin ice silent wait atload'_zsh_autosuggest_start'
+zplugin light zsh-users/zsh-autosuggestions
+
+# 快速目录跳转插件
+zplugin ice silent wait'0a'
+zplugin snippet OMZ::plugins/fasd/fasd.plugin.zsh
+
+# git命令alias插件
+# zplugin ice silent wait'0b'
+zplugin ice silent
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
+
+# alias提示插件
+zplugin ice silent wait'0c'
+zplugin light djui/alias-tips
+
+# oh my zsh lib config
+zplugin ice silent svn wait '1a' multisrc'*.zsh' pick'/dev/null'
+zplugin snippet OMZ::lib
+
+# 隔离每个工作目录的命令历史记录
+zplugin ice silent wait'1b'
+zplugin snippet OMZ::plugins/per-directory-history/per-directory-history.zsh
+
+# 语法高亮插件
+zplugin ice wait'1d' silent
+zplugin light zdharma/fast-syntax-highlighting
+
+# 自动括号, 引号匹配插件
+zplugin ice silent wait'1e'
 zplugin light hlissner/zsh-autopair
-zplugin light zsh-users/zsh-syntax-highlighting
+
+# fzf 模糊文件查找工具, 延迟2秒加载
+zplugin ice silent wait'2a' from"gh-r" as"program"
+zplugin light junegunn/fzf-bin
+
+zplugin ice silent wait'2b'
+zplugin snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh"
+
+zplugin ice silent wait'2c'
+zplugin snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh"
+
+# cargo包管理工具补全插件
+# zplugin ice silent as"completion" wait'[[ -n ${ZLAST_COMMANDS[(r)car*]} ]]'
+zplugin ice silent wait'3a'
+zplugin snippet OMZ::plugins/cargo/_cargo
+
+# 一键解压工具插件
+zplugin ice silent wait'3b'
+zplugin snippet OMZ::plugins/extract/extract.plugin.zsh

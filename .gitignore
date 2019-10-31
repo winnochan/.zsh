@@ -8,3 +8,4 @@
 .brewenv.zsh
 go.mod
 go.sum
+.cache

@@ -3,8 +3,8 @@ export LC_ALL="en_US.UTF-8"
 
 # zmodload zsh/zprof
 
-# source ${ZSH_DIR}/zplugin.zsh
-source ${ZSH_DIR}/zgen.zsh
+source ${ZSH_DIR}/zplugin.zsh
+# source ${ZSH_DIR}/zgen.zsh
 source ${ZSH_DIR}/alias.zsh
 source ${ZSH_DIR}/custom.zsh
 
@@ -23,10 +23,10 @@ if command -v keychain >/dev/null 2>&1; then
 fi
 
 # checking the cached .zcompdump once a day
-autoload -Uz compinit
-for dump in ${ZDOTDIR:-$HOME}/.zcompdump(N.mh+24); do
-    compinit
-done
-compinit -C
+# autoload -Uz compinit
+# for dump in ${ZDOTDIR:-$HOME}/.zcompdump(N.mh+24); do
+#     compinit
+# done
+# compinit -C
 
 # zprof
