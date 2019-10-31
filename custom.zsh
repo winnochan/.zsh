@@ -103,7 +103,7 @@ export FZF_COMPLETION_TRIGGER=';;'
 # pure-zsh-theme
 
 # blox-zsh-theme
-export BLOX_CONF__ONELINE=false
+export BLOX_CONF__ONELINE=true
 export BLOX_BLOCK__CWD_TRUNC=2
 export BLOX_BLOCK__HOST_USER_SHOW_ALWAYS=true
 export BLOX_BLOCK__HOST_MACHINE_SHOW_ALWAYS=true
@@ -113,8 +113,6 @@ export BLOX_BLOCK__PYENV_COLOR='green'
 export BLOX_BLOCK__VIRTUALENV_COLOR='green'
 export BLOX_BLOCK__TIME_COLOR='green'
 export BLOX_BLOCK__BGJOBS_COLOR='green'
-
-# dracula-zsh-theme
 
 # gtags
 export GTAGSLABEL=pygments
@@ -235,10 +233,10 @@ gvm() {
     return 0
 }
 
-i() {
-    init_goenv && init_jenv && init_nodenv && init_pyenv && init_rbenv && init_scalaenv && init_gvm
-}
+# i() {
+#     init_goenv && init_jenv && init_nodenv && init_pyenv && init_rbenv && init_scalaenv && init_gvm
+# }
 
 # init_nodenv
 # init_pyenv
-init_gvm
+# init_gvm
