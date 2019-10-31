@@ -1,21 +1,8 @@
-# Q1项目指令
-engine="../engine/engine.nostrip"
-alias run="$engine -l . -r"
-alias c="$engine -l . -r cmd/wizcmds/update.c -O"
-alias mb="$engine -l . -b"
-alias mu="make upcode"
-alias mr="make restart"
-alias up="touch etc/autoupdate.ini"
-alias pe="ps x | grep 'engine/engine' | grep -v grep"
-alias 38="ssh 38"
-alias 80="ssh 80"
-alias 127="ssh 127"
-
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# Emacs 指令
+# emacs 指令
 alias e="emacsclient -t -a vim"
 alias ed="emacs --daemon"
 alias edt="emacs --daemon --timed-requires"
@@ -26,12 +13,12 @@ alias eddit="emacs --daemon --debug-init --timed-requires"
 alias ef='emacsclient -t -a vim $(fzf)'
 alias vf='vim $(fzf)'
 
-# Linux 常用指令
+# linux 常用指令
 alias tf="tail -f"
 alias k2="kill -2"
 alias k9="kill -9"
 
-# Shadowsocks 指令
+# shadowsocks 指令
 alias ssnum="sudo lsof -i -n -P | egrep -c ':1080.+ESTABLISHED'"
 alias sslist="sudo lsof -i -n -P | egrep ':1080.+ESTABLISHED'"
 alias ss="ssserver -c /etc/shadowsocks.json -d"
@@ -47,14 +34,8 @@ alias dreg="docker run -d -p 5000:5000 --restart always --name registry registry
 # mosh
 alias moshroot="mosh --ssh='ssh -l root'"
 
-# brook
-PROXY_IP="127.0.0.1"
-PROXY_PORT="1087"
-alias bsc="brook ssclient -l ${PROXY_IP}:${PROXY_PORT} -i ${PROXY_IP} -s vm.winnochan.tech:9997 --http -p"
-alias ehp="export http_proxy=http://${PROXY_IP}:${PROXY_PORT}; export https_proxy=http://${PROXY_IP}:${PROXY_PORT};"
-
 # v2ray install
 alias v2rayi="bash <(curl -L -s https://install.direct/go.sh)"
 
-alias ap="export all_proxy=http://127.0.0.1:1087;"
+alias ap="export all_proxy=http://${PROXY_IP}:${PROXY_PORT};"
 alias unap="unset all_proxy"
