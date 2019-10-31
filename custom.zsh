@@ -4,11 +4,11 @@
 #     fpath=($functions_path $fpath)
 # fi
 
-functions_path="$HOMEBREW_PREFIX/share/zsh/functions"
-if [ -d $functions_path ]; then
-    fpath=($functions_path $fpath)
-fi
-fpath=(${ZSH_DIR}/completions $fpath)
+# functions_path="$HOMEBREW_PREFIX/share/zsh/functions"
+# if [ -d $functions_path ]; then
+#     fpath=($functions_path $fpath)
+# fi
+# fpath=(${ZSH_DIR}/completions $fpath)
 
 # gcloud completion
 # gcloud_completion_path=$ZSH_DIR/.zgen/littleq0903/gcloud-zsh-completion-master/src
@@ -50,12 +50,12 @@ if command -v brew >/dev/null 2>&1; then
     fi
 
     # fzf
-    fzf_path=${HOMEBREW_PREFIX}/opt/fzf
-    if [ -d $fzf_path ]; then
-        export PATH=$fzf_path/bin:$PATH
-        source $fzf_path/shell/completion.zsh 2> /dev/null
-        source $fzf_path/shell/key-bindings.zsh
-    fi
+    # fzf_path=${HOMEBREW_PREFIX}/opt/fzf
+    # if [ -d $fzf_path ]; then
+    #     export PATH=$fzf_path/bin:$PATH
+    #     source $fzf_path/shell/completion.zsh 2> /dev/null
+    #     source $fzf_path/shell/key-bindings.zsh
+    # fi
 
     export GOOGLE_CLOUD_SDK_HOME="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
     if [ -d $GOOGLE_CLOUD_SDK_HOME ]; then

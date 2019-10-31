@@ -7,3 +7,6 @@
 [submodule ".oo"]
 	path = .oo
 	url = https://github.com/hit9/oo.git
+[submodule ".zplugin/bin"]
+	path = .zplugin/bin
+	url = https://github.com/zdharma/zplugin.git
