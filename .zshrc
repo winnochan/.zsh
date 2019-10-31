@@ -10,11 +10,11 @@ source ${ZSH_DIR}/custom.zsh
 
 # ssh keychain
 if command -v keychain >/dev/null 2>&1; then
-    if [ "$(ps x | grep ssh-agent | grep -v grep)" = "" ]; then
+    # if [ "$(ps x | grep ssh-agent | grep -v grep)" = "" ]; then
         if [ -f ~/.ssh/ecdsa ]; then
             keychain -q ~/.ssh/ecdsa
         fi
-    fi
+    # fi
 
     keychain_file=$HOME/.keychain/$(hostname)-sh
     if [ -f $keychain_file ]; then
