@@ -3,6 +3,7 @@ export LC_ALL="en_US.UTF-8"
 
 # zmodload zsh/zprof
 
+# source ${ZSH_DIR}/zplugin.zsh
 source ${ZSH_DIR}/zgen.zsh
 source ${ZSH_DIR}/alias.zsh
 source ${ZSH_DIR}/custom.zsh
