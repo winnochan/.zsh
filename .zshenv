@@ -57,12 +57,6 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # godoc color
 export GODOCC_STYLE='native'
 
-# jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-
-# nodenv
-export PATH="$HOME/.nodenv/bin:$PATH"
-
 # java
 if [ -d "/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home" ]; then
     export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
@@ -75,19 +69,13 @@ elif [ -d "/Library/Java/Home" ]; then
 fi
 
 # pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
+# export PATH="$HOME/.pyenv/bin:$PATH"
 # python env var
 if [ "$ZSH_SYS" = "Linux" ]; then
     export PYTHON_CONFIGURE_OPTS="--enable-shared"
 elif [ "$ZSH_SYS" = "Darwin" ]; then
     export PYTHON_CONFIGURE_OPTS="--enable-framework"
 fi
-
-# rbenv
-# export PATH="$HOME/.rbenv/bin:$PATH"
-
-# scalaenv
-# export PATH="$HOME/.scalaenv/bin:$PATH"
 
 # rust mirror
 export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
