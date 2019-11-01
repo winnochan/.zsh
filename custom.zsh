@@ -1,8 +1,3 @@
-# zsh integrated completion
-# functions_path="$HOMEBREW_PREFIX/share/zsh-completions"
-# if [ -d $functions_path ]; then
-#     fpath=($functions_path $fpath)
-# fi
 fpath=(${ZSH_DIR}/completions $fpath)
 
 # gcloud completion
@@ -19,13 +14,15 @@ if command -v brew >/dev/null 2>&1; then
         export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
     fi
 
-    functions_path="$HOMEBREW_PREFIX/share/zsh/functions"
-    if [ -d $functions_path ]; then
-        fpath=($functions_path $fpath)
+    zsh_share_path=$HOMEBREW_PREFIX/share/zsh
+    if [ -d $zsh_share_path ]; then
+        fpath=($zsh_share_path/functions $zsh_share_path/site-functions  $fpath)
     fi
 
-    # zsh completions
-    fpath=($fpath ${HOMEBREW_PREFIX}/share/zsh/site-functions)
+    zsh_completions=$HOMEBREW_PREFIX/share/zsh-completions
+    if [ -d $zsh_completions ]; then
+        fpath=($zsh_completions $fpath)
+    fi
 
     # openssl
     export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
