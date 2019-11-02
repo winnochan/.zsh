@@ -1,19 +1,24 @@
 # try cache brew env
-brew_env_cache=$ZSH_DIR/.cache/brew/env.zsh
-if [ -f $brew_env_cache ]; then
-    source $brew_env_cache
+brew_cache_dir=$ZSH_DIR/.cache/brew
+if [ ! -d $brew_cache_dir ]; then
+    mkdir -p $brew_cache_dir
+fi
+
+brew_cache_env=$brew_cache_dir/env.zsh
+if [ -f $brew_cache_env ]; then
+    source $brew_cache_env
 elif command -v brew >/dev/null 2>&1; then
-    brew shellenv > $brew_env_cache
-    source $brew_env_cache
+    brew shellenv > $brew_cache_env
+    source $brew_cache_env
 else
     brew_base="/usr/local"
-    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_env_cache
+    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_cache_env
     brew_base="$HOME/.linuxbrew"
-    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_env_cache
+    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_cache_env
     brew_base="/home/linuxbrew/.linuxbrew"
-    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_env_cache
+    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_cache_env
 
-    test -f $brew_env_cache && source $brew_env_cache
+    test -f $brew_cache_env && source $brew_cache_env
 fi
 
 if command -v brew >/dev/null 2>&1; then
