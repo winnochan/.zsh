@@ -1,33 +1,19 @@
 export ZSH_DIR=$(dirname ${(%):-%N})
 export ZSH_SYS=$(uname)
 
-# oh-my-zsh
-DISABLE_UPDATE_PROMPT="true"
-DISABLE_AUTO_UPDATE="true"
+source ${ZSH_DIR}/plugins/brew.plugin.zsh
+source ${ZSH_DIR}/plugins/blox-theme.plugin.zsh
+source ${ZSH_DIR}/plugins/fzf.plugin.zsh
+source ${ZSH_DIR}/plugins/gtags.plugin.zsh
+source ${ZSH_DIR}/plugins/oh-my-zsh.plugin.zsh
+source ${ZSH_DIR}/plugins/rust.plugin.zsh
+source ${ZSH_DIR}/plugins/zsh-autosuggestions.plugin.zsh
 
 # base-shell config
-BASE16_SHELL="$ZSH_DIR/.base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-    eval "$("$BASE16_SHELL/profile_helper.sh")"
-
-# brew
-brew_env_cache=$ZSH_DIR/.brewenv.zsh
-if [ -f $brew_env_cache ]; then
-    source $brew_env_cache
-elif command -v brew >/dev/null 2>&1; then
-    brew shellenv > $brew_env_cache
-    source $brew_env_cache
-else
-    brew_base="/usr/local"
-    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_env_cache
-    brew_base="$HOME/.linuxbrew"
-    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_env_cache
-    brew_base="/home/linuxbrew/.linuxbrew"
-    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_env_cache
-
-    test -f $brew_env_cache && source $brew_env_cache
-fi
+# BASE16_SHELL="$ZSH_DIR/.base16-shell/"
+# [ -n "$PS1" ] && \
+#     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#     eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # android sdk
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
@@ -75,23 +61,6 @@ if [ "$ZSH_SYS" = "Linux" ]; then
     export PYTHON_CONFIGURE_OPTS="--enable-shared"
 elif [ "$ZSH_SYS" = "Darwin" ]; then
     export PYTHON_CONFIGURE_OPTS="--enable-framework"
-fi
-
-# rust mirror
-export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
-
-# rust cargo
-cargo_env="$HOME/.cargo/env"
-if [ -f "$cargo_env" ]; then
-    source $cargo_env
-fi
-
-# rustup
-if command -v rustup >/dev/null 2>&1; then
-    export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-
-    # export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
-    # export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 fi
 
 # vagrant

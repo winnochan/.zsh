@@ -73,3 +73,6 @@ if ! zgen saved; then
     # generate the init script from plugins above
     zgen save
 fi
+
+fpath=(${ZSH_DIR}/completions $fpath)
+source ${ZSH_DIR}/plugins/keychain.plugin.zsh

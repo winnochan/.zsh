@@ -1,6 +1,6 @@
 declare -A ZPLGM
 
-ZPLGM[CACHE_DIR]=$ZSH_DIR/.cache
+ZPLGM[CACHE_DIR]=$ZSH_DIR/.cache/zplugin
 ZPLGM[HOME_DIR]=$ZSH_DIR/.zplugin
 ZPLGM[BIN_DIR]=${ZPLGM[HOME_DIR]}/bin
 ZPLGM[PLUGINS_DIR]=${ZPLGM[CACHE_DIR]}/plugins
@@ -12,7 +12,7 @@ ZPLGM[MUTE_WARNINGS]=1
 
 source ${ZPLGM[BIN_DIR]}/zplugin.zsh
 
-# export ALL_PROXY=http://127.0.0.1:1087;
+export ALL_PROXY=http://127.0.0.1:1087;
 
 # blox theme
 zplugin ice silent pick'async.zsh' src'blox.zsh'
@@ -33,17 +33,17 @@ zplugin snippet OMZ::plugins/fasd/fasd.plugin.zsh
 zplugin ice silent wait'0b'
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 
-# alias提示插件
+# 隔离每个工作目录的命令历史记录
 zplugin ice silent wait'0c'
-zplugin light djui/alias-tips
+zplugin snippet OMZ::plugins/per-directory-history/per-directory-history.zsh
 
 # oh my zsh lib config
 zplugin ice silent svn wait '1a' multisrc'*.zsh' pick'/dev/null'
 zplugin snippet OMZ::lib
 
-# 隔离每个工作目录的命令历史记录
+# alias提示插件
 zplugin ice silent wait'1b'
-zplugin snippet OMZ::plugins/per-directory-history/per-directory-history.zsh
+zplugin light djui/alias-tips
 
 # 语法高亮插件
 zplugin ice wait'1d' silent
@@ -64,8 +64,8 @@ zplugin ice silent wait'2c'
 zplugin snippet "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh"
 
 # cargo包管理工具补全插件
-# zplugin ice silent as"completion" wait'[[ -n ${ZLAST_COMMANDS[(r)car*]} ]]'
-zplugin ice silent wait'3a'
+zplugin ice silent as"completion" wait'[[ -n ${ZLAST_COMMANDS[(r)car*]} ]]'
+# zplugin ice silent wait'3a'
 zplugin snippet OMZ::plugins/cargo/_cargo
 
 # 一键解压工具插件
@@ -75,3 +75,18 @@ zplugin snippet OMZ::plugins/extract/extract.plugin.zsh
 # 大量常用命令的补全插件
 zplugin ice silent blockf wait'3c'
 zplugin light zsh-users/zsh-completions
+
+###############################################################################
+# 自定义的插件和补全
+winnochan_plugins=https://raw.githubusercontent.com/winnochan/.zsh/master/plugins
+winnochan_completions=https://raw.githubusercontent.com/winnochan/.zsh/master/completions
+
+zplugin ice silent wait'0o'
+zplugin snippet ${winnochan_plugins}/keychain.plugin.zsh
+
+# zplugin ice silent wait'1o'
+# zplugin snippet ${winnochan_plugins}/brew.plugin.zsh
+
+# zplugin ice silent as'completion' wait'[[ -n ${ZLAST_COMMANDS[(r)rus*]} ]]'
+zplugin ice silent as'completion' wait'0p'
+zplugin snippet ${winnochan_completions}/_rustup
