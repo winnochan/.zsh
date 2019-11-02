@@ -3,8 +3,8 @@ export LC_ALL="en_US.UTF-8"
 
 # zmodload zsh/zprof
 
-source ${ZSH_DIR}/zplugin.zsh
-# source ${ZSH_DIR}/zgen.zsh
+# source ${ZSH_DIR}/zplugin.zsh
+source ${ZSH_DIR}/zgen.zsh
 
 # source ${ZSH_DIR}/plugins/brew.plugin.zsh
 # source ${ZSH_DIR}/plugins/blox-theme.plugin.zsh

@@ -12,7 +12,7 @@ ZPLGM[MUTE_WARNINGS]=1
 
 source ${ZPLGM[BIN_DIR]}/zplugin.zsh
 
-export ALL_PROXY=http://127.0.0.1:1087;
+# export ALL_PROXY=http://127.0.0.1:1087;
 
 # blox theme
 zplugin ice silent pick'async.zsh' src'blox.zsh'
