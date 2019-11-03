@@ -65,14 +65,6 @@ if command -v brew >/dev/null 2>&1; then
         export PATH="${HOMEBREW_PREFIX}/opt/ccache/libexec:$PATH"
     fi
 
-    # fzf
-    # fzf_path=${HOMEBREW_PREFIX}/opt/fzf
-    # if [ -d $fzf_path ]; then
-    #     export PATH=$fzf_path/bin:$PATH
-    #     source $fzf_path/shell/completion.zsh 2> /dev/null
-    #     source $fzf_path/shell/key-bindings.zsh
-    # fi
-
     if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk ]; then
         export GOOGLE_CLOUD_SDK_HOME="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
         if [ -d $GOOGLE_CLOUD_SDK_HOME ]; then
