@@ -10,7 +10,7 @@ if command -v keychain >/dev/null 2>&1; then
 
         cur_ssh_agent_id=0
         if [ "$ZSH_SYS" = "Darwin" ]; then
-            cur_ssh_agent_id=$(ps -ef | pgrep ssh-agent)
+            cur_ssh_agent_id=$(pgrep ssh-agent)
         else
             cur_ssh_agent_id=$(pidof ssh-agent)
         fi
