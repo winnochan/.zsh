@@ -40,4 +40,4 @@ alias v2rayi="bash <(curl -L -s https://install.direct/go.sh)"
 alias ap="export all_proxy=http://${PROXY_IP}:${PROXY_PORT};"
 alias unap="unset all_proxy"
 
-alias kc="keychain -q ~/.ssh/ecdsa && source $HOME/.keychain/$(hostname)-sh"
+alias kc='keychain -q ~/.ssh/ecdsa && source $HOME/.keychain/$(hostname)-sh'

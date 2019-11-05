@@ -1,5 +1,6 @@
 export ZSH_DIR=$(dirname ${(%):-%N})
 export ZSH_SYS=$(uname)
+export ZSH_CACHE=$ZSH_DIR/.cache
 
 source ${ZSH_DIR}/plugins/brew.plugin.zsh
 source ${ZSH_DIR}/plugins/blox-theme.plugin.zsh
