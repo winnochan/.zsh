@@ -19,10 +19,10 @@ source ${ZSH_DIR}/custom.zsh
 source ${ZSH_DIR}/alias.zsh
 
 # checking the cached .zcompdump once a day
-# autoload -Uz compinit
-# for dump in ${ZDOTDIR:-$HOME}/.zcompdump(N.mh+24); do
-#     compinit
-# done
-# compinit -C
+autoload -Uz compinit
+for dump in ${ZDOTDIR:-$HOME}/.zcompdump(N.mh+24); do
+    compinit
+done
+compinit -C
 
 # zprof
