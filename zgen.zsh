@@ -4,8 +4,6 @@ export ZGEN_AUTOLOAD_COMPINIT=0
 
 source $ZGEN_DIR/zgen.zsh
 
-# export ZSH_FZY_FLAGS=( -l 25 -s -j 4 )
-
 # if the init scipt doesn't exist
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
@@ -75,5 +73,5 @@ if ! zgen saved; then
     zgen save
 fi
 
-fpath=(${ZSH_DIR}/completions $fpath)
-source ${ZSH_DIR}/plugins/keychain.plugin.zsh
+fpath=($ZSH_DIR/completions $fpath)
+source $ZSH_DIR/plugins/keychain.plugin.zsh
