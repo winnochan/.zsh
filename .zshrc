@@ -6,7 +6,6 @@ export LC_ALL="en_US.UTF-8"
 # source ${ZSH_DIR}/zplugin.zsh
 source ${ZSH_DIR}/zgen.zsh
 
-source $ZSH_DIR/plugins/asdf.plugin.zsh
 # source ${ZSH_DIR}/plugins/brew.plugin.zsh
 # source ${ZSH_DIR}/plugins/blox-theme.plugin.zsh
 # source ${ZSH_DIR}/plugins/fzf.plugin.zsh
@@ -25,5 +24,7 @@ for dump in $HOME/.zcompdump(N.mh+24); do
     compinit
 done
 compinit -C
+
+source $ZSH_DIR/plugins/asdf.plugin.zsh
 
 # zprof

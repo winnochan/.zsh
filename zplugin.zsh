@@ -45,13 +45,13 @@ zplugin snippet OMZ::lib
 zplugin ice silent wait'1b'
 zplugin light djui/alias-tips
 
-# 语法高亮插件
-zplugin ice wait'1d' silent
-zplugin light zdharma/fast-syntax-highlighting
-
 # 自动括号, 引号匹配插件
-zplugin ice silent wait'1e'
+zplugin ice silent wait'1c'
 zplugin light hlissner/zsh-autopair
+
+# 语法高亮插件
+zplugin ice silent wait'1d'
+zplugin light zdharma/fast-syntax-highlighting
 
 # fzf 模糊文件查找工具, 延迟2秒加载
 zplugin ice silent wait'2a' from"gh-r" as"program"
