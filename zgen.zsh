@@ -42,6 +42,7 @@ if ! zgen saved; then
     # from github
     # zgen load unixorn/autoupdate-zgen
     zgen load djui/alias-tips
+    # zgen load esc/conda-zsh-completion
     # zgen load wfxr/forgit
     # zgen load ytet5uy4/fzf-widgets
     zgen load junegunn/fzf shell
