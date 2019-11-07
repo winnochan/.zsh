@@ -1,25 +1,30 @@
 # try cache brew env
-brew_cache_dir=$ZSH_DIR/.cache/brew
-if [ ! -d $brew_cache_dir ]; then
-    mkdir -p $brew_cache_dir
+__brew_cache_dir=$ZSH_DIR/.cache/brew
+if [ ! -d $__brew_cache_dir ]; then
+    mkdir -p $__brew_cache_dir
 fi
 
-brew_cache_env=$brew_cache_dir/env.zsh
-if [ -f $brew_cache_env ]; then
-    source $brew_cache_env
+__brew_cache_env=$__brew_cache_dir/env.zsh
+if [ -f $__brew_cache_env ]; then
+    source $__brew_cache_env
 elif command -v brew >/dev/null 2>&1; then
-    brew shellenv > $brew_cache_env
-    source $brew_cache_env
+    brew shellenv > $__brew_cache_env
+    source $__brew_cache_env
 else
-    brew_base="/usr/local"
-    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_cache_env
-    brew_base="$HOME/.linuxbrew"
-    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_cache_env
-    brew_base="/home/linuxbrew/.linuxbrew"
-    test -f $brew_base/bin/brew && $brew_base/bin/brew shellenv > $brew_cache_env
+    __brew_base="/usr/local"
+    test -f $__brew_base/bin/brew && $__brew_base/bin/brew shellenv > $__brew_cache_env
+    __brew_base="$HOME/.linuxbrew"
+    test -f $__brew_base/bin/brew && $__brew_base/bin/brew shellenv > $__brew_cache_env
+    __brew_base="/home/linuxbrew/.linuxbrew"
+    test -f $__brew_base/bin/brew && $__brew_base/bin/brew shellenv > $__brew_cache_env
 
-    test -f $brew_cache_env && source $brew_cache_env
+    test -f $__brew_cache_env && source $__brew_cache_env
+
+    unset __brew_base
 fi
+
+unset __brew_cache_dir
+unset __brew_cache_env
 
 if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_NO_AUTO_UPDATE=true
@@ -27,15 +32,17 @@ if command -v brew >/dev/null 2>&1; then
         export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
     fi
 
-    zsh_share_path=$HOMEBREW_PREFIX/share/zsh
-    if [ -d $zsh_share_path ]; then
-        fpath=($zsh_share_path/functions $zsh_share_path/site-functions  $fpath)
+    __zsh_share_path=$HOMEBREW_PREFIX/share/zsh
+    if [ -d $__zsh_share_path ]; then
+        fpath=($__zsh_share_path/functions $__zsh_share_path/site-functions  $fpath)
     fi
+    unset __zsh_share_path
 
-    zsh_completions=$HOMEBREW_PREFIX/share/zsh-completions
-    if [ -d $zsh_completions ]; then
-        fpath=($zsh_completions $fpath)
+    __zsh_completions=$HOMEBREW_PREFIX/share/zsh-completions
+    if [ -d $__zsh_completions ]; then
+        fpath=($__zsh_completions $fpath)
     fi
+    unset __zsh_completions
 
     # openssl
     if [ -d ${HOMEBREW_PREFIX}/opt/openssl ]; then
@@ -75,11 +82,6 @@ if command -v brew >/dev/null 2>&1; then
 
     # mono
     export MONO_GAC_PREFIX="${HOMEBREW_PREFIX}"
-
-    # anaconda3
-    if [ -d ${HOMEBREW_PREFIX}/anaconda3 ]; then
-        export PATH=${HOMEBREW_PREFIX}/anaconda3/bin:$PATH
-    fi
 
     # miniconda
     if [ -d ${HOMEBREW_PREFIX}/Caskroom/miniconda ]; then

@@ -4,8 +4,6 @@
 #     fpath=($gcloud_completion_path $fpath)
 # fi
 
-
-
 # if command -v pipenv >/dev/null 2>&1; then
 #     eval "$(pipenv --completion)"
 # fi
