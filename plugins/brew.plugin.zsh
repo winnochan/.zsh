@@ -68,9 +68,9 @@ if command -v brew >/dev/null 2>&1; then
     fi
 
     # ccache
-    if command -v ccache >/dev/null 2>&1; then
-        export PATH="${HOMEBREW_PREFIX}/opt/ccache/libexec:$PATH"
-    fi
+    # if command -v ccache >/dev/null 2>&1; then
+    #     export PATH="${HOMEBREW_PREFIX}/opt/ccache/libexec:$PATH"
+    # fi
 
     if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk ]; then
         export GOOGLE_CLOUD_SDK_HOME="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
@@ -82,11 +82,6 @@ if command -v brew >/dev/null 2>&1; then
 
     # mono
     export MONO_GAC_PREFIX="${HOMEBREW_PREFIX}"
-
-    # miniconda
-    if [ -d ${HOMEBREW_PREFIX}/Caskroom/miniconda ]; then
-        export PATH=${HOMEBREW_PREFIX}/Caskroom/miniconda/base/bin:$PATH
-    fi
 
     # llvm
     if [ -d ${HOMEBREW_PREFIX}/opt/llvm ]; then
