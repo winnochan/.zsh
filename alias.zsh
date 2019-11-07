@@ -41,3 +41,5 @@ alias ap="export all_proxy=http://${PROXY_IP}:${PROXY_PORT};"
 alias unap="unset all_proxy"
 
 alias kc='keychain -q ~/.ssh/ecdsa && source $HOME/.keychain/$(hostname)-sh'
+
+alias tsfzf='rg --type ts --files | fzf'
