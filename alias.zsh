@@ -37,6 +37,8 @@ alias moshroot="mosh --ssh='ssh -l root'"
 # v2ray install
 alias v2rayi="bash <(curl -L -s https://install.direct/go.sh)"
 
+export PROXY_IP=127.0.0.1
+export PROXY_PORT=1087
 alias ap="export all_proxy=http://${PROXY_IP}:${PROXY_PORT};"
 alias unap="unset all_proxy"
 

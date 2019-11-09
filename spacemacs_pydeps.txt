@@ -1,11 +1,16 @@
 autoflake
 black
+epc
 flake8
+importmagic
 isort
+jedi
 json-rpc
+nose
 ptvsd
 pygments
 pylint
+pytest
 python-language-server
 pyls-isort
 pyls-mypy
