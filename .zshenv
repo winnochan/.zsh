@@ -1,17 +1,33 @@
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 export ZSH_DIR=$(dirname ${(%):-%N})
 export ZSH_SYS=$(uname)
 export ZSH_CACHE=$ZSH_DIR/.cache
+
+source ${ZSH_DIR}/zgen.zsh
 
 # source $ZSH_DIR/plugins/asdf.plugin.zsh
 source $ZSH_DIR/plugins/brew.plugin.zsh
 source $ZSH_DIR/plugins/blox-theme.plugin.zsh
 source $ZSH_DIR/plugins/fzf.plugin.zsh
 source $ZSH_DIR/plugins/gtags.plugin.zsh
-# source $ZSH_DIR/plugins/miniconda.plugin.zsh
+source $ZSH_DIR/plugins/miniconda.plugin.zsh
 # source $ZSH_DIR/plugins/mac-bin.plugin.zsh
 source $ZSH_DIR/plugins/oh-my-zsh.plugin.zsh
 source $ZSH_DIR/plugins/rust.plugin.zsh
 source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
+
+source ${ZSH_DIR}/custom.zsh
+source ${ZSH_DIR}/alias.zsh
+
+autoload -Uz compinit
+for dump in $HOME/.zcompdump(N.mh+24); do
+    compinit
+done
+compinit -C
+
+source $ZSH_DIR/plugins/asdf.plugin.zsh
 
 # base-shell config
 # BASE16_SHELL="$ZSH_DIR/.base16-shell/"
