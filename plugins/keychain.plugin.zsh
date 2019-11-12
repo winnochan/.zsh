@@ -8,12 +8,16 @@ if command -v keychain >/dev/null 2>&1; then
             source $keychain_file
         fi
 
-        if [[ $(ps -p $SSH_AGENT_PID | grep -v PID) != '' ]]; then
+        pid_cmd_name=$(ps -p $SSH_AGENT_PID | grep -v PID | xargs | cut -d ' ' -f 4)
+        if [[ $pid_cmd_name != 'ssh-agent' ]]; then
             keychain -q ~/.ssh/ecdsa
             # keychain -q ~/.ssh/dsa
             # keychain -q ~/.ssh/rsa
             source $keychain_file
         fi
+
+        unset pid_cmd_name
+        unset keychain_file
     fi
 
 fi
