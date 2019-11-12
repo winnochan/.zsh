@@ -6,19 +6,19 @@ export ZSH_SYS=$(uname)
 export ZSH_CACHE=$ZSH_DIR/.cache
 
 source $ZSH_DIR/plugins/brew.plugin.zsh
+source $ZSH_DIR/plugins/oh-my-zsh.plugin.zsh
+source $ZSH_DIR/plugins/blox-theme.plugin.zsh
+source $ZSH_DIR/plugins/fzf.plugin.zsh
+source $ZSH_DIR/plugins/gtags.plugin.zsh
+source $ZSH_DIR/plugins/miniconda.plugin.zsh
+source $ZSH_DIR/plugins/rust.plugin.zsh
+source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
 
 source ${ZSH_DIR}/zgen.zsh
 
 # source $ZSH_DIR/plugins/asdf.plugin.zsh
 # source $ZSH_DIR/plugins/brew.plugin.zsh
-source $ZSH_DIR/plugins/blox-theme.plugin.zsh
-source $ZSH_DIR/plugins/fzf.plugin.zsh
-source $ZSH_DIR/plugins/gtags.plugin.zsh
-source $ZSH_DIR/plugins/miniconda.plugin.zsh
 # source $ZSH_DIR/plugins/mac-bin.plugin.zsh
-source $ZSH_DIR/plugins/oh-my-zsh.plugin.zsh
-source $ZSH_DIR/plugins/rust.plugin.zsh
-source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
 
 source ${ZSH_DIR}/custom.zsh
 source ${ZSH_DIR}/alias.zsh
