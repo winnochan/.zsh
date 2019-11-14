@@ -13,6 +13,7 @@ source $ZSH_DIR/plugins/oh-my-zsh.plugin.zsh
 source $ZSH_DIR/plugins/blox-theme.plugin.zsh
 source $ZSH_DIR/plugins/fzf.plugin.zsh
 source $ZSH_DIR/plugins/gtags.plugin.zsh
+source $ZSH_DIR/plugins/java.plugin.zsh
 source $ZSH_DIR/plugins/miniconda.plugin.zsh
 source $ZSH_DIR/plugins/rust.plugin.zsh
 source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
@@ -67,17 +68,6 @@ source $ZSH_DIR/.oo/env
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # godoc color
 export GODOCC_STYLE='native'
-
-# java
-if [ -d "/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home" ]; then
-    export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
-    export PATH="$JAVA_HOME/bin:$PATH"
-    export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
-elif [ -d "/Library/Java/Home" ]; then
-    export JAVA_HOME="/Library/Java/Home"
-    export PATH="$JAVA_HOME/bin:$PATH"
-    export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
-fi
 
 # pyenv
 # export PATH="$HOME/.pyenv/bin:$PATH"
