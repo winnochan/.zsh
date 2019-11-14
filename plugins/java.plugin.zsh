@@ -1,5 +1,5 @@
 if [ -f ~/.tool-versions ]; then
-    __java_version=cat ~/.tool-versions | grep java | cut -d ' ' -f 2
+    __java_version=$(cat ~/.tool-versions | grep java | cut -d ' ' -f 2)
     export JAVA_HOME=$HOME/.asdf/installs/java/$__java_version
     export PATH=$JAVA_HOME/bin:$PATH
     export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
