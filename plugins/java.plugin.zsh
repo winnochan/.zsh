@@ -13,3 +13,10 @@ elif [ $ZSH_SYS = 'Darwin' ]; then
     fi
     unset __android_home
 fi
+
+# android sdk
+if [ -d $HOME/Library/Android/sdk ]; then
+    export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+    export ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk-bundle
+    export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH
+fi
