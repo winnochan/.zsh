@@ -3,7 +3,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # emacs 指令
-alias e="emacsclient -t -a vim"
+alias e="emacsclient -t -a emacs"
 alias ed="emacs --daemon"
 alias edt="emacs --daemon --timed-requires"
 alias edi="emacs --debug-init"
