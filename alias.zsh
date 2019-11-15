@@ -10,6 +10,7 @@ alias edi="emacs --debug-init"
 alias edit="emacs --debug-init --timed-requires"
 alias eddi="emacs --daemon --debug-init"
 alias eddit="emacs --daemon --debug-init --timed-requires"
+alias editrp="emacs --debug-init --timed-requires --profile"
 alias ef='emacsclient -t -a vim $(fzf)'
 alias vf='vim $(fzf)'
 
