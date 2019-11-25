@@ -1,0 +1,3 @@
+selenium
+online-judge-tools
+infi.docopt-completion
