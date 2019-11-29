@@ -15,3 +15,6 @@
 
 # editor
 export EDITOR="emacsclient -t -a vim"
+
+export HISTSIZE=1000000
+export HISEFILESIZE=-1
