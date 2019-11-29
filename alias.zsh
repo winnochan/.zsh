@@ -46,3 +46,7 @@ alias unap="unset all_proxy"
 alias kc='keychain -q ~/.ssh/ecdsa && source $HOME/.keychain/$(hostname)-sh'
 
 alias tsfzf='rg --type ts --files | fzf'
+
+alias pc='proxychains4'
+alias pgl='proxychains4 git pull'
+alias pgp='proxychains4 git push'
