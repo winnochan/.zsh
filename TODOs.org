@@ -1,2 +1,0 @@
-* TODO 测试org-mode
-  SCHEDULED: <2019-11-15 Fri>
