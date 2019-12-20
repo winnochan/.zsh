@@ -5497,5 +5497,5 @@ rule:
         - s,zzcartoon.com
         - s,zzcloud.me
         - s,zzux.com
-#! Generated: 2019-12-20 13:46:49
+#! Generated: 2019-12-20 14:41:03
 #! GFWList: 2019-11-05 00:21:47 From online[https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt]
