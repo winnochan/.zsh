@@ -11,7 +11,7 @@ ptvsd
 pygments
 pylint
 pytest
-python-language-server
+python-language-server[all]
 pyls-isort
 pyls-mypy
 service_factory
