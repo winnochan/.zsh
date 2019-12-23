@@ -14,5 +14,6 @@ pytest
 python-language-server[all]
 pyls-isort
 pyls-mypy
+pyls-black
 service_factory
 yapf
