@@ -6,6 +6,7 @@ importmagic
 isort
 jedi
 json-rpc
+jupyterlab
 nose
 ptvsd
 pygments
