@@ -45,46 +45,46 @@ if command -v brew >/dev/null 2>&1; then
     unset __zsh_completions
 
     # openssl
-    if [ -d ${HOMEBREW_PREFIX}/opt/openssl ]; then
-        export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
-        export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/openssl/lib"
-        export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/openssl/include"
-        export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl/lib/pkgconfig"
-    fi
+    # if [ -d ${HOMEBREW_PREFIX}/opt/openssl ]; then
+    #     export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
+    #     export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/openssl/lib"
+    #     export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/openssl/include"
+    #     export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl/lib/pkgconfig"
+    # fi
 
     # node@10
-    if [ -d ${HOMEBREW_PREFIX}/opt/node@10 ]; then
-        export PATH="${HOMEBREW_PREFIX}/opt/node@10/bin:$PATH"
-        export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/node@10/lib"
-        export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/node@10/include"
-    fi
+    # if [ -d ${HOMEBREW_PREFIX}/opt/node@10 ]; then
+    #     export PATH="${HOMEBREW_PREFIX}/opt/node@10/bin:$PATH"
+    #     export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/node@10/lib"
+    #     export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/node@10/include"
+    # fi
 
     # sqlite3
-    if [ -d ${HOMEBREW_PREFIX}/opt/sqlite ]; then
-        export PATH="${HOMEBREW_PREFIX}/opt/sqlite/bin:$PATH"
-        export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/sqlite/lib"
-        export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/sqlite/include"
-        export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/sqlite/lib/pkgconfig"
-    fi
+    # if [ -d ${HOMEBREW_PREFIX}/opt/sqlite ]; then
+    #     export PATH="${HOMEBREW_PREFIX}/opt/sqlite/bin:$PATH"
+    #     export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/sqlite/lib"
+    #     export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/sqlite/include"
+    #     export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/sqlite/lib/pkgconfig"
+    # fi
 
     # ccache
     # if command -v ccache >/dev/null 2>&1; then
     #     export PATH="${HOMEBREW_PREFIX}/opt/ccache/libexec:$PATH"
     # fi
 
-    if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk ]; then
-        export GOOGLE_CLOUD_SDK_HOME="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
-        if [ -d $GOOGLE_CLOUD_SDK_HOME ]; then
-            source $GOOGLE_CLOUD_SDK_HOME/path.zsh.inc
-            source $GOOGLE_CLOUD_SDK_HOME/completion.zsh.inc
-        fi
-    fi
+    # if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk ]; then
+    #     export GOOGLE_CLOUD_SDK_HOME="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+    #     if [ -d $GOOGLE_CLOUD_SDK_HOME ]; then
+    #         source $GOOGLE_CLOUD_SDK_HOME/path.zsh.inc
+    #         source $GOOGLE_CLOUD_SDK_HOME/completion.zsh.inc
+    #     fi
+    # fi
 
     # mono
-    export MONO_GAC_PREFIX="${HOMEBREW_PREFIX}"
+    # export MONO_GAC_PREFIX="${HOMEBREW_PREFIX}"
 
     # llvm
-    if [ -d ${HOMEBREW_PREFIX}/opt/llvm ]; then
-        export PATH=${HOMEBREW_PREFIX}/opt/llvm/bin:$PATH
-    fi
+    # if [ -d ${HOMEBREW_PREFIX}/opt/llvm ]; then
+    #     export PATH=${HOMEBREW_PREFIX}/opt/llvm/bin:$PATH
+    # fi
 fi

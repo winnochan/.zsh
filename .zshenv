@@ -16,7 +16,7 @@ source $ZSH_DIR/plugins/fzf.plugin.zsh
 source $ZSH_DIR/plugins/go.plugin.zsh
 source $ZSH_DIR/plugins/gtags.plugin.zsh
 source $ZSH_DIR/plugins/java.plugin.zsh
-source $ZSH_DIR/plugins/miniconda.plugin.zsh
+# source $ZSH_DIR/plugins/miniconda.plugin.zsh
 source $ZSH_DIR/plugins/proxychains.plugin.zsh
 source $ZSH_DIR/plugins/pyenv.plugin.zsh
 source $ZSH_DIR/plugins/vagrant.plugin.zsh
@@ -24,10 +24,6 @@ source $ZSH_DIR/plugins/rust.plugin.zsh
 source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
 
 source ${ZSH_DIR}/zgen.zsh
-
-# source $ZSH_DIR/plugins/asdf.plugin.zsh
-# source $ZSH_DIR/plugins/brew.plugin.zsh
-# source $ZSH_DIR/plugins/mac-bin.plugin.zsh
 
 source ${ZSH_DIR}/custom.zsh
 source ${ZSH_DIR}/alias.zsh
