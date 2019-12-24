@@ -11,7 +11,7 @@ ptvsd
 pygments
 pylint
 pytest
-python-language-server[all]
+python-language-server[yapf]
 pyls-isort
 pyls-mypy
 pyls-black
