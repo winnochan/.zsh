@@ -1,6 +1,5 @@
 bash-language-server
 dockerfile-language-server-nodejs
-@elm-tooling/elm-language-server
 javascript-typescript-langserver
 typescript-language-server
 wxml-langserver
