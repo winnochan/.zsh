@@ -23,15 +23,15 @@ source $ZSH_DIR/plugins/vagrant.plugin.zsh
 source $ZSH_DIR/plugins/rust.plugin.zsh
 source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
 
-source ${ZSH_DIR}/zgen.zsh
+# source ${ZSH_DIR}/zgen.zsh
 
-source ${ZSH_DIR}/custom.zsh
-source ${ZSH_DIR}/alias.zsh
+# source ${ZSH_DIR}/custom.zsh
+# source ${ZSH_DIR}/alias.zsh
 
-autoload -Uz compinit
-for dump in $HOME/.zcompdump(N.mh+24); do
-    compinit
-done
-compinit -C
+# autoload -Uz compinit
+# for dump in $HOME/.zcompdump(N.mh+24); do
+#     compinit
+# done
+# compinit -C
 
-source $ZSH_DIR/plugins/asdf.plugin.zsh
+# source $ZSH_DIR/plugins/asdf.plugin.zsh
