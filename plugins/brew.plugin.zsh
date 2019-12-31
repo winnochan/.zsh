@@ -34,7 +34,7 @@ if command -v brew >/dev/null 2>&1; then
 
     __zsh_share_path=$HOMEBREW_PREFIX/share/zsh
     if [ -d $__zsh_share_path ]; then
-        fpath=($__zsh_share_path/functions $__zsh_share_path/site-functions  $fpath)
+        fpath=($__zsh_share_path/functions $__zsh_share_path/site-functions $fpath)
     fi
     unset __zsh_share_path
 
