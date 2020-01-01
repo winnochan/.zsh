@@ -11,6 +11,7 @@ export MYPY_CACHE_DIR=$ZSH_CACHE/mypy
 source $ZSH_DIR/plugins/brew.plugin.zsh
 source $ZSH_DIR/plugins/oh-my-zsh.plugin.zsh
 source $ZSH_DIR/plugins/blox-theme.plugin.zsh
+source $ZSH_DIR/plugins/emacs.plugin.zsh
 source $ZSH_DIR/plugins/flutter.plugin.zsh
 source $ZSH_DIR/plugins/fzf.plugin.zsh
 source $ZSH_DIR/plugins/go.plugin.zsh
