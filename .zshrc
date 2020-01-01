@@ -27,5 +27,6 @@ source $ZSH_DIR/plugins/miniconda.plugin.zsh
 # compinit -C
 
 # source $ZSH_DIR/plugins/asdf.plugin.zsh
+source $ZSH_DIR/plugins/emacs.plugin.zsh
 
 # zprof
