@@ -4,7 +4,7 @@ epc
 flake8
 importmagic
 isort
-jedi
+jedi<0.16,>=0.14.1
 json-rpc
 jupyterlab
 nose
