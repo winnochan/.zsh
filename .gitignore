@@ -9,3 +9,5 @@
 go.mod
 go.sum
 .cache
+configstore
+htop
