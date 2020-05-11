@@ -6,3 +6,5 @@ export GOSUMDB=gosum.io+ce6e7565+AY5qEHUk/qmHc5btzW45JVoENfazw8LielDsaI+lEbq6
 
 # godoc color
 export GODOCC_STYLE='native'
+
+export PATH=$GOPATH/bin:$PATH
