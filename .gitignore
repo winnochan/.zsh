@@ -9,4 +9,4 @@
 go.mod
 go.sum
 .cache
-configstore/
+configstore
