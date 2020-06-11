@@ -1,5 +1,7 @@
 if [ -d $HOME/miniconda3 ]; then
     export CONDA_HOME=$HOME/miniconda3
+elif [ -d /opt/miniconda3 ]; then
+    export CONDA_HOME=/opt/miniconda3
 elif [ -d /usr/local/Caskroom/miniconda/base ]; then
     export CONDA_HOME=/usr/local/Caskroom/miniconda/base
 fi
