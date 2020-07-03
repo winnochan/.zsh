@@ -5,12 +5,12 @@ fi
 
 # flutter
 if [ -d $ZSH_CACHE/flutter ]; then
-    export FLUTTER_HOME=$ZSH_CACHE/flutter
+    export FLUTTER_ROOT=$ZSH_CACHE/flutter
 
-    export PATH="$FLUTTER_HOME/bin:$PATH"
+    export PATH="$${FLUTTER_ROOT}/bin:$PATH"
 
-    if [ -d $FLUTTER_HOME/bin/cache/dart-sdk ]; then
-        export DART_SDK_HOME=$FLUTTER_HOME/bin/cache/dart-sdk
+    if [ -d ${FLUTTER_ROOT}/bin/cache/dart-sdk ]; then
+        export DART_SDK_HOME=${FLUTTER_ROOT}/bin/cache/dart-sdk
         export PATH="${DART_SDK_HOME}/bin:$PATH"
     fi
 
