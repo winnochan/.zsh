@@ -8,6 +8,7 @@
 
 # source ${ZSH_DIR}/plugins/brew.plugin.zsh
 # source ${ZSH_DIR}/plugins/blox-theme.plugin.zsh
+source $ZSH_DIR/plugins/flutter.plugin.zsh
 # source ${ZSH_DIR}/plugins/fzf.plugin.zsh
 # source ${ZSH_DIR}/plugins/gtags.plugin.zsh
 source $ZSH_DIR/plugins/java.plugin.zsh
