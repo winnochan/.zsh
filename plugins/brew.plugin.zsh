@@ -30,6 +30,8 @@ if command -v brew >/dev/null 2>&1; then
     export HOMEBREW_NO_AUTO_UPDATE=true
     if [ "$ZSH_SYS" = "Darwin" ]; then
         export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+    elif [ "$ZSH_SYS" = "Linux" ]; then
+        export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/linuxbrew-bottles
     fi
 
     __zsh_share_path=$HOMEBREW_PREFIX/share/zsh
