@@ -69,6 +69,11 @@ if command -v brew >/dev/null 2>&1; then
     #     export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/sqlite/lib/pkgconfig"
     # fi
 
+    # mysql
+    if [ -d ${HOMEBREW_PREFIX}/opt/mysql@5.7 ]; then
+       export PATH="${HOMEBREW_PREFIX}/opt/mysql@5.7/bin:$PATH"
+    fi
+
     # ccache
     # if command -v ccache >/dev/null 2>&1; then
     #     export PATH="${HOMEBREW_PREFIX}/opt/ccache/libexec:$PATH"
