@@ -25,10 +25,10 @@ source $ZSH_DIR/plugins/vagrant.plugin.zsh
 source $ZSH_DIR/plugins/rust.plugin.zsh
 source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
 
-source ${ZSH_DIR}/zgen.zsh
+source $ZSH_DIR/zgen.zsh
 
-source ${ZSH_DIR}/custom.zsh
-source ${ZSH_DIR}/alias.zsh
+source $ZSH_DIR/custom.zsh
+source $ZSH_DIR/alias.zsh
 
 source $ZSH_DIR/plugins/asdf.plugin.zsh
 
