@@ -49,3 +49,7 @@ alias tsfzf='rg --type ts --files | fzf'
 alias pc='proxychains4'
 alias pgl='proxychains4 git pull'
 alias pgp='proxychains4 git push'
+
+# git
+alias glr='git pull --recurse-submodules'
+alias gclr='git clone --recurse-submodules'
