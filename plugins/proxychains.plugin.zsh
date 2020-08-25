@@ -1,1 +1,1 @@
-export PROXYCHAINS_CONF_FILE=$ZSH_DIR/confs/proxychains.conf
+export PROXYCHAINS_CONF_FILE=$ZSH_DIR/config/proxychains.conf
