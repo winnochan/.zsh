@@ -11,7 +11,8 @@ class TerminatorThemes(plugin.Plugin):
 
     capabilities = ['terminal_menu']
     config_base = ConfigBase()
-    base_url = 'https://api.github.com/repos/EliverLara/terminator-themes/contents/themes.json'
+    # base_url = 'https://api.github.com/repos/EliverLara/terminator-themes/contents/themes.json'
+    base_url = 'https://gitee.com/winnochan/terminator-themes/raw/master/themes.json'
     inherits_config_from = "default"
 
     def callback(self, menuitems, menu, terminal):
@@ -27,8 +28,9 @@ class TerminatorThemes(plugin.Plugin):
         ui = {}
         dbox = Gtk.Dialog( _("Terminator themes"), None, Gtk.DialogFlags.MODAL)
 
-        headers = { "Accept": "application/vnd.github.v3.raw" }
-        response = requests.get(self.base_url, headers=headers)
+        # headers = { "Accept": "application/vnd.github.v3.raw" }
+        # response = requests.get(self.base_url, headers=headers)
+        response = requests.get(self.base_url)
 
         if response.status_code != 200:
             gerr(_("Failed to get list of available themes"))
