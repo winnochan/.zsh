@@ -1,8 +1,0 @@
-! edx
-||edx.org
-
-! coursera
-||coursera.org
-
-! google
-||google.com
