@@ -11,3 +11,4 @@ go.sum
 .cache
 configstore
 htop
+*.pyc
