@@ -32,3 +32,14 @@ if [ -d $CONDA_HOME ]; then
 
     fi
 fi
+
+if [ ! -f $HOME/.condarc ]; then
+    ln -s $ZSH_DIR/config/condarc $HOME/.condarc
+fi
+
+if [ ! -f $HOME/.pip/pip.conf ]; then
+    if [ ! -d $HOME/.pip ]; then
+        mkdir $HOME/.pip
+    fi
+    ln -s $ZSH_DIR/config/pip.conf $HOME/.pip/pip.conf
+fi
