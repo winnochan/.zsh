@@ -3,4 +3,5 @@ if [ ! -L $HOME/.config/terminator ]; then
         rm -rf $HOME/.config/terminator
     fi
     ln -s $ZSH_DIR/config/terminator $HOME/.config/terminator
+    echo 'link terminator config'
 fi
