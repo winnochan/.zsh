@@ -33,13 +33,18 @@ if [ -d $CONDA_HOME ]; then
     fi
 fi
 
-if [ ! -f $HOME/.condarc ]; then
+if [ ! -L $HOME/.condarc ]; then
+    if [ -e $HOME/.condarc ]; then
+        rm -rf $HOME/.condarc
+    fi
     ln -s $ZSH_DIR/config/condarc $HOME/.condarc
+    echo 'link condarc'
 fi
 
-if [ ! -f $HOME/.pip/pip.conf ]; then
-    if [ ! -d $HOME/.pip ]; then
-        mkdir $HOME/.pip
+if [ ! -L $HOME/.pip ]; then
+    if [ -e $HOME/.pip ]; then
+        rm -rf $HOME/.pip
     fi
-    ln -s $ZSH_DIR/config/pip.conf $HOME/.pip/pip.conf
+    ln -s $ZSH_DIR/config/pip $HOME/.pip
+    echo 'link pip config'
 fi
