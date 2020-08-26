@@ -72,6 +72,7 @@
     background_color = "#282828"
     background_darkness = 0.8
     background_type = transparent
+    cursor_blink = False
     cursor_color = "#aaaaaa"
     font = Cascadia Code 13
     foreground_color = "#ebdbb2"
@@ -84,6 +85,7 @@
     background_color = "#1d1f21"
     background_darkness = 0.8
     background_type = transparent
+    cursor_blink = False
     cursor_color = "#c5c8c6"
     font = Cascadia Code 13
     foreground_color = "#c5c8c6"
@@ -95,6 +97,7 @@
   [[Tomorrow Night]]
     background_darkness = 0.8
     background_type = transparent
+    cursor_blink = False
     cursor_color = "#aaaaaa"
     font = Cascadia Code 13
     show_titlebar = False
@@ -105,6 +108,7 @@
     background_color = "#09111a"
     background_darkness = 0.8
     background_type = transparent
+    cursor_blink = False
     cursor_color = "#d2e8fc"
     font = Cascadia Code 13
     foreground_color = "#d9e6f2"
