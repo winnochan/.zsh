@@ -1,6 +1,7 @@
 export ZGEN_DIR=${ZDOTDIR:-$ZSH_DIR}/.zgen
 export ZGEN_RESET_ON_CHANGE=($ZSH_DIR/zgen.zsh)
 export ZGEN_AUTOLOAD_COMPINIT=0
+export ZGEN_OH_MY_ZSH_REPO=https://gitee.com/winnochan/ohmyzsh.git
 
 source $ZGEN_DIR/zgen.zsh
 
@@ -41,34 +42,41 @@ if ! zgen saved; then
 
     # from github
     # zgen load unixorn/autoupdate-zgen
-    zgen load djui/alias-tips
+    zgen load https://gitee.com/winnochan/alias-tips.git
+    # zgen load djui/alias-tips
     # zgen load esc/conda-zsh-completion
     # zgen load wfxr/forgit
     # zgen load ytet5uy4/fzf-widgets
-    zgen load junegunn/fzf shell
-    zgen load wookayin/fzf-fasd
+    # zgen load junegunn/fzf shell
+    # zgen load wookayin/fzf-fasd
     # zgen load avivl/gcloud-project
     # zgen load littleq0903/gcloud-zsh-completion
     # zgen load mdumitru/git-aliases
     # zgen load RobSis/zsh-completion-generator
 
     # theme
-    zgen load mafredri/zsh-async
+    # zgen load mafredri/zsh-async
+    zgen load https://gitee.com/winnochan/zsh-async.git
     # zgen load sindresorhus/pure
-    zgen load yardnsm/blox-zsh-theme
+    # zgen load yardnsm/blox-zsh-theme
+    zgen load https://gitee.com/winnochan/blox-zsh-theme.git
     # zgen load dracula/dracula-theme zsh/dracula.zsh-theme
     # zgen load seletskiy/zsh-fuzzy-search-and-edit
     # zgen load urbainvaes/fzf-marks
 
     # from zsh-user
     # zgen load zsh-users/zaw
-    zgen load zsh-users/zsh-autosuggestions
-    zgen load zsh-users/zsh-completions
+    # zgen load zsh-users/zsh-autosuggestions
+    zgen load https://gitee.com/winnochan/zsh-autosuggestions.git
+    # zgen load zsh-users/zsh-completions
+    zgen load https://gitee.com/winnochan/zsh-completions.git
 
-    zgen load hlissner/zsh-autopair
-    zgen load zdharma/fast-syntax-highlighting
+    # zgen load hlissner/zsh-autopair
+    zgen load https://gitee.com/winnochan/zsh-autopair.git
+    # zgen load zdharma/fast-syntax-highlighting
+    zgen load https://gitee.com/winnochan/fast-syntax-highlighting.git
     # zgen load zsh-users/zsh-syntax-highlighting
-    zgen load zsh-users/zsh-history-substring-search
+    # zgen load zsh-users/zsh-history-substring-search
 
     # generate the init script from plugins above
     zgen save
