@@ -49,6 +49,7 @@ if ! zgen saved; then
     # zgen load ytet5uy4/fzf-widgets
     # zgen load junegunn/fzf shell
     # zgen load wookayin/fzf-fasd
+    zgen load https://gitee.com/winnochan/fzf-fasd.git
     # zgen load avivl/gcloud-project
     # zgen load littleq0903/gcloud-zsh-completion
     # zgen load mdumitru/git-aliases
