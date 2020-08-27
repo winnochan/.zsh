@@ -1,6 +1,3 @@
-[submodule ".zinit/bin"]
-	path = .zinit/bin
-	url = https://github.com/zdharma/zinit.git
 [submodule ".asdf"]
 	path = .asdf
 	url = https://gitee.com/winnochan/asdf.git
