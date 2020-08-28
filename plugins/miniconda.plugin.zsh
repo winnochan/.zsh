@@ -2,11 +2,9 @@ if [ -d $HOME/miniconda3 ]; then
     export CONDA_HOME=$HOME/miniconda3
 elif [ -d /opt/miniconda3 ]; then
     export CONDA_HOME=/opt/miniconda3
-elif [ -d /usr/local/Caskroom/miniconda/base ]; then
-    export CONDA_HOME=/usr/local/Caskroom/miniconda/base
 fi
 
-if [ -d $CONDA_HOME ]; then
+if [ -d "$CONDA_HOME" ]; then
 
     if [ $? -eq 0 ]; then
 
@@ -20,7 +18,7 @@ if [ -d $CONDA_HOME ]; then
             $CONDA_HOME/bin/conda shell.zsh hook 2> /dev/null > $__conda_setup_file
             source $__conda_setup_file
         fi
-        unset __conda_setup
+        unset __conda_setup_file
 
     else
 
