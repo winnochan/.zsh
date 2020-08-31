@@ -28,6 +28,7 @@ source $ZSH_DIR/plugins/terminator.plugin.zsh
 source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
 
 source $ZSH_DIR/zgen.zsh
+# source $ZSH_DIR/zinit.zsh
 
 source $ZSH_DIR/custom.zsh
 source $ZSH_DIR/alias.zsh
