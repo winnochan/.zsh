@@ -12,6 +12,7 @@ if ! zgen saved; then
 
     # from oh-my-zsh
     zgen oh-my-zsh
+    zgen oh-my-zsh plugins/alias-finder
     # zgen oh-my-zsh plugins/autoenv
     # zgen oh-my-zsh plugins/battery
     zgen oh-my-zsh plugins/cargo
@@ -42,7 +43,7 @@ if ! zgen saved; then
 
     # from github
     # zgen load unixorn/autoupdate-zgen
-    zgen load https://gitee.com/winnochan/alias-tips.git
+    # zgen load https://gitee.com/winnochan/alias-tips.git
     # zgen load djui/alias-tips
     # zgen load esc/conda-zsh-completion
     # zgen load wfxr/forgit
