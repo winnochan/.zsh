@@ -57,7 +57,7 @@ if ! zgen saved; then
 
     # theme
     # zgen load mafredri/zsh-async
-    zgen load https://gitee.com/winnochan/zsh-async.git
+    # zgen load https://gitee.com/winnochan/zsh-async.git
     # zgen load sindresorhus/pure
     # zgen load yardnsm/blox-zsh-theme
     zgen load https://gitee.com/winnochan/blox-zsh-theme.git

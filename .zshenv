@@ -1,4 +1,4 @@
-export all_proxy=http://127.0.0.1:1087
+# export all_proxy=http://127.0.0.1:1087
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"

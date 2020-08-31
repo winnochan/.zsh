@@ -8,12 +8,12 @@
 
 # source $ZSH_DIR/plugins/brew.plugin.zsh
 # source $ZSH_DIR/plugins/blox-theme.plugin.zsh
-source $ZSH_DIR/plugins/flutter.plugin.zsh
+# source $ZSH_DIR/plugins/flutter.plugin.zsh
 # source $ZSH_DIR/plugins/fzf.plugin.zsh
 # source $ZSH_DIR/plugins/gtags.plugin.zsh
-source $ZSH_DIR/plugins/java.plugin.zsh
+# source $ZSH_DIR/plugins/java.plugin.zsh
 # source $ZSH_DIR/plugins/keychain.plugin.zsh
-source $ZSH_DIR/plugins/miniconda.plugin.zsh
+# source $ZSH_DIR/plugins/miniconda.plugin.zsh
 # source $ZSH_DIR/plugins/oh-my-zsh.plugin.zsh
 # source $ZSH_DIR/plugins/rust.plugin.zsh
 # source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
