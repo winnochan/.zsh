@@ -4,3 +4,6 @@
 [submodule ".zgen"]
 	path = .zgen
 	url = https://gitee.com/winnochan/zgen.git
+[submodule ".zinit/bin"]
+	path = .zinit/bin
+	url = https://gitee.com/winnochan/zinit.git
