@@ -6,5 +6,8 @@ fi
 # editor
 export EDITOR="vim"
 
-export HISTSIZE=1000000
-export HISEFILESIZE=-1
+export HISTFILE=~/.zhistory
+export HISTSIZE=10000
+export SAVEHIST=1000
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
