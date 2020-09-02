@@ -1,7 +1,11 @@
-# export all_proxy=http://127.0.0.1:1087
-
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=1000
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
 
 export ZSH_DIR=$(dirname ${(%):-%N})
 export ZSH_SYS=$(uname)
