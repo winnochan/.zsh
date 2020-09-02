@@ -5,9 +5,6 @@ export ZGEN_OH_MY_ZSH_REPO=https://gitee.com/winnochan/ohmyzsh.git
 
 source $ZGEN_DIR/zgen.zsh
 
-# if the init scipt doesn't exist
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-
 if ! zgen saved; then
 
   # from oh-my-zsh
