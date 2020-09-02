@@ -12,7 +12,6 @@ if ! zgen saved; then
 
     # from oh-my-zsh
     zgen oh-my-zsh
-    zgen oh-my-zsh plugins/alias-finder
     # zgen oh-my-zsh plugins/autoenv
     # zgen oh-my-zsh plugins/battery
     zgen oh-my-zsh plugins/cargo
@@ -78,7 +77,10 @@ if ! zgen saved; then
     # zgen load zdharma/fast-syntax-highlighting
     zgen load https://gitee.com/winnochan/fast-syntax-highlighting.git
     # zgen load zsh-users/zsh-syntax-highlighting
+    zgen load https://gitee.com/winnochan/zsh-history-substring-search.git
     # zgen load zsh-users/zsh-history-substring-search
+
+    zgen oh-my-zsh plugins/alias-finder
 
     # generate the init script from plugins above
     zgen save
