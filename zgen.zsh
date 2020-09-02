@@ -28,7 +28,7 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/mosh
     # zgen oh-my-zsh plugins/ng
     # zgen oh-my-zsh plugins/nvm
-    zgen oh-my-zsh plugins/per-directory-history
+    # zgen oh-my-zsh plugins/per-directory-history
     # zgen oh-my-zsh plugins/pip
     # zgen oh-my-zsh plugins/pipenv
     # zgen oh-my-zsh plugins/rsync
