@@ -1,6 +1,8 @@
 # fasd
 if [ "$ZSH_SYS" = "Darwin" ]; then
-    alias o='a -e open_command'
+  alias o='a -e open'
+elif [ "$ZSH_SYS" = "Linux" ]; then
+  alias o='a -e xdg-open'
 fi
 
 # editor
