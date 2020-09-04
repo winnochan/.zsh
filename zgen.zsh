@@ -49,6 +49,8 @@ if ! zgen saved; then
   zgen load https://gitee.com/winnochan/fzf.git shell
   # zgen load wookayin/fzf-fasd
   zgen load https://gitee.com/winnochan/fzf-fasd.git
+  # zgen load https://gitee.com/winnochan/per-directory-history.git
+
   # zgen load avivl/gcloud-project
   # zgen load littleq0903/gcloud-zsh-completion
   # zgen load mdumitru/git-aliases
