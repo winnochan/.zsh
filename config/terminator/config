@@ -10,7 +10,7 @@
   zoom_in = <Super>equal
   zoom_out = <Super>minus
   zoom_normal = <Super>grave
-  new_tab = <Super>t
+  new_tab = <Shift><Alt>t
   cycle_next = None
   cycle_prev = None
   go_next = None
@@ -23,12 +23,12 @@
   rotate_ccw = None
   split_horiz = None
   split_vert = None
-  close_term = <Super>w
+  close_term = <Shift><Alt>w
   copy = <Shift><Alt>c
   paste = <Shift><Alt>v
   toggle_scrollbar = None
-  search = <Super>f
-  close_window = <Super>q
+  search = <Shift><Alt>f
+  close_window = <Shift><Alt>q
   resize_up = None
   resize_down = None
   resize_left = None
