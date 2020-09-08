@@ -50,6 +50,7 @@ if ! zgen saved; then
   # zgen load wookayin/fzf-fasd
   zgen load https://gitee.com/winnochan/fzf-fasd.git
   # zgen load https://gitee.com/winnochan/per-directory-history.git
+  zgen load https://gitee.com/winnochan/zsh-directory-history.git
 
   # zgen load avivl/gcloud-project
   # zgen load littleq0903/gcloud-zsh-completion
