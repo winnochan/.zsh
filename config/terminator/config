@@ -10,7 +10,7 @@
   zoom_in = <Super>equal
   zoom_out = <Super>minus
   zoom_normal = <Super>grave
-  new_tab = <Shift><Alt>t
+  new_tab = <Super>t
   cycle_next = None
   cycle_prev = None
   go_next = None
