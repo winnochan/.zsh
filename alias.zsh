@@ -34,7 +34,7 @@ alias dreg="docker run -d -p 5000:5000 --restart always --name registry registry
 alias moshroot="mosh --ssh='ssh -l root'"
 
 # v2ray install
-alias v2rayi="bash <(curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) && (curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh)"
+alias v2rayi="bash <(curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) && bash <(curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh)"
 
 export PROXY_IP=127.0.0.1
 export PROXY_PORT=1087
