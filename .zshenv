@@ -26,6 +26,7 @@ source $ZSH_DIR/plugins/pyenv.plugin.zsh
 source $ZSH_DIR/plugins/vagrant.plugin.zsh
 source $ZSH_DIR/plugins/rust.plugin.zsh
 source $ZSH_DIR/plugins/terminator.plugin.zsh
+source $ZSH_DIR/plugins/wezterm.plugin.zsh
 source $ZSH_DIR/plugins/xmodmap.plugin.zsh
 source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
 source $ZSH_DIR/plugins/zsh-bin.plugin.zsh
