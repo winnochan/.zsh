@@ -14,7 +14,7 @@ if command -v rustup >/dev/null 2>&1; then
     fi
     source $rust_cache/rust_sysroot.zsh
 
-    export RUST_SRC_PATH=$RUST_SYSROOT/lib/rustlib/src/rust/src
+    export RUST_SRC_PATH=$RUST_SYSROOT/lib/rustlib/src/rust/library
 
     # export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 
