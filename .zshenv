@@ -7,6 +7,10 @@ export ZSH_DIR=$(dirname ${(%):-%N})
 export ZSH_SYS=$(uname)
 export ZSH_CACHE=$ZSH_DIR/.cache
 
+if [ ! -d $HOME/.config ]; then
+  mkdir $HOME/.config
+fi
+
 export BETTER_EXCEPTIONS=1
 export MYPY_CACHE_DIR=$ZSH_CACHE/mypy
 
