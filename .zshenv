@@ -24,7 +24,7 @@ source $ZSH_DIR/plugins/fzf.plugin.zsh
 source $ZSH_DIR/plugins/go.plugin.zsh
 source $ZSH_DIR/plugins/gtags.plugin.zsh
 # source $ZSH_DIR/plugins/java.plugin.zsh
-source $ZSH_DIR/plugins/miniconda.plugin.zsh
+# source $ZSH_DIR/plugins/miniconda.plugin.zsh
 source $ZSH_DIR/plugins/proxychains.plugin.zsh
 source $ZSH_DIR/plugins/pyenv.plugin.zsh
 source $ZSH_DIR/plugins/vagrant.plugin.zsh
@@ -43,8 +43,8 @@ source $ZSH_DIR/custom.zsh
 
 source $ZSH_DIR/plugins/asdf.plugin.zsh
 
-autoload -Uz compinit
-for dump in $HOME/.zcompdump(N.mh+24); do
-    compinit
-done
-compinit -C
+# autoload -Uz compinit
+# for dump in $HOME/.zcompdump(N.mh+24); do
+#     compinit
+# done
+# compinit -C
