@@ -1,9 +1,9 @@
 importmagic
-pyls-mypy
 ptvsd
 autoflake
 json-rpc
 pyls-isort
+pyls-mypy
 pyls-black
 service_factory
 epc

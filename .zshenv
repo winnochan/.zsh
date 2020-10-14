@@ -43,8 +43,8 @@ source $ZSH_DIR/custom.zsh
 
 source $ZSH_DIR/plugins/asdf.plugin.zsh
 
-# autoload -Uz compinit
-# for dump in $HOME/.zcompdump(N.mh+24); do
-#     compinit
-# done
-# compinit -C
+autoload -Uz compinit
+for dump in $HOME/.zcompdump(N.mh+24); do
+    compinit
+done
+compinit -C
