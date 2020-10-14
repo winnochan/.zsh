@@ -1,20 +1,11 @@
-# autoflake
 black
-# epc
 flake8
-# importmagic
 isort
 jedi<0.16,>=0.14.1
-# json-rpc
 jupyterlab
 nose
-# ptvsd
 pygments
 pylint
 pytest
 python-language-server[yapf]
-# pyls-isort
-# pyls-mypy
-# pyls-black
-# service_factory
 yapf
