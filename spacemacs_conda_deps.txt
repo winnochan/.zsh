@@ -1,8 +1,8 @@
 black
 flake8
 isort
-# jedi<0.18.0,>=0.17.0
-jedi<0.16,>=0.14.1
+jedi<0.18.0,>=0.17.0
+# jedi<0.16,>=0.14.1
 jupyterlab
 nose
 pygments
