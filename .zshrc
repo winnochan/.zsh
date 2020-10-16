@@ -21,7 +21,7 @@
 # source $ZSH_DIR/custom.zsh
 # source $ZSH_DIR/alias.zsh
 
-# source $ZSH_DIR/plugins/asdf.plugin.zsh
+source $ZSH_DIR/plugins/asdf.plugin.zsh
 
 # checking the cached .zcompdump once a day
 # autoload -Uz compinit
