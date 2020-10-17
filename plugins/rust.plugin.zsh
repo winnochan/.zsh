@@ -16,10 +16,10 @@ if command -v rustup >/dev/null 2>&1; then
 
     export RUST_SRC_PATH=$RUST_SYSROOT/lib/rustlib/src/rust/library
 
-    # export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+    export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 
-    export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
-    export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
+    # export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
+    # export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
     # export CARGO_REGISTRIES_MY_REGISTRY_INDEX=https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/
 
     if [ ! -f $HOME/.cargo/config.toml ]; then
