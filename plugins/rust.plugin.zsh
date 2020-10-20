@@ -16,13 +16,15 @@ if command -v rustup >/dev/null 2>&1; then
 
     export RUST_SRC_PATH=$RUST_SYSROOT/lib/rustlib/src/rust/library
 
-    export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+    export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+    export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
-    # export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
-    # export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
-    # export CARGO_REGISTRIES_MY_REGISTRY_INDEX=https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/
+    # export CARGO_HTTP_MULTIPLEXING=false
 
-    if [ ! -f $HOME/.cargo/config.toml ]; then
-        echo '[source]\n\n[source.mirror]\nregistry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/"\n\n[source.crates-io]\nreplace-with = "mirror"' > $HOME/.cargo/config.toml
+    if [ ! -L $HOME/.cargo/config.toml ]; then
+      if [ -e $HOME/.cargo/config.toml ]; then
+        rm -rf $HOME/.cargo/config.toml
+      fi
+      ln -s $ZSH_DIR/config/cargo.toml $HOME/.cargo/config.toml
     fi
 fi
