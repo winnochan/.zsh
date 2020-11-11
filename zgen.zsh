@@ -13,19 +13,14 @@ if ! zgen saved; then
   # zgen oh-my-zsh plugins/autoenv
   zgen oh-my-zsh plugins/cargo
   # zgen oh-my-zsh plugins/colored-man-pages
-  # zgen oh-my-zsh plugins/cp
   zgen oh-my-zsh plugins/extract
   zgen oh-my-zsh plugins/fasd
   zgen oh-my-zsh plugins/git
-  # zgen oh-my-zsh plugins/gitfast
-  # zgen oh-my-zsh plugins/gitignore
   # zgen oh-my-zsh plugins/keychain
   zgen oh-my-zsh plugins/last-working-dir
   # zgen oh-my-zsh plugins/per-directory-history
   # zgen oh-my-zsh plugins/pip
   # zgen oh-my-zsh plugins/pipenv
-  # zgen oh-my-zsh plugins/rust
-  # zgen oh-my-zsh plugins/tig
 
   # from github
   # zgen load https://gitee.com/winnochan/alias-tips.git
