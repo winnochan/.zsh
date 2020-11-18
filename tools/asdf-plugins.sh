@@ -1,3 +1,5 @@
+brew install readline xz gnupg
+
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 asdf install golang $(asdf latest golang)
 
