@@ -40,11 +40,3 @@ if [ ! -L $HOME/.condarc ]; then
     ln -s $ZSH_DIR/config/condarc $HOME/.condarc
     echo 'link condarc'
 fi
-
-if [ ! -L $HOME/.pip ]; then
-    if [ -e $HOME/.pip ]; then
-        rm -rf $HOME/.pip
-    fi
-    ln -s $ZSH_DIR/config/pip $HOME/.pip
-    echo 'link pip config'
-fi
