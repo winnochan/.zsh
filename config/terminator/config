@@ -42,8 +42,8 @@
   switch_to_tab_2 = <Primary>2
   switch_to_tab_3 = <Primary>3
   switch_to_tab_4 = <Primary>4
-  switch_to_tab_5 = None
-  switch_to_tab_6 = None
+  switch_to_tab_5 = <Primary>5
+  switch_to_tab_6 = <Primary>6
   switch_to_tab_7 = None
   switch_to_tab_8 = None
   switch_to_tab_9 = None
