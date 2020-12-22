@@ -52,3 +52,11 @@ alias pgp='proxychains4 git push'
 # git
 alias glr='git pull --recurse-submodules'
 alias gclr='git clone --recurse-submodules'
+
+alias nr='npm run'
+alias ni='npm install'
+alias nu='npm uninstall'
+alias nis='npm install -S'
+alias nid='npm install -D'
+alias nus='npm uninstall -S'
+alias nud='npm uninstall -D'
