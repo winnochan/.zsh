@@ -21,6 +21,8 @@ if command -v rustup >/dev/null 2>&1; then
 
     # export CARGO_HTTP_MULTIPLEXING=false
 
+    fpath=($RUST_SYSROOT/share/zsh/site-functions $fpath)
+
     if [ ! -L $HOME/.cargo/config.toml ]; then
       if [ -e $HOME/.cargo/config.toml ]; then
         rm -rf $HOME/.cargo/config.toml
