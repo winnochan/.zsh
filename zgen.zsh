@@ -25,7 +25,7 @@ if ! zgen saved; then
   # from github
   # zgen load https://gitee.com/winnochan/alias-tips.git
   # zgen load esc/conda-zsh-completion
-  zgen load https://gitee.com/winnochan/fzf.git shell
+  zgen load https://gitee.com/mirrors/fzf.git shell
   zgen load https://gitee.com/winnochan/fzf-fasd.git
 
   # theme
