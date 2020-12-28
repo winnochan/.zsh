@@ -11,7 +11,7 @@ if ! zgen saved; then
   zgen oh-my-zsh
   zgen oh-my-zsh plugins/alias-finder
   # zgen oh-my-zsh plugins/autoenv
-  zgen oh-my-zsh plugins/cargo
+  # zgen oh-my-zsh plugins/cargo
   # zgen oh-my-zsh plugins/colored-man-pages
   zgen oh-my-zsh plugins/extract
   zgen oh-my-zsh plugins/fasd
