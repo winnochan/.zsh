@@ -1,1 +1,1 @@
-npm i -g typescript prettier import-js eslint @nestjs/cli
+npm i -g typescript typescript-language-server flow-bin prettier import-js eslint eslint-cli @nestjs/cli vls vscode-json-languageserver
