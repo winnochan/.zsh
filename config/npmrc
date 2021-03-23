@@ -7,4 +7,4 @@ chromedriver_cdnurl=https://repo.huaweicloud.com/chromedriver
 operadriver_cdnurl=https://repo.huaweicloud.com/operadriver
 electron_mirror=https://repo.huaweicloud.com/electron/
 python_mirror=https://repo.huaweicloud.com/python
-canvas_binary_host_mirror=https://repo.huaweicloud.com/repository/npm/canvas-prebuilt
+canvas_binary_host_mirror=https://npm.taobao.org/mirrors/node-canvas-prebuilt/
