@@ -5,3 +5,5 @@ if [ ! -L $HOME/.pip ]; then
   ln -s $ZSH_DIR/config/pip $HOME/.pip
   echo 'link pip config'
 fi
+
+export ASDF_PYTHON_DEFAULT_PACKAGES_FILE=$ZSH_DIR/config/pip/default-packages

@@ -19,7 +19,7 @@ if ! zgen saved; then
   # zgen oh-my-zsh plugins/keychain
   zgen oh-my-zsh plugins/last-working-dir
   # zgen oh-my-zsh plugins/per-directory-history
-  # zgen oh-my-zsh plugins/pip
+  zgen oh-my-zsh plugins/pip
   # zgen oh-my-zsh plugins/pipenv
 
   # from github
