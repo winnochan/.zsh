@@ -32,11 +32,3 @@ if [ -d $CONDA_HOME ]; then
 
     fi
 fi
-
-if [ ! -L $HOME/.condarc ]; then
-    if [ -e $HOME/.condarc ]; then
-        rm -rf $HOME/.condarc
-    fi
-    ln -s $ZSH_DIR/config/condarc $HOME/.condarc
-    echo 'link condarc'
-fi

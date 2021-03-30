@@ -1,0 +1,42 @@
+{
+    "54321375-37a7-485b-83f5-c3af5c2db0b8": {
+        "id": "54321375-37a7-485b-83f5-c3af5c2db0b8",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1617083849.5444162
+    },
+    "306db866-12ea-474a-b7d9-ea2a4a66cfad": {
+        "id": "306db866-12ea-474a-b7d9-ea2a4a66cfad",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "http://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1617083849.5444362
+    },
+    "2b19933a-5fc3-4212-8ba2-eba531f4122d": {
+        "id": "2b19933a-5fc3-4212-8ba2-eba531f4122d",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1617083849.5444489
+    },
+    "e0c01078-cb00-4d72-8cda-820c96009491": {
+        "id": "e0c01078-cb00-4d72-8cda-820c96009491",
+        "name": "Baidu",
+        "keyword": "b",
+        "cmd": "https://www.baidu.com/s?wd=%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1617083981.2932682
+    }
+}
