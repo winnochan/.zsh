@@ -68,3 +68,8 @@ alias nis='npm install -S'
 alias nid='npm install -D'
 alias nus='npm uninstall -S'
 alias nud='npm uninstall -D'
+
+# ffmpeg alias
+alias ff1080p="ffmpeg -i $1 -c:a copy -c:s copy -c:v libx265 -preset 9 -crf 18 -aspect 16:9 -vf scale=1920x1080 $1-1080p20"
+alias ff720p="ffmpeg -i $1 -c:a copy -c:s copy -c:v libx265 -preset 9 -crf 18 -aspect 16:9 -vf scale=1280×720 $1-720p20"
+alias ff480p="ffmpeg -i $1 -c:a copy -c:s copy -c:v libx265 -preset 9 -crf 18 -aspect 16:9 -vf scale=854x480 $1-480p20"
