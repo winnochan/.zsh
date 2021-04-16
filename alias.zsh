@@ -69,7 +69,27 @@ alias nid='npm install -D'
 alias nus='npm uninstall -S'
 alias nud='npm uninstall -D'
 
-# ffmpeg alias
-alias ff1080p="ffmpeg -i $1 -c:a copy -c:s copy -c:v libx265 -preset veryslow -crf 20 -aspect 16:9 -vf scale=1920x1080 $1-1080p20"
-alias ff720p="ffmpeg -i $1 -c:a copy -c:s copy -c:v libx265 -preset veryslow -crf 19 -aspect 16:9 -vf scale=1280×720 $1-720p20"
-alias ff480p="ffmpeg -i $1 -c:a copy -c:s copy -c:v libx265 -preset veryslow -crf 18 -aspect 16:9 -vf scale=854x480 $1-480p20"
+ff1080p() {
+  __FILE=$1
+  __FN=${__FILE%%.*}
+  echo __FN, $1, $2, $3
+  ffmpeg -i "$1" -c:a copy -c:s copy -c:v libx265 -preset "$2" -crf "$3" -aspect 16:9 -vf 'scale=1920:1080' "${__FN}-1080p${2}-${3}.mp4"
+  unset __FILE
+  unset __FN
+}
+
+ff720p() {
+  __FILE=$1
+  __FN=${__FILE%%.*}
+  ffmpeg -i "$1" -c:a copy -c:s copy -c:v libx265 -preset "$2" -crf "$3" -aspect 16:9 -vf 'scale=1280:720' "${__FN}-720p${2}-${3}.mp4"
+  unset __FILE
+  unset __FN
+}
+
+ff480p() {
+  __FILE=$1
+  __FN=${__FILE%%.*}
+  ffmpeg -i "$1" -c:a copy -c:s copy -c:v libx265 -preset "$2" -crf "$3" -aspect 16:9 -vf 'scale=854:480' "${__FN}-480p${2}-${3}.mp4"
+  unset __FILE
+  unset __FN
+}
