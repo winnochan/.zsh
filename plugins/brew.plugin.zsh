@@ -33,10 +33,10 @@ if command -v brew >/dev/null 2>&1; then
     # fi
     if [ "$ZSH_SYS" = "Darwin" ]; then
         # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.sjtug.sjtu.edu.cn/homebrew-bottles
-        export HOMEBREW_BOTTLE_DOMAIN=https://mirror.sjtu.edu.cn/homebrew-bottles
+        # export HOMEBREW_BOTTLE_DOMAIN=https://mirror.sjtu.edu.cn/homebrew-bottles
         # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
     elif [ "$ZSH_SYS" = "Linux" ]; then
-        export HOMEBREW_BOTTLE_DOMAIN=https://mirror.sjtu.edu.cn/linuxbrew-bottles
+        # export HOMEBREW_BOTTLE_DOMAIN=https://mirror.sjtu.edu.cn/linuxbrew-bottles
         # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/linuxbrew-bottles
     fi
 
