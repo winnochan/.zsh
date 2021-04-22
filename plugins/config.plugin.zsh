@@ -64,4 +64,12 @@ if [ ! -L $HOME/.npmrc ]; then
   ln -s $ZSH_DIR/config/npmrc $HOME/.npmrc
   echo 'link npmrc'
 fi
+
+if [ ! -L $HOME/.default-npm-packages ]; then
+  if [ -e $HOME/.default-npm-packages ]; then
+    rm -rf $HOME/.default-npm-packages
+  fi
+  ln -s $ZSH_DIR/config/default-npm-packages $HOME/.default-npm-packages
+  echo 'link default-npm-packages'
+fi
 export NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
