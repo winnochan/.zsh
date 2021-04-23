@@ -34,7 +34,7 @@ if ! zgenom saved; then
 
   # from zsh-user
   zgenom load https://gitee.com/winnochan/zsh-autosuggestions.git
-  zgenom load https://gitee.com/winnochan/zsh-completions.git
+  zgenom load https://gitee.com/winnochan/zsh-completions.git src
 
   zgenom load https://gitee.com/winnochan/zsh-autopair.git
   zgenom load https://gitee.com/winnochan/fast-syntax-highlighting.git
@@ -44,5 +44,5 @@ if ! zgenom saved; then
   zgenom save
 fi
 
-fpath=($ZSH_DIR/completions $fpath)
+fpath+=$ZSH_DIR/completions
 # source $ZSH_DIR/plugins/keychain.plugin.zsh
