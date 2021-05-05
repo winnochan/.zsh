@@ -11,7 +11,5 @@ elif [ -f $ZSH_DIR/plugins/rust.plugin.zsh ]; then
 fi
 
 if command -v cargo >/dev/null 2>&1; then
-    cargo install cargo-edit
-    cargo install cargo-audit
-    cargo install gitui
+  cargo install cargo-edit cargo-audit cargo-outdated
 fi
