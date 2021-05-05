@@ -6,3 +6,6 @@ registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/"
 
 [source.crates-io]
 replace-with = "mirror"
+
+[profile.dev]
+split-debuginfo = "unpacked"
