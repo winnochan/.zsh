@@ -7,3 +7,4 @@ eslint-cli
 @nestjs/cli
 vls
 vscode-json-languageserver
+pm2
