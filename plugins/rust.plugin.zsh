@@ -16,8 +16,8 @@ if command -v rustup >/dev/null 2>&1; then
 
     export RUST_SRC_PATH=$RUST_SYSROOT/lib/rustlib/src/rust/library
 
-    export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
-    export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+    export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
+    export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
 
     # export CARGO_HTTP_MULTIPLEXING=false
 
