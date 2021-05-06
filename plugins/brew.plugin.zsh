@@ -38,6 +38,7 @@ if command -v brew >/dev/null 2>&1; then
     elif [ "$ZSH_SYS" = "Linux" ]; then
         # export HOMEBREW_BOTTLE_DOMAIN=https://mirror.sjtu.edu.cn/linuxbrew-bottles
         # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/linuxbrew-bottles
+	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles
     fi
 
     __zsh_share_path=$HOMEBREW_PREFIX/share/zsh
