@@ -53,18 +53,18 @@ if command -v brew >/dev/null 2>&1; then
   fi
   unset __zsh_completions
 
-  if [ -d ${HOMEBREW_PREFIX}/include ]; then
-    export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/lib"
-    export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/include"
-    export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/lib/pkgconfig"
-  fi
+  # if [ -d ${HOMEBREW_PREFIX}/include ]; then
+  #   export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/lib"
+  #   export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/include"
+  #   export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/lib/pkgconfig"
+  # fi
 
   # openssl
   # if [ -d ${HOMEBREW_PREFIX}/opt/openssl ]; then
-  #     export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
-  #     export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/openssl/lib"
-  #     export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/openssl/include"
-  #     export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl/lib/pkgconfig"
+  #   export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
+  #   export LDFLAGS="$LDFLAGS -L${HOMEBREW_PREFIX}/opt/openssl/lib"
+  #   export CPPFLAGS="$CPPFLAGS -I${HOMEBREW_PREFIX}/opt/openssl/include"
+  #   export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl/lib/pkgconfig"
   # fi
 
   # node@10
