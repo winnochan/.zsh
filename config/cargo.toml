@@ -8,3 +8,6 @@ replace-with = "mirror"
 
 [profile.dev]
 split-debuginfo = "unpacked"
+
+[profile.release]
+lto = true
