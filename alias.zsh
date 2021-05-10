@@ -2,7 +2,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias emacs="emacs -nw"
 # emacs 指令
 alias e="emacsclient -t -a emacs"
 alias ed="emacs --daemon"
