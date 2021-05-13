@@ -15,4 +15,6 @@ opt-level = 3
 split-debuginfo = "unpacked"
 
 [profile.release]
-# lto = true
+lto = true
+opt-level = 3
+codegen-units = 1
