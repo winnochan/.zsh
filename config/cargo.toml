@@ -20,3 +20,6 @@ split-debuginfo = "unpacked"
 lto = true
 opt-level = 3
 codegen-units = 1
+
+[profile.doc]
+# panic = 'abort'
