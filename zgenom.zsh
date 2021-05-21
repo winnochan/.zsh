@@ -12,7 +12,7 @@ if ! zgenom saved; then
   zgenom ohmyzsh
   zgenom ohmyzsh plugins/alias-finder
   # zgenom ohmyzsh plugins/autoenv
-  # zgenom ohmyzsh plugins/cargo
+  zgenom ohmyzsh plugins/cargo
   # zgenom ohmyzsh plugins/colored-man-pages
   zgenom ohmyzsh plugins/extract
   zgenom ohmyzsh plugins/fasd
@@ -22,6 +22,7 @@ if ! zgenom saved; then
   # zgenom ohmyzsh plugins/per-directory-history
   zgenom ohmyzsh plugins/pip
   # zgenom ohmyzsh plugins/pipenv
+  # zgenom ohmyzsh plugins/rustup
 
   # from github
   # zgenom load https://gitee.com/winnochan/alias-tips.git
