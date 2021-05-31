@@ -27,13 +27,14 @@ unset __brew_cache_dir
 unset __brew_cache_env
 
 if command -v brew >/dev/null 2>&1; then
-  export HOMEBREW_NO_AUTO_UPDATE=true
   # if [ -f $HOME/.ssh/tokens/github-repo.token ]; then
   #     export HOMEBREW_GITHUB_API_TOKEN=$(cat $HOME/.ssh/tokens/github-repo.token)
   # fi
   if [ "$ZSH_SYS" = "Darwin" ]; then
+    # export HOMEBREW_NO_AUTO_UPDATE=true
     export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
   elif [ "$ZSH_SYS" = "Linux" ]; then
+    export HOMEBREW_NO_AUTO_UPDATE=true
     export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles
   fi
 
