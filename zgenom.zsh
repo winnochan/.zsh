@@ -46,4 +46,4 @@ if ! zgenom saved; then
 fi
 
 fpath+=$ZSH_DIR/completions
-# source $ZSH_DIR/plugins/keychain.plugin.zsh
+source $ZSH_DIR/plugins/keychain.plugin.zsh

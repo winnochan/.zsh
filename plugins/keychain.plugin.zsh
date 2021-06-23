@@ -3,7 +3,7 @@ if command -v keychain >/dev/null 2>&1; then
     # if [ -f ~/.ssh/ecdsa ] && [ -f ~/.ssh/dsa ] && [ -f ~/.ssh/rsa ]; then
     if [ -f ~/.ssh/ecdsa ]; then
 
-        keychain_file=$HOME/.keychain/$(hostname)-sh
+        keychain_file=$HOME/.keychain/$HOST-sh
         if [ -f $keychain_file ]; then
             source $keychain_file
         fi
