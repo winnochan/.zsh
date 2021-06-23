@@ -104,7 +104,7 @@
     background_color = "#09111a"
     background_darkness = 0.8
     cursor_color = "#d2e8fc"
-    font = FiraMono Nerd Font Mono Medium 12
+    font = FiraMono Nerd Font Mono Medium 11
     foreground_color = "#d9e6f2"
     show_titlebar = False
     scrollback_infinite = True
