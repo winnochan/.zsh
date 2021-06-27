@@ -2,6 +2,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias bu="brew update"
+alias buv="brew update -v"
+alias bug="brew upgrade"
+
 # emacs 指令
 alias e="emacsclient -t -a emacs"
 alias ed="emacs --daemon"
