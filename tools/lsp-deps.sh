@@ -1,1 +1,1 @@
-npm i -g bash-language-server dockerfile-language-server-nodejs typescript-language-server yaml-language-server
+npm i -g typescript-language-server yaml-language-server
