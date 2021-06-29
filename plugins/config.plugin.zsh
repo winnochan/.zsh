@@ -10,6 +10,14 @@ if [ ! -L $HOME/.config/ulauncher ]; then
   echo 'link ulauncher config'
 fi
 
+if [ ! -L $HOME/.config/alacritty ]; then
+  if [ -e $HOME/.config/alacritty ]; then
+    rm -rf $HOME/.config/alacritty
+  fi
+  ln -s $ZSH_DIR/config/alacritty $HOME/.config/alacritty
+  echo 'link alacritty config'
+fi
+
 if [ ! -L $HOME/.config/terminator ]; then
   if [ -e $HOME/.config/terminator ]; then
     rm -rf $HOME/.config/terminator
