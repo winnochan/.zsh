@@ -18,6 +18,10 @@ alias editrp="emacs --debug-init --timed-requires --profile"
 alias ef='emacsclient -t -a vim $(fzf)'
 alias vf='vim $(fzf)'
 
+if [ "$ZSH_SYS" = 'Linux' ]; then
+  alias open='xdg-open'
+fi
+
 # linux 常用指令
 alias tf="tail -f"
 alias k2="kill -2"
