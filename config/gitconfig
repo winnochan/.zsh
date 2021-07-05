@@ -13,3 +13,5 @@
   insteadOf = https://mirrors.ustc.edu.cn/linuxbrew-core.git
 [url "https://mirrors.ustc.edu.cn/brew.git"]
   insteadOf = https://github.com/Homebrew/brew
+[core]
+	quotepath = false
