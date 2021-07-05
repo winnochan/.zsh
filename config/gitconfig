@@ -15,3 +15,5 @@
   insteadOf = https://github.com/Homebrew/brew
 [core]
 	quotepath = false
+[pull]
+	rebase = false
