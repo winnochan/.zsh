@@ -1,0 +1,15 @@
+[user]
+  email = winnochan@icloud.com
+  name = WinnoChan
+[https]
+  proxy = http://127.0.0.1:1087
+[http]
+  proxy = http://127.0.0.1:1087
+[credential]
+  helper = cache --timeout=604800
+[url "https://mirrors.ustc.edu.cn/homebrew-core.git"]
+  insteadOf = https://github.com/Homebrew/homebrew-core
+[url "https://mirrors.ustc.edu.cn/linuxbrew-core.git"]
+  insteadOf = https://mirrors.ustc.edu.cn/linuxbrew-core.git
+[url "https://mirrors.ustc.edu.cn/brew.git"]
+  insteadOf = https://github.com/Homebrew/brew
