@@ -8,3 +8,4 @@ eslint-cli
 vls
 vscode-json-languageserver
 pm2
+yaml-language-server
