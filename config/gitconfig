@@ -14,6 +14,8 @@
 [url "https://mirrors.ustc.edu.cn/brew.git"]
   insteadOf = https://github.com/Homebrew/brew
 [core]
-	quotepath = false
+  quotepath = false
+  precomposeunicode = true
+  editor = vim
 [pull]
-	rebase = false
+  rebase = false
