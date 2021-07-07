@@ -22,7 +22,6 @@ source $ZSH_DIR/plugins/blox-theme.plugin.zsh
 # source $ZSH_DIR/plugins/emacs.plugin.zsh
 # source $ZSH_DIR/plugins/flutter.plugin.zsh
 source $ZSH_DIR/plugins/fzf.plugin.zsh
-source $ZSH_DIR/plugins/git.plugin.zsh
 source $ZSH_DIR/plugins/go.plugin.zsh
 source $ZSH_DIR/plugins/gtags.plugin.zsh
 # source $ZSH_DIR/plugins/java.plugin.zsh
@@ -39,6 +38,8 @@ source $ZSH_DIR/zgenom.zsh
 
 source $ZSH_DIR/alias.zsh
 source $ZSH_DIR/custom.zsh
+
+source $ZSH_DIR/plugins/git.plugin.zsh
 
 # source $ZSH_DIR/plugins/asdf.plugin.zsh
 
