@@ -82,11 +82,13 @@
   [[Azu]]
     background_color = "#09111a"
     background_darkness = 0.8
+    background_type = transparent
     cursor_color = "#d2e8fc"
-    font = CaskaydiaCove Nerd Font Mono 12
+    font = CaskaydiaCove Nerd Font Mono 13
     foreground_color = "#d9e6f2"
     show_titlebar = False
     scrollback_infinite = True
+    disable_mousewheel_zoom = True
     palette = "#000000:#ac6d74:#74ac6d:#aca46d:#6d74ac:#a46dac:#6daca4:#e6e6e6:#262626:#d6b8bc:#bcd6b8:#d6d3b8:#b8bcd6:#d3b8d6:#b8d6d3:#ffffff"
     word_chars = "-./?%&#:_"
     use_system_font = False
