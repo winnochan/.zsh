@@ -6,7 +6,7 @@
 [http]
   proxy = http://127.0.0.1:1087
 [credential]
-  helper = cache --timeout=604800
+  helper = cache --timeout=2000000000
 [url "https://mirrors.ustc.edu.cn/homebrew-core.git"]
   insteadOf = https://github.com/Homebrew/homebrew-core
 [url "https://mirrors.ustc.edu.cn/linuxbrew-core.git"]
