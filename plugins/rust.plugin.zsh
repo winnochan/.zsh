@@ -9,19 +9,27 @@ if command -v rustup >/dev/null 2>&1; then
         mkdir -p $rust_cache
     fi
 
-    if [ ! -f $rust_cache/rust_sysroot.zsh ]; then
-        echo "export RUST_SYSROOT=$(rustc --print sysroot)" > $rust_cache/rust_sysroot.zsh
+    if [ "$RUST_SYSROOT" = "" ]; then
+      if [ ! -f $rust_cache/rust_sysroot.zsh ]; then
+        __rust_sysroot=$(rustc --print sysroot)
+        if [ "${__rust_sysroot}" != "" ]; then
+          echo "export RUST_SYSROOT=${__rust_sysroot}" > $rust_cache/rust_sysroot.zsh
+        fi
+        unset __rust_sysroot
+      fi
+      if [ -f $rust_cache/rust_sysroot.zsh ]; then
+        source $rust_cache/rust_sysroot.zsh
+      fi
     fi
-    source $rust_cache/rust_sysroot.zsh
-
-    export RUST_SRC_PATH=$RUST_SYSROOT/lib/rustlib/src/rust/library
 
     export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
     export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
 
+    if [ "$RUST_SYSROOT" != "" ]; then
+      export RUST_SRC_PATH=$RUST_SYSROOT/lib/rustlib/src/rust/library
+      fpath=($RUST_SYSROOT/share/zsh/site-functions $fpath)
+    fi
     # export CARGO_HTTP_MULTIPLEXING=false
-
-    fpath=($RUST_SYSROOT/share/zsh/site-functions $fpath)
 
     if [ ! -L $HOME/.cargo/config.toml ]; then
       if [ -e $HOME/.cargo/config.toml ]; then
