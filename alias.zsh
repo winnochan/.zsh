@@ -75,6 +75,7 @@ alias nis='npm install -S'
 alias nid='npm install -D'
 alias nus='npm uninstall -S'
 alias nud='npm uninstall -D'
+alias nd='node dist'
 
 ff1080p() {
   __FILE=$1
