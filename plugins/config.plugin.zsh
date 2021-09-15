@@ -26,15 +26,15 @@ if [ ! -L $HOME/.config/terminator ]; then
   echo 'link terminator config'
 fi
 
-# if command -v xmodmap >/dev/null 2>&1; then
-#   if [ ! -L $HOME/.Xmodmap ]; then
-#     if [ -e $HOME/.Xmodmap ]; then
-#       rm -rf $HOME/.Xmodmap
-#     fi
-#     ln -s $ZSH_DIR/config/Xmodmap $HOME/.Xmodmap
-#     echo 'link xmodmap'
-#   fi
-# fi
+if command -v xmodmap >/dev/null 2>&1; then
+  if [ ! -L $HOME/.Xmodmap ]; then
+    if [ -e $HOME/.Xmodmap ]; then
+      rm -rf $HOME/.Xmodmap
+    fi
+    ln -s $ZSH_DIR/config/Xmodmap $HOME/.Xmodmap
+    echo 'link xmodmap'
+  fi
+fi
 
 __wezterm_dir=$HOME/.config/wezterm
 if [ ! -L $__wezterm_dir ]; then
