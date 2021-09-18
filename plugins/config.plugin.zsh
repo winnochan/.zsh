@@ -63,7 +63,8 @@ if [ ! -L $HOME/.condarc ]; then
 fi
 
 
-export ASDF_PYTHON_DEFAULT_PACKAGES_FILE=$ZSH_DIR/config/pip/default-packages
+export ASDF_GOLANG_DEFAULT_PACKAGES_FILE=$ZSH_DIR/config/asdf/golang-default-packages
+export ASDF_PYTHON_DEFAULT_PACKAGES_FILE=$ZSH_DIR/config/asdf/python-default-packages
 
 if [ ! -L $HOME/.npmrc ]; then
   if [ -e $HOME/.npmrc ]; then
