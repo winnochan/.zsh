@@ -20,7 +20,7 @@ if ! zgenom saved; then
   # zgenom ohmyzsh plugins/keychain
   zgenom ohmyzsh plugins/last-working-dir
   # zgenom ohmyzsh plugins/per-directory-history
-  zgenom ohmyzsh plugins/pip
+  # zgenom ohmyzsh plugins/pip
   # zgenom ohmyzsh plugins/pipenv
   # zgenom ohmyzsh plugins/rustup
 
