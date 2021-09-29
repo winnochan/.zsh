@@ -12,7 +12,7 @@ if ! zgenom saved; then
   zgenom ohmyzsh
   zgenom ohmyzsh plugins/alias-finder
   # zgenom ohmyzsh plugins/autoenv
-  zgenom ohmyzsh plugins/cargo
+  # zgenom ohmyzsh plugins/cargo
   # zgenom ohmyzsh plugins/colored-man-pages
   zgenom ohmyzsh plugins/extract
   zgenom ohmyzsh plugins/fasd
