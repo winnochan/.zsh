@@ -35,7 +35,7 @@ if ! zgenom saved; then
 
   # from zsh-user
   zgenom load https://gitee.com/winnochan/zsh-autosuggestions.git
-  zgenom load https://gitee.com/winnochan/zsh-completions.git src
+  # zgenom load https://gitee.com/winnochan/zsh-completions.git src
 
   zgenom load https://gitee.com/winnochan/zsh-autopair.git
   zgenom load https://gitee.com/winnochan/fast-syntax-highlighting.git
