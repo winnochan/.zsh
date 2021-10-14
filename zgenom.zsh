@@ -7,7 +7,6 @@ export ZGEN_OH_MY_ZSH_REPO=https://gitee.com/mirrors/oh-my-zsh.git
 source $ZGENOM_DIR/zgenom.zsh
 
 if ! zgenom saved; then
-
   # from ohmyzsh
   zgenom ohmyzsh
   zgenom ohmyzsh plugins/alias-finder

@@ -24,11 +24,18 @@
 source $ZSH_DIR/plugins/asdf.plugin.zsh
 
 # checking the cached .zcompdump once a day
-autoload -Uz compinit
-for dump in $HOME/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
+# autoload -Uz compinit
+# for dump in $HOME/.zcompdump(N.mh+24); do
+#   compinit
+# done
+# compinit -C
+
+# autoload -Uz compinit
+# if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
+#   compinit
+# else
+#   compinit -C
+# fi
 
 # autoload -Uz compinit
 # if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
@@ -40,12 +47,20 @@ compinit -C
 
 # autoload -Uz compinit
 
-# () {
-#   if [[ $# -gt 0 ]]; then
-#     compinit
-#   else
-#     compinit -C
-#   fi
-# } ${ZDOTDIR:-$HOME}/.zcompdump(N.mh+24)
+() {
+  if [[ $# -gt 0 ]]; then
+    compinit
+  else
+    compinit -C
+  fi
+} ${ZDOTDIR:-$HOME}/.zcompdump(N.mh+24)
+
+{
+  # Compile zcompdump, if modified, to increase startup speed.
+  zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+  if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
+    zcompile "$zcompdump"
+  fi
+} &!
 
 # zprof
