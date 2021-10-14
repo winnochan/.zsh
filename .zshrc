@@ -24,11 +24,11 @@
 source $ZSH_DIR/plugins/asdf.plugin.zsh
 
 # checking the cached .zcompdump once a day
-# autoload -Uz compinit
-# for dump in $HOME/.zcompdump(N.mh+24); do
-#   compinit
-# done
-# compinit -C
+autoload -Uz compinit
+for dump in $HOME/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
 # autoload -Uz compinit
 # if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
