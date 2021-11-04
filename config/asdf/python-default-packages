@@ -14,7 +14,7 @@ pylint
 pyls-isort
 pyls-mypy
 pyls-black
-pytest==6.2.4
+pytest==6.1.2
 python-language-server[all]
 service_factory>=0.1.5
 yapf
