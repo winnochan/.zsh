@@ -27,9 +27,8 @@ alias tf="tail -f"
 alias k2="kill -2"
 alias k9="kill -9"
 
-# shadowsocks 指令
-alias ssnum="sudo lsof -i -n -P | egrep -c ':1087.+ESTABLISHED'"
-alias sslist="sudo lsof -i -n -P | egrep ':1087.+ESTABLISHED'"
+# rust
+alias rc='rustc --edition=2021 -C opt-level=3 -C lto=yes -C codegen-units=1'
 
 # rg
 alias rgi="rg -i"
