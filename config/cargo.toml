@@ -1,3 +1,6 @@
+[package]
+edition = "2021"
+
 [source]
 
 [source.mirror]
