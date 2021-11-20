@@ -1,13 +1,8 @@
-@nestjs/cli@7
-bash-language-server
 eslint-cli
-flow-bin
-hexo-cli
 import-js
 pm2
 prettier
 typescript
 typescript-language-server
-vls
 vscode-json-languageserver
 yaml-language-server
