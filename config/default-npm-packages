@@ -1,4 +1,4 @@
-@nestjs/cli@7
+@nestjs/cli@8
 bash-language-server
 eslint-cli
 flow-bin
