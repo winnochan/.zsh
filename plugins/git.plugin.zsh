@@ -15,3 +15,6 @@ if [ "$USER" = "winnochan" ]; then
     echo 'link git attributes'
   fi
 fi
+
+# export GCM_CREDENTIAL_STORE=gpg
+export GCM_CREDENTIAL_STORE=secretservice
