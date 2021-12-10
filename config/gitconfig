@@ -6,8 +6,7 @@
 [http]
   proxy = http://127.0.0.1:1087
 [credential]
-  helper = /usr/bin/git-credential-manager-core
-  # helper = cache --timeout=2000000000
+  helper = cache --timeout=2000000000
 [url "https://mirrors.ustc.edu.cn/homebrew-core.git"]
   insteadOf = https://github.com/Homebrew/homebrew-core
 [url "https://mirrors.ustc.edu.cn/linuxbrew-core.git"]
@@ -23,9 +22,3 @@
 [diff "xlsx"]
     binary = true
     textconv = git-xlsx-textconv
-[credential "https://dev.azure.com"]
-  useHttpPath = true
-[credential "https://gitee.com"]
-	provider = generic
-[credential "http://git-server.mengmax.fun"]
-	provider = generic
