@@ -3,11 +3,14 @@ edition = "2021"
 
 [source]
 
-[source.mirror]
-registry = "https://mirror.sjtu.edu.cn/git/crates.io-index/"
+[source.sjtu]
+registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/"
+
+[source.tuna]
+registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 
 [source.crates-io]
-replace-with = "mirror"
+replace-with = "sjtu"
 
 [profile.dev]
 debug = true
