@@ -29,6 +29,7 @@ alias k9="kill -9"
 
 # rust
 alias rc='rustc --edition=2021 -C opt-level=3 -C lto=yes -C codegen-units=1'
+alias ruu='rustup update'
 alias cbr='cargo build --release'
 alias cb='cargo build'
 alias crr='cargo run --release'
