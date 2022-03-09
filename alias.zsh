@@ -105,3 +105,23 @@ ff480p() {
   unset __FILE
   unset __FN
 }
+
+ffs() {
+  __file=$1
+  __fb=${__file%.*}
+  __fe=${__file##*.}
+  ffmpeg -ss $2 -i ${__file} -c copy "${__fb}_.${__fe}"
+  unset __file
+  unset __fb
+  unset __fe
+}
+
+ffst() {
+  __file=$1
+  __fb=${__file%.*}
+  __fe=${__file##*.}
+  ffmpeg -ss $2 -to $3 -i ${__file} -c copy "${__fb}_.${__fe}"
+  unset __file
+  unset __fb
+  unset __fe
+}
