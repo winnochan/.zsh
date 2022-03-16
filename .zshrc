@@ -20,6 +20,7 @@
 
 # source $ZSH_DIR/custom.zsh
 # source $ZSH_DIR/alias.zsh
+# source $ZSH_DIR/zi.zsh
 
 # source $ZSH_DIR/plugins/asdf.plugin.zsh
 
@@ -48,6 +49,7 @@
 # autoload -Uz compinit
 
 () {
+  autoload -Uz compinit
   if [[ $# -gt 0 ]]; then
     compinit
   else
