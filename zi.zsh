@@ -12,34 +12,32 @@ ZI[OPTIMIZE_OUT_DISK_ACCESSES]=1
 
 source ${ZI[BIN_DIR]}/zi.zsh
 
+# ohmyzsh lib
 zi wait lucid light-mode for multisrc='lib/*.zsh' from=gitee.com mirrors/oh-my-zsh
 
+# snippets
 zi wait lucid for \
    https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/alias-finder/alias-finder.plugin.zsh \
    https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/extract/extract.plugin.zsh \
    https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/fasd/fasd.plugin.zsh \
    https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh \
    https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/last-working-dir/last-working-dir.plugin.zsh \
-   https://gitee.com/winnochan/fzf-fasd/raw/master/fzf-fasd.plugin.zsh
+   https://gitee.com/winnochan/fzf-fasd/raw/master/fzf-fasd.plugin.zsh \
+   https://gitee.com/mirrors/fzf/raw/master/shell/completion.zsh \
+   https://gitee.com/mirrors/fzf/raw/master/shell/key-bindings.zsh \
+   https://gitee.com/winnochan/zsh-autopair/raw/master/autopair.zsh
 
-zi wait lucid light-mode for multisrc='shell/*.zsh' from=gitee.com mirrors/fzf
+# 主题配置(blox theme)
+zi ice silent wait=! atload=blox_hook__render from=gitee.com src=blox.zsh; zi light winnochan/blox-zsh-theme
 
-# blox theme
-zi silent wait=! light-mode for from=gitee.com src=blox.zsh atload=blox_hook__render winnochan/blox-zsh-theme
-# zi ice silent wait=! atload=blox_hook__render from=gitee.com src=blox.zsh; zi light winnochan/blox-zsh-theme
-
-# 自动推荐历史命令插件
-zi ice silent wait lucid atload=_zsh_autosuggest_start from=gitee.com; zi light winnochan/zsh-autosuggestions
-
-# 大量常用命令的补全插件
-# zi ice silent blockf from=gitee.com; zi light winnochan/zsh-completions
-zi wait lucid light-mode for from=gitee.com winnochan/zsh-completions
-
-# 自动括号, 引号匹配插件
-zi wait lucid light-mode for from=gitee.com winnochan/zsh-autopair
-
+# 推荐历史命令
+# 常用命令补全
 # 语法高亮插件
-zi wait lucid light-mode for from=gitee.com winnochan/fast-syntax-highlighting
+zi wait lucid light-mode for \
+   atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions \
+   from=gitee.com winnochan/zsh-completions \
+   from=gitee.com winnochan/fast-syntax-highlighting
+# zi ice wait lucid atload=_zsh_autosuggest_start from=gitee.com; zi light winnochan/zsh-autosuggestions
 
 autoload -Uz _zi
 (( ${+_comps} )) && _comps[zi]=_zi
