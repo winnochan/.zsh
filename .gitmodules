@@ -7,3 +7,6 @@
 [submodule ".zgenom"]
 	path = .zgenom
 	url = https://gitee.com/winnochan/zgenom.git
+[submodule ".zi/bin"]
+	path = .zi/bin
+	url = https://gitee.com/winnochan/zi.git
