@@ -33,8 +33,9 @@ source $ZSH_DIR/plugins/rust.plugin.zsh
 source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
 source $ZSH_DIR/plugins/zsh-bin.plugin.zsh
 
-source $ZSH_DIR/zgenom.zsh
+# source $ZSH_DIR/zgenom.zsh
 # source $ZSH_DIR/zinit.zsh
+source $ZSH_DIR/zi.zsh
 
 source $ZSH_DIR/alias.zsh
 source $ZSH_DIR/custom.zsh
