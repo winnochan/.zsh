@@ -1,4 +1,5 @@
 declare -A ZI
+
 ZI[HOME_DIR]=$ZSH_DIR/.zi
 ZI[BIN_DIR]=${ZI[HOME_DIR]}/bin
 ZI[CACHE_DIR]=$ZSH_DIR/.cache/zi
@@ -37,7 +38,6 @@ zi wait lucid light-mode for \
    atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions \
    from=gitee.com winnochan/zsh-completions \
    from=gitee.com winnochan/fast-syntax-highlighting
-# zi ice wait lucid atload=_zsh_autosuggest_start from=gitee.com; zi light winnochan/zsh-autosuggestions
 
 autoload -Uz _zi
 (( ${+_comps} )) && _comps[zi]=_zi
