@@ -30,7 +30,8 @@ zi silent wait lucid light-mode for \
    atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions
 
 # 主题配置(blox theme)
-zi ice silent wait=! atload=blox_hook__render from=gitee.com src=blox.zsh; zi light winnochan/blox-zsh-theme
+zi silent wait=! lucid light-mode for \
+   atload=blox_hook__render src=blox.zsh from=gitee.com winnochan/blox-zsh-theme
 
 autoload -Uz _zi
 (( ${+_comps} )) && _comps[zi]=_zi
