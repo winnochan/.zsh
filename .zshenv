@@ -14,9 +14,9 @@ fi
 export BETTER_EXCEPTIONS=1
 export MYPY_CACHE_DIR=$ZSH_CACHE/mypy
 
-source $ZSH_DIR/plugins/config.plugin.zsh
+# source $ZSH_DIR/plugins/config.plugin.zsh
 source $ZSH_DIR/plugins/alias-finder.plugin.zsh
-source $ZSH_DIR/plugins/brew.plugin.zsh
+# source $ZSH_DIR/plugins/brew.plugin.zsh
 source $ZSH_DIR/plugins/oh-my-zsh.plugin.zsh
 source $ZSH_DIR/plugins/blox-theme.plugin.zsh
 # source $ZSH_DIR/plugins/emacs.plugin.zsh
@@ -26,10 +26,10 @@ source $ZSH_DIR/plugins/go.plugin.zsh
 source $ZSH_DIR/plugins/gtags.plugin.zsh
 # source $ZSH_DIR/plugins/java.plugin.zsh
 # source $ZSH_DIR/plugins/miniconda.plugin.zsh
-source $ZSH_DIR/plugins/proxychains.plugin.zsh
-source $ZSH_DIR/plugins/pyenv.plugin.zsh
-source $ZSH_DIR/plugins/vagrant.plugin.zsh
-source $ZSH_DIR/plugins/rust.plugin.zsh
+# source $ZSH_DIR/plugins/proxychains.plugin.zsh
+# source $ZSH_DIR/plugins/pyenv.plugin.zsh
+# source $ZSH_DIR/plugins/vagrant.plugin.zsh
+# source $ZSH_DIR/plugins/rust.plugin.zsh
 source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
 source $ZSH_DIR/plugins/zsh-bin.plugin.zsh
 
