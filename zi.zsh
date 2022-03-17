@@ -14,15 +14,15 @@ ZI[OPTIMIZE_OUT_DISK_ACCESSES]=1
 source ${ZI[BIN_DIR]}/zi.zsh
 
 # ohmyzsh lib
-zi wait lucid light-mode for multisrc='lib/*.zsh' from=gitee.com mirrors/oh-my-zsh
+zi silent wait lucid light-mode for multisrc='lib/*.zsh' from=gitee.com mirrors/oh-my-zsh
+
+# ohmyzsh plugins
+zi silent wait lucid light-mode for \
+   multisrc='plugins/{alias-finder,extract,fasd,git,last-working-dir}/*.plugin.zsh' \
+   from=gitee.com mirrors/oh-my-zsh
 
 # snippets
-zi wait lucid for \
-   https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/alias-finder/alias-finder.plugin.zsh \
-   https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/extract/extract.plugin.zsh \
-   https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/fasd/fasd.plugin.zsh \
-   https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh \
-   https://gitee.com/mirrors/oh-my-zsh/raw/master/plugins/last-working-dir/last-working-dir.plugin.zsh \
+zi silent wait lucid for \
    https://gitee.com/winnochan/fzf-fasd/raw/master/fzf-fasd.plugin.zsh \
    https://gitee.com/mirrors/fzf/raw/master/shell/completion.zsh \
    https://gitee.com/mirrors/fzf/raw/master/shell/key-bindings.zsh \
