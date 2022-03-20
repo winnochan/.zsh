@@ -31,10 +31,17 @@ zi silent wait lucid light-mode for \
 
 # 主题配置(blox theme), 异步
 # zi silent wait=! lucid light-mode for \
-#    atload=blox_hook__render src=blox.zsh from=gitee.com winnochan/blox-zsh-theme
+#    atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
 
 # 主题配置(blox theme), 同步
-zi silent lucid light-mode for from=gitee.com winnochan/blox-zsh-theme
+# zi silent lucid light-mode for from=gitee.com winnochan/blox-zsh-theme
+
+if [ "$ZSH_SYS" = "Darwin" ]; then
+  zi silent wait=! lucid light-mode for \
+     atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
+elif [ "$ZSH_SYS" = "Linux" ]; then
+  zi silent lucid light-mode for from=gitee.com winnochan/blox-zsh-theme
+fi
 
 autoload -Uz _zi
 (( ${+_comps} )) && _comps[zi]=_zi
