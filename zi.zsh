@@ -22,7 +22,7 @@ source ${ZI[BIN_DIR]}/zi.zsh
 
 if [ "$ZSH_SYS" = "Darwin" ]; then
 
-  zi silent lucid light-mode for \
+  zi silent wait lucid light-mode for \
      multisrc='lib/*.zsh plugins/{alias-finder,extract,fasd,git,last-working-dir}/*.plugin.zsh' \
      from=gitee.com mirrors/oh-my-zsh \
      from=gitee.com winnochan/fzf-fasd \
