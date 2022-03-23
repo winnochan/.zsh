@@ -36,17 +36,19 @@ source ${ZI[BIN_DIR]}/zi.zsh
 
 # elif [ "$ZSH_SYS" = "Linux" ]; then
 
-  zi silent wait lucid light-mode for \
-     multisrc='lib/*.zsh plugins/{alias-finder,extract,fasd,git,last-working-dir}/*.plugin.zsh' \
-     from=gitee.com mirrors/oh-my-zsh \
-     from=gitee.com winnochan/fzf-fasd \
-     multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
-     from=gitee.com winnochan/zsh-completions \
-     from=gitee.com winnochan/zsh-autopair \
-     from=gitee.com winnochan/fast-syntax-highlighting \
-     atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions
+zi silent wait lucid light-mode for \
+   multisrc='lib/*.zsh plugins/{alias-finder,extract,fasd,git,last-working-dir}/*.plugin.zsh' \
+   from=gitee.com mirrors/oh-my-zsh \
+   from=gitee.com winnochan/fzf-fasd \
+   multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
+   from=gitee.com winnochan/zsh-completions \
+   from=gitee.com winnochan/zsh-autopair \
+   from=gitee.com winnochan/fast-syntax-highlighting \
+   atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions
 
-  zi silent wait=! lucid light-mode for atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
+zi silent wait=! lucid light-mode for atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
+
+# zi silent lucid light-mode for from=gitee.com winnochan/blox-zsh-theme
 
 # fi
 
