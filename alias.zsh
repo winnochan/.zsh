@@ -63,9 +63,9 @@ alias kc='keychain -q ~/.ssh/ecdsa && source $HOME/.keychain/$(hostname)-sh'
 
 alias tsfzf='rg --type ts --files | fzf'
 
-alias pc='proxychains4'
-alias pgl='proxychains4 git pull'
-alias pgp='proxychains4 git push'
+alias pc='proxychains4 -q'
+alias pgl='proxychains4 -q git pull'
+alias pgp='proxychains4 -q git push'
 
 # git
 alias glr='git pull --recurse-submodules'
