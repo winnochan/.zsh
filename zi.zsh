@@ -30,6 +30,8 @@ zi silent wait lucid light-mode for \
    from=gitee.com winnochan/fast-syntax-highlighting \
    atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions
 
+zi silent lucid light-mode for as='program' pick='fasd' from=gitee.com winnochan/fasd
+
 # zi silent wait=! lucid light-mode for atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
 
 zi silent lucid light-mode for from=gitee.com winnochan/blox-zsh-theme
