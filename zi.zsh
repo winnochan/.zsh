@@ -32,10 +32,10 @@ zi silent wait lucid light-mode for \
    from=gitee.com winnochan/fast-syntax-highlighting
 
 # 主题配置(blox theme), 异步
-# zi silent wait=! lucid light-mode for atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
+zi silent wait=! lucid light-mode for atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
 
 # 主题配置(blox theme), 同步
-zi silent lucid light-mode for from=gitee.com winnochan/blox-zsh-theme
+# zi silent lucid light-mode for from=gitee.com winnochan/blox-zsh-theme
 
 autoload -Uz _zi
 (( ${+_comps} )) && _comps[zi]=_zi
