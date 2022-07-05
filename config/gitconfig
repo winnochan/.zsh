@@ -27,3 +27,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[lfs "https://git.mengmax.fun/mmxs/xlsapp.git/info/lfs"]
+	locksverify = true
