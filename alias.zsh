@@ -130,3 +130,7 @@ ffst() {
   unset __fb
   unset __fe
 }
+
+ghrma() {
+  git filter-branch --force --index-filter "git rm --cached --ignore-unmatch -r $1" --prune-empty --tag-name-filter cat -- --all
+}
