@@ -26,6 +26,14 @@ if [ ! -L $HOME/.config/terminator ]; then
   echo 'link terminator config'
 fi
 
+if [ ! -L $HOME/.xprofile ]; then
+  if [ -e $HOME/.xprofile ]; then
+    rm -rf $HOME/.xprofile
+  fi
+  ln -s $ZSH_DIR/config/xprofile $HOME/.xprofile
+  echo 'link xprofile config'
+fi
+
 if command -v xmodmap >/dev/null 2>&1; then
   if [ ! -L $HOME/.Xmodmap ]; then
     if [ -e $HOME/.Xmodmap ]; then
