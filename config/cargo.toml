@@ -1,7 +1,10 @@
+[http]
+check-revoke = false
+
 [package]
 edition = "2021"
 
-[source]
+# [source]
 
 [source.sjtu]
 registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/"
@@ -9,8 +12,11 @@ registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/"
 [source.tuna]
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 
+[source.ustc]
+registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+
 [source.crates-io]
-replace-with = "sjtu"
+replace-with = "tuna"
 
 [profile.dev]
 debug = true
@@ -27,5 +33,5 @@ split-debuginfo = "unpacked"
 opt-level = "s"
 codegen-units = 1
 
-[profile.doc]
+# [profile.doc]
 # panic = 'abort'
