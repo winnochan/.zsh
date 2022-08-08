@@ -2,57 +2,59 @@ if [ ! -e ~/.config ]; then
   mkdir ~/.config
 fi
 
-if [ ! -L $HOME/.config/ulauncher ]; then
-  if [ -e $HOME/.config/ulauncher ]; then
-    rm -rf $HOME/.config/ulauncher
-  fi
-  ln -s $ZSH_DIR/config/ulauncher $HOME/.config/ulauncher
-  echo 'link ulauncher config'
-fi
+# if [ ! -L $HOME/.config/ulauncher ]; then
+#   if [ -e $HOME/.config/ulauncher ]; then
+#     rm -rf $HOME/.config/ulauncher
+#   fi
+#   ln -s $ZSH_DIR/config/ulauncher $HOME/.config/ulauncher
+#   echo 'link ulauncher config'
+# fi
 
-if [ ! -L $HOME/.config/alacritty ]; then
-  if [ -e $HOME/.config/alacritty ]; then
-    rm -rf $HOME/.config/alacritty
-  fi
-  ln -s $ZSH_DIR/config/alacritty $HOME/.config/alacritty
-  echo 'link alacritty config'
-fi
+# if [ ! -L $HOME/.config/alacritty ]; then
+#   if [ -e $HOME/.config/alacritty ]; then
+#     rm -rf $HOME/.config/alacritty
+#   fi
+#   ln -s $ZSH_DIR/config/alacritty $HOME/.config/alacritty
+#   echo 'link alacritty config'
+# fi
 
-if [ ! -L $HOME/.config/terminator ]; then
-  if [ -e $HOME/.config/terminator ]; then
-    rm -rf $HOME/.config/terminator
-  fi
-  ln -s $ZSH_DIR/config/terminator $HOME/.config/terminator
-  echo 'link terminator config'
-fi
-
-if [ ! -L $HOME/.xprofile ]; then
-  if [ -e $HOME/.xprofile ]; then
-    rm -rf $HOME/.xprofile
-  fi
-  ln -s $ZSH_DIR/config/xprofile $HOME/.xprofile
-  echo 'link xprofile config'
-fi
-
-if command -v xmodmap >/dev/null 2>&1; then
-  if [ ! -L $HOME/.Xmodmap ]; then
-    if [ -e $HOME/.Xmodmap ]; then
-      rm -rf $HOME/.Xmodmap
+if [ "$ZSH_SYS" = "Linux" ]; then
+  if [ ! -L $HOME/.config/terminator ]; then
+    if [ -e $HOME/.config/terminator ]; then
+      rm -rf $HOME/.config/terminator
     fi
-    ln -s $ZSH_DIR/config/Xmodmap $HOME/.Xmodmap
-    echo 'link xmodmap'
+    ln -s $ZSH_DIR/config/terminator $HOME/.config/terminator
+    echo 'link terminator config'
+  fi
+
+  if [ ! -L $HOME/.xprofile ]; then
+    if [ -e $HOME/.xprofile ]; then
+      rm -rf $HOME/.xprofile
+    fi
+    ln -s $ZSH_DIR/config/xprofile $HOME/.xprofile
+    echo 'link xprofile config'
+  fi
+
+  if command -v xmodmap >/dev/null 2>&1; then
+    if [ ! -L $HOME/.Xmodmap ]; then
+      if [ -e $HOME/.Xmodmap ]; then
+        rm -rf $HOME/.Xmodmap
+      fi
+      ln -s $ZSH_DIR/config/Xmodmap $HOME/.Xmodmap
+      echo 'link xmodmap'
+    fi
   fi
 fi
 
-__wezterm_dir=$HOME/.config/wezterm
-if [ ! -L $__wezterm_dir ]; then
-  if [ -e $__wezterm_dir ]; then
-    rm -rf $__wezterm_dir
-  fi
-  ln -s $ZSH_DIR/config/wezterm $__wezterm_dir
-  echo 'link wezterm config'
-fi
-unset __wezterm_dir
+# __wezterm_dir=$HOME/.config/wezterm
+# if [ ! -L $__wezterm_dir ]; then
+#   if [ -e $__wezterm_dir ]; then
+#     rm -rf $__wezterm_dir
+#   fi
+#   ln -s $ZSH_DIR/config/wezterm $__wezterm_dir
+#   echo 'link wezterm config'
+# fi
+# unset __wezterm_dir
 
 if [ ! -L $HOME/.pip ]; then
   if [ -e $HOME/.pip ]; then
