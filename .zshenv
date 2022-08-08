@@ -16,7 +16,11 @@ export MYPY_CACHE_DIR=$ZSH_CACHE/mypy
 
 source $ZSH_DIR/plugins/config.plugin.zsh
 source $ZSH_DIR/plugins/alias-finder.plugin.zsh
-source $ZSH_DIR/plugins/brew.plugin.zsh
+
+if [ "$ZSH_SYS" = "Darwin" ]; then
+  source $ZSH_DIR/plugins/brew.plugin.zsh
+fi
+
 source $ZSH_DIR/plugins/oh-my-zsh.plugin.zsh
 source $ZSH_DIR/plugins/blox-theme.plugin.zsh
 # source $ZSH_DIR/plugins/emacs.plugin.zsh
