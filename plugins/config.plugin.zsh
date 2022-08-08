@@ -2,51 +2,51 @@ if [ ! -e ~/.config ]; then
   mkdir ~/.config
 fi
 
-# if [ ! -L $HOME/.config/ulauncher ]; then
-#   if [ -e $HOME/.config/ulauncher ]; then
-#     rm -rf $HOME/.config/ulauncher
+# if [ ! -L ~/.config/ulauncher ]; then
+#   if [ -e ~/.config/ulauncher ]; then
+#     rm -rf ~/.config/ulauncher
 #   fi
-#   ln -s $ZSH_DIR/config/ulauncher $HOME/.config/ulauncher
+#   ln -s $ZSH_DIR/config/ulauncher ~/.config/ulauncher
 #   echo 'link ulauncher config'
 # fi
 
-# if [ ! -L $HOME/.config/alacritty ]; then
-#   if [ -e $HOME/.config/alacritty ]; then
-#     rm -rf $HOME/.config/alacritty
+# if [ ! -L ~/.config/alacritty ]; then
+#   if [ -e ~/.config/alacritty ]; then
+#     rm -rf ~/.config/alacritty
 #   fi
-#   ln -s $ZSH_DIR/config/alacritty $HOME/.config/alacritty
+#   ln -s $ZSH_DIR/config/alacritty ~/.config/alacritty
 #   echo 'link alacritty config'
 # fi
 
 if [ "$ZSH_SYS" = "Linux" ]; then
-  if [ ! -L $HOME/.config/terminator ]; then
-    if [ -e $HOME/.config/terminator ]; then
-      rm -rf $HOME/.config/terminator
+  if [ ! -L ~/.config/terminator ]; then
+    if [ -e ~/.config/terminator ]; then
+      rm -rf ~/.config/terminator
     fi
-    ln -s $ZSH_DIR/config/terminator $HOME/.config/terminator
+    ln -s $ZSH_DIR/config/terminator ~/.config/terminator
     echo 'link terminator config'
   fi
 
-  if [ ! -L $HOME/.xprofile ]; then
-    if [ -e $HOME/.xprofile ]; then
-      rm -rf $HOME/.xprofile
+  if [ ! -L ~/.xprofile ]; then
+    if [ -e ~/.xprofile ]; then
+      rm -rf ~/.xprofile
     fi
-    ln -s $ZSH_DIR/config/xprofile $HOME/.xprofile
+    ln -s $ZSH_DIR/config/xprofile ~/.xprofile
     echo 'link xprofile config'
   fi
 
   if command -v xmodmap >/dev/null 2>&1; then
-    if [ ! -L $HOME/.Xmodmap ]; then
-      if [ -e $HOME/.Xmodmap ]; then
-        rm -rf $HOME/.Xmodmap
+    if [ ! -L ~/.Xmodmap ]; then
+      if [ -e ~/.Xmodmap ]; then
+        rm -rf ~/.Xmodmap
       fi
-      ln -s $ZSH_DIR/config/Xmodmap $HOME/.Xmodmap
+      ln -s $ZSH_DIR/config/Xmodmap ~/.Xmodmap
       echo 'link xmodmap'
     fi
   fi
 fi
 
-# __wezterm_dir=$HOME/.config/wezterm
+# __wezterm_dir=~/.config/wezterm
 # if [ ! -L $__wezterm_dir ]; then
 #   if [ -e $__wezterm_dir ]; then
 #     rm -rf $__wezterm_dir
@@ -56,19 +56,19 @@ fi
 # fi
 # unset __wezterm_dir
 
-if [ ! -L $HOME/.pip ]; then
-  if [ -e $HOME/.pip ]; then
-    rm -rf $HOME/.pip
+if [ ! -L ~/.pip ]; then
+  if [ -e ~/.pip ]; then
+    rm -rf ~/.pip
   fi
-  ln -s $ZSH_DIR/config/pip $HOME/.pip
+  ln -s $ZSH_DIR/config/pip ~/.pip
   echo 'link pip config'
 fi
 
-if [ ! -L $HOME/.condarc ]; then
-  if [ -e $HOME/.condarc ]; then
-    rm -rf $HOME/.condarc
+if [ ! -L ~/.condarc ]; then
+  if [ -e ~/.condarc ]; then
+    rm -rf ~/.condarc
   fi
-  ln -s $ZSH_DIR/config/condarc $HOME/.condarc
+  ln -s $ZSH_DIR/config/condarc ~/.condarc
   echo 'link condarc'
 fi
 
@@ -76,19 +76,19 @@ fi
 export ASDF_GOLANG_DEFAULT_PACKAGES_FILE=$ZSH_DIR/config/asdf/golang-default-packages
 export ASDF_PYTHON_DEFAULT_PACKAGES_FILE=$ZSH_DIR/config/asdf/python-default-packages
 
-if [ ! -L $HOME/.npmrc ]; then
-  if [ -e $HOME/.npmrc ]; then
-    rm -rf $HOME/.npmrc
+if [ ! -L ~/.npmrc ]; then
+  if [ -e ~/.npmrc ]; then
+    rm -rf ~/.npmrc
   fi
-  ln -s $ZSH_DIR/config/npmrc $HOME/.npmrc
+  ln -s $ZSH_DIR/config/npmrc ~/.npmrc
   echo 'link npmrc'
 fi
 
-if [ ! -L $HOME/.default-npm-packages ]; then
-  if [ -e $HOME/.default-npm-packages ]; then
-    rm -rf $HOME/.default-npm-packages
+if [ ! -L ~/.default-npm-packages ]; then
+  if [ -e ~/.default-npm-packages ]; then
+    rm -rf ~/.default-npm-packages
   fi
-  ln -s $ZSH_DIR/config/default-npm-packages $HOME/.default-npm-packages
+  ln -s $ZSH_DIR/config/default-npm-packages ~/.default-npm-packages
   echo 'link default-npm-packages'
 fi
 export NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
