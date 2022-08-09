@@ -21,9 +21,9 @@ source ${ZI[BIN_DIR]}/zi.zsh
 # 推荐历史命令
 
 # zi silent wait lucid light-mode for \
+#    as='program' pick='fasd' from=gitee.com winnochan/fasd \
 #    multisrc='lib/*.zsh' from=gitee.com mirrors/oh-my-zsh \
 #    multisrc='plugins/{alias-finder,extract,fasd,git,last-working-dir}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
-#    as='program' pick='fasd' from=gitee.com winnochan/fasd \
 #    from=gitee.com winnochan/fzf-fasd \
 #    multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
 #    from=gitee.com winnochan/zsh-completions \
@@ -42,10 +42,10 @@ zi silent wait lucid light-mode for \
    from=gitee.com winnochan/fast-syntax-highlighting
 
 # 主题配置(blox theme), 异步
-# zi silent wait=! lucid light-mode for atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
+# zi wait=! lucid light-mode for atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
 
 # 主题配置(blox theme), 同步
-zi silent lucid light-mode for from=gitee.com winnochan/blox-zsh-theme
+zi light-mode for from=gitee.com winnochan/blox-zsh-theme
 
 autoload -Uz _zi
 (( ${+_comps} )) && _comps[zi]=_zi
