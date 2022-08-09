@@ -19,6 +19,14 @@ fi
 # fi
 
 if [ "$ZSH_SYS" = "Linux" ]; then
+  if [ ! -L ~/.mongoshrc.js ]; then
+    if [ -e ~/.mongoshrc.js ]; then
+      rm -rf ~/.mongoshrc.js
+    fi
+    ln -s $ZSH_DIR/config/mongoshrc.js ~/.mongoshrc.js
+    echo 'link mongoshrc config'
+  fi
+
   if [ ! -L ~/.config/terminator ]; then
     if [ -e ~/.config/terminator ]; then
       rm -rf ~/.config/terminator
