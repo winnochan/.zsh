@@ -31,9 +31,12 @@ source ${ZI[BIN_DIR]}/zi.zsh
 #    from=gitee.com winnochan/zsh-autopair \
 #    from=gitee.com winnochan/fast-syntax-highlighting
 
+# zi silent light-mode for \
+#    src='plugins/last-working-dir/last-working-dir.plugin.zsh' from=gitee.com mirrors/oh-my-zsh
+
 zi silent wait lucid light-mode for \
    as='program' pick='fasd' from=gitee.com winnochan/fasd \
-   multisrc='plugins/{alias-finder,extract,fasd,git,last-working-dir}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
+   multisrc='plugins/{alias-finder,extract,fasd,git}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
    from=gitee.com winnochan/fzf-fasd \
    multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
    from=gitee.com winnochan/zsh-completions \

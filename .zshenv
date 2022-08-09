@@ -6,6 +6,7 @@ export LC_ALL="en_US.UTF-8"
 export ZSH_DIR=$(dirname ${(%):-%N})
 export ZSH_SYS=$(uname)
 export ZSH_CACHE=$ZSH_DIR/.cache
+export ZSH_CACHE_DIR=$ZSH_DIR/.cache
 
 if [ ! -d $HOME/.config ]; then
   mkdir $HOME/.config
