@@ -31,18 +31,27 @@ source ${ZI[BIN_DIR]}/zi.zsh
 #    from=gitee.com winnochan/zsh-autopair \
 #    from=gitee.com winnochan/fast-syntax-highlighting
 
-# zi silent light-mode for \
-#    src='plugins/last-working-dir/last-working-dir.plugin.zsh' from=gitee.com mirrors/oh-my-zsh
-
-zi silent wait lucid light-mode for \
-   as='program' pick='fasd' from=gitee.com winnochan/fasd \
-   multisrc='plugins/{alias-finder,extract,fasd,git}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
-   from=gitee.com winnochan/fzf-fasd \
-   multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
-   from=gitee.com winnochan/zsh-completions \
-   atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions \
-   from=gitee.com winnochan/zsh-autopair \
-   from=gitee.com winnochan/fast-syntax-highlighting
+if [ "$ZSH_SYS" = "Linux" ]; then
+  zi silent wait lucid light-mode for \
+     as='program' pick='fasd' from=gitee.com winnochan/fasd \
+     multisrc='plugins/{alias-finder,extract,fasd,git,last-working-dir}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
+     from=gitee.com winnochan/fzf-fasd \
+     multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
+     from=gitee.com winnochan/zsh-completions \
+     atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions \
+     from=gitee.com winnochan/zsh-autopair \
+     from=gitee.com winnochan/fast-syntax-highlighting
+else
+  zi silent wait lucid light-mode for \
+     as='program' pick='fasd' from=gitee.com winnochan/fasd \
+     multisrc='plugins/{alias-finder,extract,fasd,git}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
+     from=gitee.com winnochan/fzf-fasd \
+     multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
+     from=gitee.com winnochan/zsh-completions \
+     atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions \
+     from=gitee.com winnochan/zsh-autopair \
+     from=gitee.com winnochan/fast-syntax-highlighting
+fi
 
 # 主题配置(blox theme), 异步
 # zi wait=! lucid light-mode for atload=blox_hook__render from=gitee.com winnochan/blox-zsh-theme
