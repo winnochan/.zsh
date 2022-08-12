@@ -1,5 +1,4 @@
 @nestjs/cli@9
-bash-language-server
 eslint-cli
 flow-bin
 hexo-cli
