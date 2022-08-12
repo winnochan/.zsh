@@ -49,6 +49,8 @@ source $ZSH_DIR/plugins/git.plugin.zsh
 
 source $ZSH_DIR/plugins/asdf.plugin.zsh
 
+fpath=($ZSH_DIR/completions $fpath)
+
 # autoload -Uz compinit
 # for dump in $HOME/.zcompdump(N.mh+24); do
 #     compinit
