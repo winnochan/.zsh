@@ -29,3 +29,5 @@
 	required = true
 [lfs "https://git.mengmax.fun/mmxs/xlsapp.git/info/lfs"]
 	locksverify = true
+[url "https://github.com/"]
+	insteadOf = git@github.com:
