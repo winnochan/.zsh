@@ -70,6 +70,7 @@ alias pgp='proxychains4 -q git push'
 # git
 alias glr='git pull --recurse-submodules'
 alias gclr='git clone --recurse-submodules'
+alias gmc='git merge --continue'
 
 alias nr='npm run'
 alias nrb='npm run build'
