@@ -7,12 +7,10 @@
   proxy = http://127.0.0.1:1087
 [credential]
   helper = cache --timeout=2000000000
-[url "https://mirrors.ustc.edu.cn/homebrew-core.git"]
-  insteadOf = https://github.com/Homebrew/homebrew-core
-[url "https://mirrors.ustc.edu.cn/linuxbrew-core.git"]
-  insteadOf = https://mirrors.ustc.edu.cn/linuxbrew-core.git
-[url "https://mirrors.ustc.edu.cn/brew.git"]
-  insteadOf = https://github.com/Homebrew/brew
+# [url "https://mirrors.ustc.edu.cn/homebrew-core.git"]
+#   insteadOf = https://github.com/Homebrew/homebrew-core
+# [url "https://mirrors.ustc.edu.cn/brew.git"]
+#   insteadOf = https://github.com/Homebrew/brew
 [core]
   quotepath = false
   precomposeunicode = true
@@ -23,11 +21,11 @@
     binary = true
     textconv = git-xlsx-textconv
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [lfs "https://git.mengmax.fun/mmxs/xlsapp.git/info/lfs"]
-	locksverify = true
+  locksverify = true
 [url "https://github.com/"]
-	insteadOf = git@github.com:
+  insteadOf = git@github.com:
