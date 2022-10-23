@@ -33,7 +33,8 @@ if command -v brew >/dev/null 2>&1; then
   if [ "$ZSH_SYS" = "Darwin" ]; then
     # export HOMEBREW_NO_AUTO_UPDATE=true
     # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-    export HOMEBREW_BOTTLE_DOMAIN=https://mirror.sjtu.edu.cn/homebrew-bottles/bottles
+    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+    # export HOMEBREW_BOTTLE_DOMAIN=https://mirror.sjtu.edu.cn/homebrew-bottles/bottles
   elif [ "$ZSH_SYS" = "Linux" ]; then
     export HOMEBREW_NO_AUTO_UPDATE=true
     export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles
