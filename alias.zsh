@@ -22,6 +22,10 @@ if [ "$ZSH_SYS" = 'Linux' ]; then
   alias open='xdg-open'
 fi
 
+if [ "$ZSH_SYS" = "Darwin" ]; then
+  alias sftp='with-readline sftp'
+fi
+
 # linux 常用指令
 alias tf="tail -f"
 alias k2="kill -2"
