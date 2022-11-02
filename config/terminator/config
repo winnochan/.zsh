@@ -80,7 +80,7 @@
     copy_on_selection = True
   [[Azu]]
     background_color = "#09111a"
-    background_darkness = 0.6
+    background_darkness = 1.0
     background_type = transparent
     cursor_color = "#d2e8fc"
     font = CaskaydiaCove Nerd Font Mono 12
