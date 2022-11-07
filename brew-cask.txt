@@ -1,0 +1,7 @@
+dotnet-sdk
+hammerspoon
+iina
+joplin
+macfuse
+mongodb-compass
+visual-studio-code
