@@ -11,6 +11,8 @@ elif command -v brew >/dev/null 2>&1; then
   brew shellenv > $__brew_cache_env
   source $__brew_cache_env
 else
+  __brew_base="/opt/homebrew"
+  test -f $__brew_base/bin/brew && $__brew_base/bin/brew shellenv > $__brew_cache_env
   __brew_base="/usr/local"
   test -f $__brew_base/bin/brew && $__brew_base/bin/brew shellenv > $__brew_cache_env
   __brew_base="$HOME/.linuxbrew"
