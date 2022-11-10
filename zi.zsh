@@ -38,7 +38,6 @@ if [ "$ZSH_SYS" = "Linux" ]; then
   zi silent wait lucid light-mode for \
      as='program' pick='fasd' from=gitee.com winnochan/fasd \
      multisrc='plugins/{alias-finder,extract,fasd,git,last-working-dir}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
-     as=program from=gitee.com mirrors/fzf \
      multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
      from=gitee.com winnochan/fzf-fasd \
      from=gitee.com winnochan/zsh-completions \
@@ -49,7 +48,6 @@ else
   zi silent wait lucid light-mode for \
      as='program' pick='fasd' from=gitee.com winnochan/fasd \
      multisrc='plugins/{alias-finder,extract,fasd,git}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
-     as=program from=gitee.com mirrors/fzf \
      multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
      from=gitee.com winnochan/fzf-fasd \
      from=gitee.com winnochan/zsh-completions \
