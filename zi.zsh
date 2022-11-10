@@ -31,15 +31,15 @@ source ${ZI[BIN_DIR]}/zi.zsh
 #    from=gitee.com winnochan/zsh-autopair \
 #    from=gitee.com winnochan/fast-syntax-highlighting
 
-zi ice from=gitee.com as=program
-zi light mirrors/fzf
+# zi ice from=gitee.com as=program
+# zi light mirrors/fzf
 
 if [ "$ZSH_SYS" = "Linux" ]; then
   zi silent wait lucid light-mode for \
      as='program' pick='fasd' from=gitee.com winnochan/fasd \
      multisrc='plugins/{alias-finder,extract,fasd,git,last-working-dir}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
      from=gitee.com winnochan/fzf-fasd \
-     multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
+     as=program multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
      from=gitee.com winnochan/zsh-completions \
      atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions \
      from=gitee.com winnochan/zsh-autopair \
@@ -49,7 +49,7 @@ else
      as='program' pick='fasd' from=gitee.com winnochan/fasd \
      multisrc='plugins/{alias-finder,extract,fasd,git}/*.plugin.zsh' from=gitee.com mirrors/oh-my-zsh \
      from=gitee.com winnochan/fzf-fasd \
-     multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
+     as=program multisrc='shell/*.zsh' from=gitee.com mirrors/fzf \
      from=gitee.com winnochan/zsh-completions \
      atload=_zsh_autosuggest_start from=gitee.com winnochan/zsh-autosuggestions \
      from=gitee.com winnochan/zsh-autopair \
