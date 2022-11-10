@@ -19,7 +19,7 @@ dav1d
 docbook
 docbook-xsl
 emacs
-et
+MisterTea/et/et
 fasd
 ffmpeg
 flac
@@ -127,7 +127,6 @@ nghttp2
 ninja
 node@16
 npth
-ntfs-3g-mac
 opencore-amr
 openexr
 openjdk
