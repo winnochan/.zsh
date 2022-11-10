@@ -31,6 +31,9 @@ source ${ZI[BIN_DIR]}/zi.zsh
 #    from=gitee.com winnochan/zsh-autopair \
 #    from=gitee.com winnochan/fast-syntax-highlighting
 
+zi ice from=gitee.com as=program
+zi light mirrors/fzf
+
 if [ "$ZSH_SYS" = "Linux" ]; then
   zi silent wait lucid light-mode for \
      as='program' pick='fasd' from=gitee.com winnochan/fasd \
