@@ -6,7 +6,10 @@
 # source $ZSH_DIR/zplugin.zsh
 # source $ZSH_DIR/zgen.zsh
 
-# source $ZSH_DIR/plugins/brew.plugin.zsh
+if [ "$ZSH_SYS" = "Darwin" ]; then
+  source $ZSH_DIR/plugins/brew.plugin.zsh
+fi
+
 # source $ZSH_DIR/plugins/blox-theme.plugin.zsh
 # source $ZSH_DIR/plugins/flutter.plugin.zsh
 # source $ZSH_DIR/plugins/fzf.plugin.zsh
