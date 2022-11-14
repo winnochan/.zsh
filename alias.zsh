@@ -31,6 +31,9 @@ alias tf="tail -f"
 alias k2="kill -2"
 alias k9="kill -9"
 
+alias pplog="pm2 logs --raw | pino-pretty -t 'SYS:standard'"
+alias ppl="pm2 logs --raw | pino-pretty -t 'SYS:standard'"
+
 # rust
 alias rc='rustc --edition=2021 -C opt-level=3 -C lto=yes -C codegen-units=1'
 alias ruu='rustup update'
