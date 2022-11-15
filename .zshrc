@@ -20,6 +20,7 @@ fi
 # source $ZSH_DIR/plugins/oh-my-zsh.plugin.zsh
 # source $ZSH_DIR/plugins/rust.plugin.zsh
 # source $ZSH_DIR/plugins/zsh-autosuggestions.plugin.zsh
+source $ZSH_DIR/plugins/zsh-bin.plugin.zsh
 
 # source $ZSH_DIR/custom.zsh
 # source $ZSH_DIR/alias.zsh
