@@ -26,6 +26,14 @@ if [ ! -L ~/.mongoshrc.js ]; then
   echo 'link mongoshrc config'
 fi
 
+if [ ! -L ~/.wezterm.lua ]; then
+    if [ -e ~/.wezterm.lua ]; then
+        rm -rf ~/.wezterm.lua
+    fi
+    ln -s $ZSH_DIR/config/wezterm.lua ~/.wezterm.lua
+    echo 'link wezterm.lua'
+fi
+
 if [ "$ZSH_SYS" = "Linux" ]; then
   if [ ! -L ~/.config/terminator ]; then
     if [ -e ~/.config/terminator ]; then
