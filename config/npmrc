@@ -1,3 +1,4 @@
-proxy=http://127.0.0.1:1087/
-https-proxy=http://127.0.0.1:1087/
-strict-ssl=false
+# proxy=http://127.0.0.1:1087/
+# https-proxy=http://127.0.0.1:1087/
+# strict-ssl=false
+registry=http://mirrors.cloud.tencent.com/npm/
