@@ -3,9 +3,10 @@
   name = WinnoChan
 [https]
   proxy = http://127.0.0.1:1087
+  postBuffer = 157286400
 [http]
   proxy = http://127.0.0.1:1087
-	postBuffer = 157286400
+  postBuffer = 157286400
 [credential]
   helper = cache --timeout=2000000000
 # [url "https://mirrors.ustc.edu.cn/homebrew-core.git"]
