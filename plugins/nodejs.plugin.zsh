@@ -1,0 +1,1 @@
+export PKG_CACHE_PATH=$ZSH_DIR/pkg

@@ -13,3 +13,4 @@ configstore
 htop
 *.pyc
 *.~undo-tree~
+pkg/v3.4/fetched-v18.5.0-macos*

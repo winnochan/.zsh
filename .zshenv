@@ -31,6 +31,7 @@ source $ZSH_DIR/plugins/go.plugin.zsh
 source $ZSH_DIR/plugins/gtags.plugin.zsh
 # source $ZSH_DIR/plugins/java.plugin.zsh
 # source $ZSH_DIR/plugins/miniconda.plugin.zsh
+source $ZSH_DIR/plugins/nodejs.plugin.zsh
 source $ZSH_DIR/plugins/proxychains.plugin.zsh
 source $ZSH_DIR/plugins/pyenv.plugin.zsh
 source $ZSH_DIR/plugins/vagrant.plugin.zsh
