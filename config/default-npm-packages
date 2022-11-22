@@ -8,6 +8,7 @@ parallel-typescript
 pm2
 prettier
 typescript@4
+typescript-formatter
 typescript-language-server
 vls
 vscode-json-languageserver
