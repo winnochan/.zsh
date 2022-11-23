@@ -1,6 +1,7 @@
 bash-language-server
 @nestjs/cli@9
 eslint-cli
+eslint
 flow-bin
 hexo-cli
 import-js
