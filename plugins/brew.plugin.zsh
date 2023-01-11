@@ -33,13 +33,13 @@ if command -v brew >/dev/null 2>&1; then
   #     export HOMEBREW_GITHUB_API_TOKEN=$(cat $HOME/.ssh/tokens/github-repo.token)
   # fi
   if [ "$ZSH_SYS" = "Darwin" ]; then
-    # export HOMEBREW_NO_AUTO_UPDATE=true
+    export HOMEBREW_NO_AUTO_UPDATE=true
     # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+    # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
     # export HOMEBREW_BOTTLE_DOMAIN=https://mirror.sjtu.edu.cn/homebrew-bottles/bottles
   elif [ "$ZSH_SYS" = "Linux" ]; then
     export HOMEBREW_NO_AUTO_UPDATE=true
-    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles
+    # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles
   fi
 
   __zsh_share_path=$HOMEBREW_PREFIX/share/zsh
