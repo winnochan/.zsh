@@ -22,10 +22,10 @@ if command -v rustup >/dev/null 2>&1; then
       fi
     fi
 
-    export RUSTUP_DIST_SERVER=https://mirror.sjtu.edu.cn/rust-static
-    export RUSTUP_UPDATE_ROOT=https://mirror.sjtu.edu.cn/rust-static/rustup
-    # export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
-    # export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+    # export RUSTUP_DIST_SERVER=https://mirror.sjtu.edu.cn/rust-static
+    # export RUSTUP_UPDATE_ROOT=https://mirror.sjtu.edu.cn/rust-static/rustup
+    export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+    export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
     # export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
     # export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
 
