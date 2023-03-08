@@ -63,9 +63,9 @@ alias moshroot="mosh --ssh='ssh -l root'"
 alias v2rayi="bash <(curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) && bash <(curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh)"
 
 export PROXY_IP=127.0.0.1
-export PROXY_PORT=1086
-# alias ap="export all_proxy=http://${PROXY_IP}:${PROXY_PORT};"
-alias ap="export all_proxy=socks5://${PROXY_IP}:${PROXY_PORT};"
+export PROXY_PORT=1087
+alias ap="export all_proxy=http://${PROXY_IP}:${PROXY_PORT};"
+# alias ap="export all_proxy=socks5://${PROXY_IP}:${PROXY_PORT};"
 alias unap="unset all_proxy"
 
 alias kc='keychain -q ~/.ssh/ecdsa && source $HOME/.keychain/$(hostname)-sh'
