@@ -96,6 +96,7 @@ alias nus='npm uninstall -S'
 alias nud='npm uninstall -D'
 alias nd='node dist'
 
+
 ff1080p() {
   __FILE=$1
   __FN=${__FILE%%.*}
@@ -119,6 +120,12 @@ ff480p() {
   ffmpeg -i "$1" -c:a copy -c:s copy -c:v libx265 -preset "$2" -crf "$3" -aspect 16:9 -vf 'scale=854:480' "${__FN}-480p${2}-${3}.mp4"
   unset __FILE
   unset __FN
+}
+
+ffc() {
+  __file=$1
+  ffmpeg -f concat -i filelist.txt -c copy ${__file}
+  unset __file
 }
 
 ffs() {
