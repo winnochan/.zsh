@@ -132,7 +132,7 @@ ffs() {
   __file=$1
   __fb=${__file%.*}
   __fe=${__file##*.}
-  ffmpeg -ss $2 -i ${__file} -c copy "${__fb}_.${__fe}"
+  ffmpeg -ss $2 -i ${__file} -c copy "${__fb}_cut.${__fe}"
   unset __file
   unset __fb
   unset __fe
@@ -142,7 +142,7 @@ ffst() {
   __file=$1
   __fb=${__file%.*}
   __fe=${__file##*.}
-  ffmpeg -ss $2 -to $3 -i ${__file} -c copy "${__fb}_.${__fe}"
+  ffmpeg -ss $2 -to $3 -i ${__file} -c copy "${__fb}_cut.${__fe}"
   unset __file
   unset __fb
   unset __fe
