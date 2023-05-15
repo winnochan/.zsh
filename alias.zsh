@@ -62,7 +62,7 @@ alias moshroot="mosh --ssh='ssh -l root'"
 # v2ray install
 alias v2rayi="bash <(curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) && bash <(curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh)"
 
-export PROXY_IP=127.0.0.1
+export PROXY_IP=192.168.83.1
 export PROXY_PORT=1087
 alias ap="export all_proxy=http://${PROXY_IP}:${PROXY_PORT};"
 # alias ap="export all_proxy=socks5://${PROXY_IP}:${PROXY_PORT};"

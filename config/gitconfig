@@ -2,10 +2,10 @@
   email = winnochan@icloud.com
   name = WinnoChan
 [https]
-  proxy = http://127.0.0.1:1087
+  proxy = http://192.168.83.1:1087
   postBuffer = 10737418240
 [http]
-  proxy = http://127.0.0.1:1087
+  proxy = http://192.168.83.1:1087
   postBuffer = 10737418240
 [credential]
   helper = cache --timeout=2000000000
