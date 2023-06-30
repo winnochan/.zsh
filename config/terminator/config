@@ -35,7 +35,7 @@
   move_tab_left = None
   toggle_zoom = None
   scaled_zoom = None
-  next_tab = <Primary>Tab
+  next_tab = <Primary>Right
   prev_tab = <Primary>Left
   switch_to_tab_1 = <Primary>1
   switch_to_tab_2 = <Primary>2
