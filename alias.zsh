@@ -2,8 +2,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias paru="paru --needed --noconfirm"
-
 alias bu="brew update"
 alias buv="brew update -v"
 alias bug="brew upgrade"
