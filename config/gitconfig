@@ -1,12 +1,6 @@
 [user]
   email = winnochan@icloud.com
   name = WinnoChan
-[https]
-  proxy = http://127.0.0.1:1087
-  postBuffer = 10737418240
-[http]
-  proxy = http://127.0.0.1:1087
-  postBuffer = 10737418240
 [credential]
   helper = cache --timeout=2000000000
 # [url "https://mirrors.ustc.edu.cn/homebrew-core.git"]
@@ -31,3 +25,7 @@
   locksverify = true
 [url "https://github.com/"]
   insteadOf = git@github.com:
+[http "https://github.com"]
+  proxy = http://127.0.0.1:1087
+[https "https://github.com"]
+  proxy = http://127.0.0.1:1087
