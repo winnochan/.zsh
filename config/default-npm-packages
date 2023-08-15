@@ -12,5 +12,5 @@ typescript@4
 typescript-formatter
 typescript-language-server
 vls
-vscode-json-languageserver
+vscode-langservers-extracted
 yaml-language-server
