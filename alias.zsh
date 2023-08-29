@@ -45,9 +45,10 @@ alias cb='cargo build'
 alias crr='cargo run --release'
 alias cr='cargo run'
 
-# gcc / g++
+# gcc / g++ / clang
 alias gcc='gcc -O2'
 alias g++='g++ -O2'
+alias clang='clang -O2'
 
 # rg
 alias rgi="rg -i"
