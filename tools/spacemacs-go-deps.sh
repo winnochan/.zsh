@@ -1,15 +1,17 @@
-GO111MODULE=on go get golang.org/x/tools/gopls@latest
-GO111MODULE=on CGO_ENABLED=0 go get -trimpath -ldflags '-s -w' github.com/golangci/golangci-lint/cmd/golangci-lint
-go get -u golang.org/x/tools/cmd/godoc
-go get -u golang.org/x/tools/cmd/goimports
-go get -u golang.org/x/tools/cmd/gorename
-go get -u golang.org/x/tools/cmd/guru
-go get -u github.com/cweill/gotests/...
-go get -u github.com/davidrjenni/reftools/cmd/fillstruct
-go get -u github.com/fatih/gomodifytags
-go get -u github.com/godoctor/godoctor
-go get -u github.com/haya14busa/gopkgs/cmd/gopkgs
-go get -u github.com/josharian/impl
-go get -u github.com/rogpeppe/godef
+# spacemacs plugins
+GO111MODULE=on go install golang.org/x/tools/gopls@latest
+GO111MODULE=on CGO_ENABLED=0 go install -v -trimpath -ldflags '-s -w' github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+go install golang.org/x/tools/cmd/godoc@latest
+go install golang.org/x/tools/cmd/goimports@latest
+go install golang.org/x/tools/cmd/gorename@latest
+go install golang.org/x/tools/cmd/guru@latest
+go install github.com/cweill/gotests/...@latest
+go install github.com/davidrjenni/reftools/cmd/fillstruct@latest
+go install github.com/fatih/gomodifytags@latest
+go install github.com/godoctor/godoctor@latest
+go install github.com/haya14busa/gopkgs/cmd/gopkgs@latest
+go install github.com/josharian/impl@latest
+go install github.com/rogpeppe/godef@latest
 
+# custom plugins
 go install github.com/tokuhirom/git-xlsx-textconv@latest
