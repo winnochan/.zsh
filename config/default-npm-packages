@@ -1,14 +1,9 @@
-bash-language-server
-@nestjs/cli@9.1
-eslint-cli
 eslint
 flow-bin
-hexo-cli
 import-js
-parallel-typescript
 pm2
 prettier
-typescript@4
+typescript
 typescript-formatter
 typescript-language-server
 vls

@@ -1,5 +1,6 @@
 autoflake
 black
+debugpy
 epc
 flake8
 importmagic
@@ -14,7 +15,7 @@ pylint
 pyls-isort
 pyls-mypy
 pyls-black
-pytest==6.1.2
-python-language-server[all]
+pytest
+python-lsp-server[all]
 service_factory>=0.1.5
 yapf
