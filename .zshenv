@@ -50,9 +50,6 @@ source $ZSH_DIR/plugins/git.plugin.zsh
 
 source $ZSH_DIR/plugins/asdf.plugin.zsh
 
-GOPATH=$(go env GOPATH)
-PATH=$PATH:$GOPATH/bin
-
 fpath=($ZSH_DIR/completions $fpath)
 
 # autoload -Uz compinit
