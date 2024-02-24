@@ -98,7 +98,9 @@ alias nud='npm uninstall -D'
 alias nd='node dist'
 
 # coursera-dl, edx-dl
-alias csds="cs-dlp -caa chrome --download-delay 7 --video-resolution 720p -sl 'en,zh-CN|zh-TW' --download-quizzes --download-notebooks --about -o --specialization $1 --path $1"
+csds() {
+  cs-dlp -caa chrome --download-delay 7 --video-resolution 720p -sl 'en,zh-CN|zh-TW' --download-quizzes --download-notebooks --about -o --specialization $1 --path $1
+}
 
 ff1080p() {
   __FILE=$1
